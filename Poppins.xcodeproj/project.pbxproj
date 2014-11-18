@@ -13,6 +13,13 @@
 		6A696F747A9BF689A96680CC /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
 		F8B20F161A1D35C600E8617F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B20F141A1D35C600E8617F /* Nimble.framework */; };
 		F8B20F171A1D35C600E8617F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B20F151A1D35C600E8617F /* Quick.framework */; };
+		EA835D741A1AA6E10033AE00 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D731A1AA6E10033AE00 /* Dropbox.framework */; };
+		EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */; };
+		EA835D781A1AA7000033AE00 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D771A1AA7000033AE00 /* Security.framework */; };
+		EA835D7A1A1AA70D0033AE00 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D791A1AA70D0033AE00 /* SystemConfiguration.framework */; };
+		EA835D7C1A1AA7140033AE00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7B1A1AA7140033AE00 /* QuartzCore.framework */; };
+		EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7D1A1AA7250033AE00 /* libc++.dylib */; };
+		EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7F1A1AA7310033AE00 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,14 @@
 		ABB0894473AAFE7E68C6396D /* Poppins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B20F141A1D35C600E8617F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage.build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F8B20F151A1D35C600E8617F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage.build/iOS/Quick.framework; sourceTree = "<group>"; };
+		EA835D731A1AA6E10033AE00 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EA835D771A1AA7000033AE00 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EA835D791A1AA70D0033AE00 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EA835D7B1A1AA7140033AE00 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EA835D7D1A1AA7250033AE00 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		EA835D7F1A1AA7310033AE00 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +67,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */,
+				EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */,
+				EA835D7C1A1AA7140033AE00 /* QuartzCore.framework in Frameworks */,
+				EA835D7A1A1AA70D0033AE00 /* SystemConfiguration.framework in Frameworks */,
+				EA835D781A1AA7000033AE00 /* Security.framework in Frameworks */,
+				EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */,
+				EA835D741A1AA6E10033AE00 /* Dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +110,20 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		269D3242B63FA855764E6F68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA835D7F1A1AA7310033AE00 /* libz.dylib */,
+				EA835D7D1A1AA7250033AE00 /* libc++.dylib */,
+				EA835D7B1A1AA7140033AE00 /* QuartzCore.framework */,
+				EA835D791A1AA70D0033AE00 /* SystemConfiguration.framework */,
+				EA835D771A1AA7000033AE00 /* Security.framework */,
+				EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */,
+				EA835D731A1AA6E10033AE00 /* Dropbox.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B8F3C69D1C7435C4717945C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +142,7 @@
 		5EAEEA5A9A711562DD19B8DF /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */,
 				6C8F5A473AB2C1C4E96CABB0 /* Info.plist */,
 			);
 			path = "Other-Sources";
@@ -400,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -422,6 +460,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Poppins/Resources/Other-Sources/Poppins-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -430,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -450,6 +490,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Poppins/Resources/Other-Sources/Poppins-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
