@@ -11,6 +11,8 @@
 		52F67282AB2CBF409064A361 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2729CDC3064EC8E18E74E8 /* Images.xcassets */; };
 		6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D3C7953B819874CE387DA /* AppDelegate.swift */; };
 		6A696F747A9BF689A96680CC /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
+		F8B20F161A1D35C600E8617F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B20F141A1D35C600E8617F /* Nimble.framework */; };
+		F8B20F171A1D35C600E8617F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B20F151A1D35C600E8617F /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		A7291FA7576673F55122E623 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB0894473AAFE7E68C6396D /* Poppins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppins.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B20F141A1D35C600E8617F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage.build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		F8B20F151A1D35C600E8617F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage.build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B20F171A1D35C600E8617F /* Quick.framework in Frameworks */,
+				F8B20F161A1D35C600E8617F /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,7 @@
 		0A2D6994F26EB0EA08A74735 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				F8B20F131A1D35AA00E8617F /* Frameworks */,
 				DFFBDF0EB997B7BFC5676114 /* Resources */,
 				8F24E5C5275E4C376C3538D4 /* Helpers */,
 				9FE417C441FA1B4E62E13330 /* Tests */,
@@ -67,7 +74,6 @@
 			children = (
 				CD6F8D6182180892DF070680 /* Poppins */,
 				0A2D6994F26EB0EA08A74735 /* UnitTests */,
-				269D3242B63FA855764E6F68 /* Frameworks */,
 				D891CE07DB60305C53AEBC5A /* Products */,
 			);
 			indentWidth = 4;
@@ -80,13 +86,6 @@
 			children = (
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		269D3242B63FA855764E6F68 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3B8F3C69D1C7435C4717945C /* Views */ = {
@@ -203,6 +202,16 @@
 				5EAEEA5A9A711562DD19B8DF /* Other-Sources */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F8B20F131A1D35AA00E8617F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8B20F141A1D35C600E8617F /* Nimble.framework */,
+				F8B20F151A1D35C600E8617F /* Quick.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +385,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage.build/iOS",
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +402,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Poppins/Resources/Other-Sources/Info.plist";
@@ -418,6 +432,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -545,6 +563,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage.build/iOS",
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,7 +7,7 @@ Run `bin/setup`
 This will:
 
  - Install the gem dependencies
- - Install the pod dependencies
+ - Install the framework dependencies
 
 ## Testing ##
 
