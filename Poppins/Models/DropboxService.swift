@@ -31,7 +31,6 @@ public class DropboxService : SyncableService {
     public func saveFile(filename: String, data: NSData) -> Result<()> {
         let path = DBPath.root().childPath(filename)
         return DBFilesystem.sharedFilesystem().createFile(path) >>- { $0.writeData(data) }
-                                    
     }
 
     public func getFiles() -> Result<[String]> {
