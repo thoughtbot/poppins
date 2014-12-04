@@ -1,1 +1,3 @@
+github "thoughtbot/Cascade" "v0.1"
+github "Quick/Nimble" "v0.2.0"
 github "Quick/Quick" "v0.2.0"

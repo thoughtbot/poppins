@@ -20,3 +20,10 @@ func <^><A, B>(f: A -> B, a: Result<A>) -> Result<B> {
     case let .Error(err): return .error(err)
     }
 }
+
+func ??<A>(lhs: Result<A>, rhs: A) -> A {
+    switch lhs {
+    case let .Success(aBox): return aBox._value
+    case .Error(_): return rhs
+    }
+}

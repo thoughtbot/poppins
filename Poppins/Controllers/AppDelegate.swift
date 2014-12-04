@@ -3,13 +3,14 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var controller = ApplicationController()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         if application.isUnitTesting() {
             return true
         }
 
-        SyncManager.sharedManager.setup()
+        controller.configureLinkedService()
         return true
     }
 

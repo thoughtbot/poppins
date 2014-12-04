@@ -1,20 +1,21 @@
-class Async<T> {
-    private var _done: (T -> ())?
+class Async {
+    private var _done: (() -> ())?
 
-    class func run<U>(f: U -> T) -> U -> Async<T> {
-        return { u in
-            var proc = Async<T>()
-            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-                let data: T = f(u)
-                dispatch_async(dispatch_get_main_queue()) {
-                    _ = proc._done?(data)
-                }
-            }
-            return proc
+    class func map<U, T>(u: [U], f: U -> T) -> Async {
+        var proc = Async()
+        let dispatch_queue = dispatch_queue_create("com.poppins.cache", DISPATCH_QUEUE_CONCURRENT)
+        let dispatch_group = dispatch_group_create()
+
+        u.map { x in
+            dispatch_group_async(dispatch_group, dispatch_queue) { _ = f(x) }
         }
+
+        dispatch_group_notify(dispatch_group, dispatch_queue) { _ = proc._done?() }
+
+        return proc
     }
 
-    func done(f: T -> ()) {
+    func done(f: () -> ()) {
         _done = f
     }
 }
