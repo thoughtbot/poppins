@@ -1,7 +1,115 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="66v-CU-UqJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Cascade View Controller-->
+        <scene sceneID="6Uc-f3-O3v">
+            <objects>
+                <collectionViewController id="66v-CU-UqJ" customClass="CascadeViewController" customModule="Poppins" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DvA-3L-NK5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewLayout key="collectionViewLayout" id="LgW-2s-OHf" customClass="CascadeLayout" customModule="Cascade"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PoppinsCell" id="hT0-Tj-cLo" customClass="PoppinsCell" customModule="Poppins" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ry-5e-bTe">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8ry-5e-bTe" secondAttribute="trailing" id="PO4-Ph-OLQ"/>
+                                    <constraint firstItem="8ry-5e-bTe" firstAttribute="leading" secondItem="hT0-Tj-cLo" secondAttribute="leading" id="SxI-2A-0VQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="8ry-5e-bTe" secondAttribute="bottom" id="hAJ-CP-s8H"/>
+                                    <constraint firstItem="8ry-5e-bTe" firstAttribute="top" secondItem="hT0-Tj-cLo" secondAttribute="top" id="w5C-Ow-R1y"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="8ry-5e-bTe" id="OHj-Vt-J2b"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="66v-CU-UqJ" id="aSE-yw-mQ3"/>
+                            <outlet property="delegate" destination="66v-CU-UqJ" id="sp1-zS-CxQ"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="hVe-qh-QfR" kind="presentation" identifier="LinkAccountSegue" id="oAP-lB-aVz"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADR-R8-wdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="489" y="595"/>
+        </scene>
+        <!--Link Account View Controller-->
+        <scene sceneID="d9i-ZL-IIG">
+            <objects>
+                <viewController id="hVe-qh-QfR" customClass="LinkAccountViewController" customModule="Poppins" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T6y-JT-J2O"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Zy-6v-r0e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8UY-65-2kl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob5-hS-Dry">
+                                <rect key="frame" x="245" y="285" width="110" height="30"/>
+                                <state key="normal" title="Link to Dropbox">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkDropbox" destination="hVe-qh-QfR" eventType="touchUpInside" id="8jx-wg-pLc"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1F-rS-rj5">
+                                <rect key="frame" x="200" y="240" width="200" height="120"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-Cl-7kJ">
+                                        <rect key="frame" x="90" y="70" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syncing..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twe-4E-PUv">
+                                        <rect key="frame" x="62" y="30" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="IJJ-Cl-7kJ" secondAttribute="centerX" id="7x4-My-Oeq"/>
+                                    <constraint firstAttribute="bottom" secondItem="IJJ-Cl-7kJ" secondAttribute="bottom" constant="30" id="DJk-KS-hdT"/>
+                                    <constraint firstItem="Twe-4E-PUv" firstAttribute="top" secondItem="a1F-rS-rj5" secondAttribute="top" constant="30" id="VGS-JC-PW2"/>
+                                    <constraint firstAttribute="centerX" secondItem="Twe-4E-PUv" secondAttribute="centerX" id="db0-PT-kpd"/>
+                                    <constraint firstAttribute="width" constant="200" id="i2C-JF-6iw"/>
+                                    <constraint firstAttribute="height" constant="120" id="iPS-9A-rAR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="a1F-rS-rj5" secondAttribute="centerX" id="aNR-iF-mqO"/>
+                            <constraint firstAttribute="centerY" secondItem="ob5-hS-Dry" secondAttribute="centerY" id="bQI-fX-cZP"/>
+                            <constraint firstAttribute="centerX" secondItem="ob5-hS-Dry" secondAttribute="centerX" id="q23-bI-bdU"/>
+                            <constraint firstAttribute="centerY" secondItem="a1F-rS-rj5" secondAttribute="centerY" id="wi2-Qh-yd3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="syncingView" destination="a1F-rS-rj5" id="4SD-ur-WqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="php-Nc-ahP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="595"/>
+        </scene>
+    </scenes>
 </document>

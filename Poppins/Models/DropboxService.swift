@@ -41,13 +41,19 @@ public class DropboxService : SyncableService {
 
     public func getFile(filename: String) -> Result<NSData> {
         let path = DBPath.root().childPath(filename)
-        return DBFilesystem.sharedFilesystem().openFile(path) >>- { $0.readData() }
+        return DBFilesystem.sharedFilesystem().openFile(path) >>- { file in
+            let data = file.readData()
+            file.close()
+            return data
+        }
     }
 
     private func setupFilesystem(account: DBAccount) {
         DBFilesystem(account: account) >>- DBFilesystem.setSharedFilesystem
-        DBFilesystem.sharedFilesystem().addObserver(self, forPathAndChildren: DBPath.root()) {
-            NSNotificationCenter.defaultCenter().postNotificationName(FilesUpdatedNotificationName, object: .None)
+        DBFilesystem.sharedFilesystem().addObserver(self, forPathAndDescendants: DBPath.root()) {
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+                _ = SyncManager.sharedManager.preload <^> SyncManager.sharedManager.getFiles()
+            }
         }
     }
 }

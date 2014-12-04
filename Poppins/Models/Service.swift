@@ -1,3 +1,5 @@
+let StoredServiceKey = "PoppinsStoredServiceKey"
+
 public enum Service: Printable {
     case Unconfigured
     case Dropbox

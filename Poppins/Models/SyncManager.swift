@@ -1,5 +1,5 @@
 public let AccountLinkedNotificationName = "PoppinsAccountLinked"
-let FilesUpdatedNotificationName = "PoppinsFilesUpdated"
+let PreloadCompletedNotificationName = "PoppinsPreloadCompleted"
 
 public let ServiceKey = "PoppinsService"
 
@@ -58,5 +58,11 @@ public class SyncManager: SyncableService {
 
     public func getFiles() -> Result<[String]> {
         return service.getFiles()
+    }
+
+    func preload(files: [String]) {
+        Async.map(files, self.getFile).done {
+            NSNotificationCenter.defaultCenter().postNotificationName(PreloadCompletedNotificationName, object: .None)
+        }
     }
 }

@@ -9,6 +9,13 @@ public enum Result<A> {
     public static func error(v: NSError) -> Result<A> {
         return .Error(v)
     }
+
+    func toOptional() -> A? {
+        switch self {
+        case let .Success(aBox): return aBox._value
+        case .Error(_): return .None
+        }
+    }
 }
 
 public final class Box<A> {
