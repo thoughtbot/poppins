@@ -45,6 +45,8 @@
 		EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */; };
 		EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211221A2508C50069A5C6 /* NotificationListener.swift */; };
 		EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
+		EAF49C7A1A38EC9200B395DF /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF49C791A38EC8100B395DF /* Gifu.framework */; };
+		EAF49C7B1A38EC9200B395DF /* Gifu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAF49C791A38EC8100B395DF /* Gifu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,20 @@
 			remoteGlobalIDString = F8FB72581A1F9654004265D5;
 			remoteInfo = Cascade;
 		};
+		EAF49C781A38EC8100B395DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00B8C73E1A364DA400C188E7;
+			remoteInfo = Gifu;
+		};
+		EAF49C7C1A38EC9200B395DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B8C73D1A364DA400C188E7;
+			remoteInfo = Gifu;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -135,6 +151,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EAB1930B1A2F8DC40002C6D0 /* Cascade.framework in Embed Frameworks */,
+				EAF49C7B1A38EC9200B395DF /* Gifu.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +210,7 @@
 		EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDropboxService.swift; sourceTree = "<group>"; };
 		EAB211221A2508C50069A5C6 /* NotificationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListener.swift; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gifu.xcodeproj; path = Carthage.checkout/gifu/Gifu.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +231,7 @@
 				EAB1930A1A2F8DC40002C6D0 /* Cascade.framework in Frameworks */,
 				EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */,
 				EA835D7C1A1AA7140033AE00 /* QuartzCore.framework in Frameworks */,
+				EAF49C7A1A38EC9200B395DF /* Gifu.framework in Frameworks */,
 				EA835D7A1A1AA70D0033AE00 /* SystemConfiguration.framework in Frameworks */,
 				EA835D781A1AA7000033AE00 /* Security.framework in Frameworks */,
 				EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */,
@@ -400,6 +419,7 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */,
 				EAB193041A2F8D910002C6D0 /* Cascade.xcodeproj */,
 			);
 			name = Frameworks;
@@ -441,6 +461,14 @@
 				EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */,
 			);
 			path = Fakes;
+			sourceTree = "<group>";
+		};
+		EAF49C751A38EC8100B395DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAF49C791A38EC8100B395DF /* Gifu.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EEF0CA746796050EB40ADC3E /* Resources */ = {
@@ -500,6 +528,7 @@
 			);
 			dependencies = (
 				EAB1930D1A2F8DC40002C6D0 /* PBXTargetDependency */,
+				EAF49C7D1A38EC9200B395DF /* PBXTargetDependency */,
 			);
 			name = Poppins;
 			productName = Poppins;
@@ -530,6 +559,10 @@
 				{
 					ProductGroup = EAB193051A2F8D910002C6D0 /* Products */;
 					ProjectRef = EAB193041A2F8D910002C6D0 /* Cascade.xcodeproj */;
+				},
+				{
+					ProductGroup = EAF49C751A38EC8100B395DF /* Products */;
+					ProjectRef = EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */;
 				},
 				{
 					ProductGroup = EAB192F61A2F8D8A0002C6D0 /* Products */;
@@ -610,6 +643,13 @@
 			fileType = wrapper.framework;
 			path = Cascade.framework;
 			remoteRef = EAB193081A2F8D920002C6D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EAF49C791A38EC8100B395DF /* Gifu.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gifu.framework;
+			remoteRef = EAF49C781A38EC8100B395DF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -700,6 +740,11 @@
 			isa = PBXTargetDependency;
 			name = Cascade;
 			targetProxy = EAB1930C1A2F8DC40002C6D0 /* PBXContainerItemProxy */;
+		};
+		EAF49C7D1A38EC9200B395DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Gifu;
+			targetProxy = EAF49C7C1A38EC9200B395DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
