@@ -1,3 +1,4 @@
 github "Quick/Quick"
 github "Quick/Nimble"
 github "thoughtbot/Cascade"
+github "kaishin/gifu"
