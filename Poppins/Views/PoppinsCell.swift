@@ -12,11 +12,18 @@ class PoppinsCell: UICollectionViewCell {
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 2, height: 2)
     @IBInspectable var shadowSpread: CGFloat = 14
 
-    func configureWithImageData(data: NSData) {
-        let size = imageSizeConstrainedByWidth(frame.width) <^> UIImage(data: data) ?? CGSizeZero
-        let image = AnimatedImage(data: data, size: size)
-        imageView?.setAnimatedImage(image)
-        imageView?.startAnimatingGIF()
+    func configureWithImagePath(path: String) {
+        let image = ImageCache.cachedImageForPath(path) ??
+            curry(AnimatedImage.animatedImageWithData)
+                <^> SyncManager.sharedManager.getFile(path).toOptional()
+                <*> imageView?.frame.size
+
+        curry(ImageCache.cacheImage) <^> image <*> path
+
+        if let x = image {
+            imageView?.setAnimatedImage(x)
+            imageView?.startAnimatingGIF()
+        }
     }
 
     override func layoutSubviews() {

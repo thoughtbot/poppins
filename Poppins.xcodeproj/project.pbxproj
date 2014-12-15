@@ -48,7 +48,6 @@
 		EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
 		EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */; };
 		F80BE3D21A41E564009192A4 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BE3CE1A41E564009192A4 /* HockeySDK.framework */; };
-		F80BE3D31A41E564009192A4 /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F80BE3D01A41E564009192A4 /* HockeySDK.xcconfig */; };
 		F80BE3D41A41E564009192A4 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F80BE3D11A41E564009192A4 /* HockeySDKResources.bundle */; };
 		F80BE3DF1A41E5B9009192A4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BE3D51A41E5B9009192A4 /* AssetsLibrary.framework */; };
 		F80BE3E01A41E5B9009192A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BE3D61A41E5B9009192A4 /* CoreGraphics.framework */; };
@@ -62,6 +61,8 @@
 		F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BE3DE1A41E5B9009192A4 /* UIKit.framework */; };
 		F80BE3EA1A41E659009192A4 /* HockeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80BE3E91A41E659009192A4 /* HockeyManager.swift */; };
 		F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
+		F825388B1A3F8C5C004476DC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* ImageCache.swift */; };
+		F825388D1A3F8D4B004476DC /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +242,8 @@
 		F80BE3DE1A41E5B9009192A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F80BE3E91A41E659009192A4 /* HockeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HockeyManager.swift; sourceTree = "<group>"; };
 		F825387D1A3F818A004476DC /* ApplicationAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
+		F825388A1A3F8C5C004476DC /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F825388C1A3F8D4B004476DC /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +366,7 @@
 				EAB2111B1A24D7650069A5C6 /* UnconfiguredService.swift */,
 				EAF49CDE1A3F582100B395DF /* GifItemSource.swift */,
 				F80BE3E91A41E659009192A4 /* HockeyManager.swift */,
+				F825388A1A3F8C5C004476DC /* ImageCache.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -411,7 +415,7 @@
 		CD6F8D6182180892DF070680 /* Poppins */ = {
 			isa = PBXGroup;
 			children = (
-				EAACE1EE1A1BA90800E3C43D /* Operators */,
+				EAACE1EE1A1BA90800E3C43D /* Functional */,
 				9B88E0AB406E4C76442BEB17 /* Extensions */,
 				243AB5E3CA6007E62EFE04E7 /* Protocols */,
 				97EECE52D262452A82126E4F /* Models */,
@@ -449,14 +453,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EAACE1EE1A1BA90800E3C43D /* Operators */ = {
+		EAACE1EE1A1BA90800E3C43D /* Functional */ = {
 			isa = PBXGroup;
 			children = (
 				EAACE1EF1A1BA93700E3C43D /* Operators.swift */,
 				EAACE1F11A1BA9BF00E3C43D /* Optional.swift */,
 				EA7A042D1A1E44D8002C73AF /* Results.swift */,
+				F825388C1A3F8D4B004476DC /* Curry.swift */,
 			);
-			path = Operators;
+			path = Functional;
 			sourceTree = "<group>";
 		};
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
@@ -624,7 +629,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = POP;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
 					4E511CA83D18390E4117F469 = {
@@ -753,7 +758,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80BE3D31A41E564009192A4 /* HockeySDK.xcconfig in Resources */,
 				52F67282AB2CBF409064A361 /* Images.xcassets in Resources */,
 				F80BE3D41A41E564009192A4 /* HockeySDKResources.bundle in Resources */,
 			);
@@ -823,10 +827,12 @@
 				EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */,
 				6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */,
 				F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */,
+				F825388B1A3F8C5C004476DC /* ImageCache.swift in Sources */,
 				6A696F747A9BF689A96680CC /* Main.storyboard in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
 				EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */,
 				EAF49CD11A3F37D200B395DF /* Array.swift in Sources */,
+				F825388D1A3F8D4B004476DC /* Curry.swift in Sources */,
 				EA7A04321A23B176002C73AF /* DBFile.swift in Sources */,
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
