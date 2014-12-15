@@ -1,4 +1,5 @@
 import Cascade
+import Gifu
 
 class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     var images: [String] = []
@@ -32,10 +33,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     }
 
     func reloadFiles() {
-        switch SyncManager.sharedManager.getFiles() {
-        case let .Success(files): images = files._value
-        case .Error(_): return
-        }
+        images = SyncManager.sharedManager.getFiles() ?? []
         collectionView?.reloadData()
     }
 
@@ -45,16 +43,14 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PoppinsCell", forIndexPath: indexPath) as PoppinsCell
-
-        let result = SyncManager.sharedManager.getFile(images[indexPath.row])
-        cell.configureWithImageData <^> result
+        cell.configureWithImagePath <^> safeValue(images, indexPath.row)
         return cell
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let result = SyncManager.sharedManager.getFile(images[indexPath.row])
-        let image = result.toOptional() >>- imageForData
-        return imageSizeConstrainedByWidth(100.0) <^> image ?? CGSize(width: 1, height: 1)
+        let path = safeValue(images, indexPath.row)
+        let data: Result<NSData> = path.toResult() >>- SyncManager.sharedManager.getFile
+        return data.toOptional() >>- imageForData >>- { $0.size } ?? CGSize(width: 1, height: 1)
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: CascadeLayout, numberOfColumnsInSectionAtIndexPath indexPath: NSIndexPath) -> Int {

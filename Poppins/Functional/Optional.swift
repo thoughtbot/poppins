@@ -18,3 +18,12 @@ func <*><A, B>(f: (A -> B)?, a: A?) -> B? {
     default: return .None
     }
 }
+
+extension Optional {
+    func toResult() -> Result<T> {
+        switch self {
+        case let .Some(x): return .success(x)
+        case .None: return .error(NSError(domain: "", code: 0, userInfo: .None))
+        }
+    }
+}
