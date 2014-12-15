@@ -50,6 +50,7 @@
 		EAF49CD11A3F37D200B395DF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
 		EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
 		EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */; };
+		F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +218,7 @@
 		EAF49CD01A3F37D200B395DF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		EAF49CDE1A3F582100B395DF /* GifItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifItemSource.swift; sourceTree = "<group>"; };
 		EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionSpec.swift; sourceTree = "<group>"; };
+		F825387D1A3F818A004476DC /* ApplicationAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 				EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */,
 				EAB193191A2FA0740002C6D0 /* LinkAccountViewController.swift */,
 				EAB1931B1A2FA8920002C6D0 /* ApplicationController.swift */,
+				F825387D1A3F818A004476DC /* ApplicationAppearance.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */,
 				EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */,
 				6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */,
+				F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */,
 				6A696F747A9BF689A96680CC /* Main.storyboard in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
 				EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */,
