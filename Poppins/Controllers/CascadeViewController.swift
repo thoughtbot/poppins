@@ -53,7 +53,8 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let result = SyncManager.sharedManager.getFile(images[indexPath.row])
-        return result.toOptional() >>- imageForData >>- imageSizeConstrainedByWidth(100.0) ?? CGSize(width: 1, height: 1)
+        let image = result.toOptional() >>- imageForData
+        return imageSizeConstrainedByWidth(100.0) <^> image ?? CGSize(width: 1, height: 1)
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: CascadeLayout, numberOfColumnsInSectionAtIndexPath indexPath: NSIndexPath) -> Int {
