@@ -19,6 +19,10 @@
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setLinkedService", name: AccountLinkedNotificationName, object: .None)
     }
 
+    func configureApplication() {
+        ApplicationAppearance.setupAppearance()
+    }
+
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }

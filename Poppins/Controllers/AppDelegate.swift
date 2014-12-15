@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         controller.configureLinkedService()
+        controller.configureApplication()
         return true
     }
 
