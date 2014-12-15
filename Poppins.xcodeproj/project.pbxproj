@@ -47,6 +47,9 @@
 		EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
 		EAF49C7A1A38EC9200B395DF /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF49C791A38EC8100B395DF /* Gifu.framework */; };
 		EAF49C7B1A38EC9200B395DF /* Gifu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAF49C791A38EC8100B395DF /* Gifu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EAF49CD11A3F37D200B395DF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
+		EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
+		EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +214,9 @@
 		EAB211221A2508C50069A5C6 /* NotificationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListener.swift; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gifu.xcodeproj; path = Carthage.checkout/gifu/Gifu.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EAF49CD01A3F37D200B395DF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		EAF49CDE1A3F582100B395DF /* GifItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifItemSource.swift; sourceTree = "<group>"; };
+		EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +329,7 @@
 				EA34E7841A1CFD4F00875CFC /* Async.swift */,
 				EA45EF421A1D4C36001E6178 /* Result.swift */,
 				EAB2111B1A24D7650069A5C6 /* UnconfiguredService.swift */,
+				EAF49CDE1A3F582100B395DF /* GifItemSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,6 +341,7 @@
 				EA7A04311A23B176002C73AF /* DBFile.swift */,
 				EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */,
 				EAF49B8A1A30FF1000B395DF /* UIImage.swift */,
+				EAF49CD01A3F37D200B395DF /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 		9FE417C441FA1B4E62E13330 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EAF49CEE1A3F86F100B395DF /* Extensions */,
 				EA7A04331A23BB3B002C73AF /* Models */,
 			);
 			path = Tests;
@@ -469,6 +478,14 @@
 				EAF49C791A38EC8100B395DF /* Gifu.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EAF49CEE1A3F86F100B395DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EEF0CA746796050EB40ADC3E /* Resources */ = {
@@ -696,6 +713,7 @@
 			files = (
 				EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */,
 				EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */,
+				EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */,
 				EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,8 +739,10 @@
 				6A696F747A9BF689A96680CC /* Main.storyboard in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
 				EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */,
+				EAF49CD11A3F37D200B395DF /* Array.swift in Sources */,
 				EA7A04321A23B176002C73AF /* DBFile.swift in Sources */,
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
+				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */,
 			);

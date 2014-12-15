@@ -60,4 +60,16 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: CascadeLayout, numberOfColumnsInSectionAtIndexPath indexPath: NSIndexPath) -> Int {
         return 2
     }
+
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+        let imagePath = safeValue(images, indexPath.row)
+        let data = imagePath >>- { SyncManager.sharedManager.getFile($0).toOptional() }
+        let gifItemSource = GifItemSource.create <^> data
+
+        if let source = gifItemSource {
+            let activityVC = UIActivityViewController(activityItems: [source], applicationActivities: [])
+            presentViewController(activityVC, animated: true, completion: .None)
+        }
+    }
 }
