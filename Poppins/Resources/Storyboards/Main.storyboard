@@ -1,39 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="66v-CU-UqJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="66v-CU-UqJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Cascade View Controller-->
         <scene sceneID="6Uc-f3-O3v">
             <objects>
                 <collectionViewController id="66v-CU-UqJ" customClass="CascadeViewController" customModule="Poppins" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DvA-3L-NK5">
+                    <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="DvA-3L-NK5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.14509803921568629" green="0.15686274509803921" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewLayout key="collectionViewLayout" id="LgW-2s-OHf" customClass="CascadeLayout" customModule="Cascade"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PoppinsCell" id="hT0-Tj-cLo" customClass="PoppinsCell" customModule="Poppins" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PoppinsCell" id="hT0-Tj-cLo" customClass="PoppinsCell" customModule="Poppins" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="550" height="578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ry-5e-bTe">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNX-tu-WQi" userLabel="ShadowView">
+                                            <rect key="frame" x="8" y="8" width="534" height="562"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DesignPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="8ry-5e-bTe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="534" height="562"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8ry-5e-bTe" secondAttribute="bottom" id="BCr-4E-0E1"/>
+                                                <constraint firstAttribute="trailing" secondItem="8ry-5e-bTe" secondAttribute="trailing" id="Gjc-ZQ-16i"/>
+                                                <constraint firstItem="8ry-5e-bTe" firstAttribute="leading" secondItem="jNX-tu-WQi" secondAttribute="leading" id="ITW-Er-DxC"/>
+                                                <constraint firstItem="8ry-5e-bTe" firstAttribute="top" secondItem="jNX-tu-WQi" secondAttribute="top" id="Ua8-EZ-Di5"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="8ry-5e-bTe" secondAttribute="trailing" id="PO4-Ph-OLQ"/>
-                                    <constraint firstItem="8ry-5e-bTe" firstAttribute="leading" secondItem="hT0-Tj-cLo" secondAttribute="leading" id="SxI-2A-0VQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="8ry-5e-bTe" secondAttribute="bottom" id="hAJ-CP-s8H"/>
-                                    <constraint firstItem="8ry-5e-bTe" firstAttribute="top" secondItem="hT0-Tj-cLo" secondAttribute="top" id="w5C-Ow-R1y"/>
+                                    <constraint firstItem="jNX-tu-WQi" firstAttribute="top" secondItem="hT0-Tj-cLo" secondAttribute="topMargin" id="7aD-8M-zOG"/>
+                                    <constraint firstItem="jNX-tu-WQi" firstAttribute="leading" secondItem="hT0-Tj-cLo" secondAttribute="leadingMargin" id="AkW-XZ-to2"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="jNX-tu-WQi" secondAttribute="trailing" id="E8k-NG-MBc"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="jNX-tu-WQi" secondAttribute="bottom" id="Khd-xo-LMf"/>
                                 </constraints>
+                                <size key="customSize" width="550" height="578"/>
                                 <connections>
                                     <outlet property="imageView" destination="8ry-5e-bTe" id="OHj-Vt-J2b"/>
+                                    <outlet property="shadowView" destination="jNX-tu-WQi" id="ifj-bM-r9p"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -48,7 +63,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADR-R8-wdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="595"/>
+            <point key="canvasLocation" x="464" y="595"/>
         </scene>
         <!--Link Account View Controller-->
         <scene sceneID="d9i-ZL-IIG">
@@ -112,4 +127,7 @@
             <point key="canvasLocation" x="1274" y="595"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DesignPlaceholder" width="301" height="226"/>
+    </resources>
 </document>
