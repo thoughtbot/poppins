@@ -10,6 +10,8 @@
     }
 
     func configureLinkedService() {
+        HockeyManager.configure()
+
         switch linkedService {
         case .Dropbox: SyncManager.sharedManager.setService(DropboxService())
         case .Unconfigured: SyncManager.sharedManager.setService(UnconfiguredService())
