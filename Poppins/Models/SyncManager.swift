@@ -1,5 +1,6 @@
 public let AccountLinkedNotificationName = "PoppinsAccountLinked"
 let PreloadCompletedNotificationName = "PoppinsPreloadCompleted"
+let InitialSyncCompletedNotificationName = "PoppinsInitialSyncCompleted"
 
 public let ServiceKey = "PoppinsService"
 
