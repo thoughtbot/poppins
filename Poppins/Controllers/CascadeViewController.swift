@@ -58,7 +58,6 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     }
 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
         let imagePath = safeValue(images, indexPath.row)
         let data = imagePath >>- { SyncManager.sharedManager.getFile($0).toOptional() }
         let gifItemSource = GifItemSource.create <^> data
