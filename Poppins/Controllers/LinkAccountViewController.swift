@@ -6,7 +6,7 @@ class LinkAccountViewController: UIViewController {
         super.viewDidLoad()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "authSuccessful", name: AccountLinkedNotificationName, object: .None)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preloadCompleted", name: PreloadCompletedNotificationName, object: .None)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "initialSyncCompleted", name: InitialSyncCompletedNotificationName, object: .None)
     }
 
     deinit {
@@ -21,7 +21,7 @@ class LinkAccountViewController: UIViewController {
         }
     }
 
-    func preloadCompleted() {
+    func initialSyncCompleted() {
         dispatch_async(dispatch_get_main_queue()) {
             _ = self.presentingViewController?.dismissViewControllerAnimated(true, completion: .None)
         }
