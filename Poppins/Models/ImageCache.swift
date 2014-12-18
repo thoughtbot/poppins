@@ -1,10 +1,8 @@
-import Gifu
+class Cache<T> {
+    var cache: [String: T] = [:]
 
-class ImageCache: NSCache {
-    override init() {
-        super.init()
+    init() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("didRecieveMemoryWarning"), name: UIApplicationDidReceiveMemoryWarningNotification, object: .None)
-        name = "PoppinsImageCache"
     }
 
     deinit {
@@ -12,24 +10,14 @@ class ImageCache: NSCache {
     }
 
     func didRecieveMemoryWarning() {
-        removeAllObjects()
+        cache.removeAll(keepCapacity: false)
     }
 
-    class func cachedImageForPath(path: String) -> AnimatedImage? {
-        return sharedCache.objectForKey(path) as? AnimatedImage
+    func itemForKey(key: String) -> T? {
+        return cache[key]
     }
 
-    class func cacheImage(image: AnimatedImage, forPath path: String) {
-        sharedCache.setObject(image, forKey: path)
-    }
-}
-
-private extension ImageCache {
-    class var sharedCache: ImageCache {
-        struct Static {
-            static let instance = ImageCache()
-        }
-
-        return Static.instance
+    func setItem(item: T, forKey key: String) {
+        cache[key] = item
     }
 }

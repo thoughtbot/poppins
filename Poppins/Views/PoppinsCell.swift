@@ -1,5 +1,7 @@
 import Gifu
 
+private let ImageCache = Cache<[AnimatedFrame]>()
+
 @IBDesignable
 class PoppinsCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView?
@@ -13,12 +15,12 @@ class PoppinsCell: UICollectionViewCell {
     @IBInspectable var shadowSpread: CGFloat = 14
 
     func configureWithImagePath(path: String) {
-        let image = ImageCache.cachedImageForPath(path) ??
-            curry(AnimatedImage.animatedImageWithData)
+        let image = ImageCache.itemForKey(path) ??
+            curry(AnimatedFrame.createWithData)
                 <^> SyncManager.sharedManager.getFile(path).toOptional()
                 <*> imageView?.frame.size
 
-        curry(ImageCache.cacheImage) <^> image <*> path
+        curry(ImageCache.setItem) <^> image <*> path
 
         if let x = image {
             imageView?.setAnimatedImage(x)
