@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AfL-xs-nH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AfL-xs-nH3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -44,15 +44,16 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNX-tu-WQi" userLabel="ShadowView">
                                             <rect key="frame" x="8" y="8" width="480" height="451"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DesignPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="8ry-5e-bTe">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzu-vH-G2h" customClass="AnimatedView" customModule="Gifu">
                                                     <rect key="frame" x="0.0" y="0.0" width="480" height="451"/>
-                                                </imageView>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="8ry-5e-bTe" secondAttribute="bottom" id="BCr-4E-0E1"/>
-                                                <constraint firstAttribute="trailing" secondItem="8ry-5e-bTe" secondAttribute="trailing" id="Gjc-ZQ-16i"/>
-                                                <constraint firstItem="8ry-5e-bTe" firstAttribute="leading" secondItem="jNX-tu-WQi" secondAttribute="leading" id="ITW-Er-DxC"/>
-                                                <constraint firstItem="8ry-5e-bTe" firstAttribute="top" secondItem="jNX-tu-WQi" secondAttribute="top" id="Ua8-EZ-Di5"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qzu-vH-G2h" secondAttribute="trailing" id="GVY-sg-tZe"/>
+                                                <constraint firstItem="Qzu-vH-G2h" firstAttribute="top" secondItem="jNX-tu-WQi" secondAttribute="top" id="ViS-uR-LSA"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qzu-vH-G2h" secondAttribute="bottom" id="bPv-ES-Zgn"/>
+                                                <constraint firstItem="Qzu-vH-G2h" firstAttribute="leading" secondItem="jNX-tu-WQi" secondAttribute="leading" id="blO-Rp-Fpc"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -66,7 +67,7 @@
                                 </constraints>
                                 <size key="customSize" width="496" height="459"/>
                                 <connections>
-                                    <outlet property="imageView" destination="8ry-5e-bTe" id="OHj-Vt-J2b"/>
+                                    <outlet property="animatedView" destination="Qzu-vH-G2h" id="dJj-Xn-5zU"/>
                                     <outlet property="shadowView" destination="jNX-tu-WQi" id="ifj-bM-r9p"/>
                                 </connections>
                             </collectionViewCell>

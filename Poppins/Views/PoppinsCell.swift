@@ -4,7 +4,7 @@ private let ImageCache = Cache<[AnimatedFrame]>()
 
 @IBDesignable
 class PoppinsCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var animatedView: AnimatedView?
     @IBOutlet weak var shadowView: UIView?
 
     @IBInspectable var cornerRadius: CGFloat = 6.0
@@ -18,13 +18,13 @@ class PoppinsCell: UICollectionViewCell {
         let image = ImageCache.itemForKey(path) ??
             curry(AnimatedFrame.createWithData)
                 <^> SyncManager.sharedManager.getFile(path).toOptional()
-                <*> imageView?.frame.size
+                <*> animatedView?.frame.size
 
         curry(ImageCache.setItem) <^> image <*> path
 
         if let x = image {
-            imageView?.setAnimatedImage(x)
-            imageView?.startAnimatingGIF()
+            animatedView?.setAnimatedFrames(x)
+            animatedView?.resumeAnimation()
         }
     }
 
@@ -37,7 +37,7 @@ class PoppinsCell: UICollectionViewCell {
 
 extension PoppinsCell {
     func setupCornerRadius() {
-        imageView?.layer.cornerRadius = cornerRadius
+        animatedView?.layer.cornerRadius = cornerRadius
     }
 
     func setupDropShadow() {
