@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */; };
 		52F67282AB2CBF409064A361 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A2729CDC3064EC8E18E74E8 /* Images.xcassets */; };
+		5D8975CA1A43807D00F72C27 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8975C91A43807D00F72C27 /* Button.swift */; };
 		6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D3C7953B819874CE387DA /* AppDelegate.swift */; };
 		6A696F747A9BF689A96680CC /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
@@ -189,6 +190,7 @@
 		0A2729CDC3064EC8E18E74E8 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2687C52B5525793534A0348B /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		3C2E4731BAC412231FABC50C /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5D8975C91A43807D00F72C27 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		636D3C7953B819874CE387DA /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C8F5A473AB2C1C4E96CABB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */,
+				5D8975C91A43807D00F72C27 /* Button.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				EA7A042E1A1E44D8002C73AF /* Results.swift in Sources */,
 				EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */,
 				EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */,
+				5D8975CA1A43807D00F72C27 /* Button.swift in Sources */,
 				EAB1931A1A2FA0740002C6D0 /* LinkAccountViewController.swift in Sources */,
 				EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */,
 				EAB2111E1A24DEEA0069A5C6 /* UIApplication.swift in Sources */,

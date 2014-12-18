@@ -1,6 +1,7 @@
 class LinkAccountViewController: UIViewController {
     @IBOutlet weak var syncingView: UIView!
     @IBOutlet weak var syncingViewOffsetConstraint: NSLayoutConstraint!
+    @IBOutlet weak var linkDropboxButton: Button!
 
     override func viewDidLoad() {
         super.viewDidLoad()
