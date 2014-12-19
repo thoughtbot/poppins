@@ -1,6 +1,7 @@
 import Gifu
 
 private let ImageCache = Cache<[AnimatedFrame]>()
+private let purger = CachePurger(cache: ImageCache)
 private let operationQueue = AsyncQueue(name: "PoppinsCacheQueue", maxOperations: 10)
 
 @IBDesignable
@@ -26,6 +27,7 @@ class PoppinsCell: UICollectionViewCell {
     }
 
     func fetchImage(path: String) {
+        purger.thumbsUpGoodJob()
         var image = ImageCache.itemForKey(path)
         if image == nil {
             if operation?.cancelled ?? true { return }
