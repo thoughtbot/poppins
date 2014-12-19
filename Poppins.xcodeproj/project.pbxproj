@@ -13,6 +13,7 @@
 		6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D3C7953B819874CE387DA /* AppDelegate.swift */; };
 		6A696F747A9BF689A96680CC /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
+		EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
 		EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
 		EA45EF431A1D4C36001E6178 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA45EF421A1D4C36001E6178 /* Result.swift */; };
 		EA7A042E1A1E44D8002C73AF /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Results.swift */; };
@@ -62,7 +63,7 @@
 		F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BE3DE1A41E5B9009192A4 /* UIKit.framework */; };
 		F80BE3EA1A41E659009192A4 /* HockeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80BE3E91A41E659009192A4 /* HockeyManager.swift */; };
 		F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
-		F825388B1A3F8C5C004476DC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* ImageCache.swift */; };
+		F825388B1A3F8C5C004476DC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* Cache.swift */; };
 		F825388D1A3F8D4B004476DC /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +198,7 @@
 		A7291FA7576673F55122E623 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB0894473AAFE7E68C6396D /* Poppins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA34E7841A1CFD4F00875CFC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		EA395D661A448DF400EB607E /* AsyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncQueue.swift; sourceTree = "<group>"; };
 		EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EA45EF421A1D4C36001E6178 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA7A042D1A1E44D8002C73AF /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -244,7 +246,7 @@
 		F80BE3DE1A41E5B9009192A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F80BE3E91A41E659009192A4 /* HockeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HockeyManager.swift; sourceTree = "<group>"; };
 		F825387D1A3F818A004476DC /* ApplicationAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
-		F825388A1A3F8C5C004476DC /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F825388A1A3F8C5C004476DC /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		F825388C1A3F8D4B004476DC /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -369,7 +371,8 @@
 				EAB2111B1A24D7650069A5C6 /* UnconfiguredService.swift */,
 				EAF49CDE1A3F582100B395DF /* GifItemSource.swift */,
 				F80BE3E91A41E659009192A4 /* HockeyManager.swift */,
-				F825388A1A3F8C5C004476DC /* ImageCache.swift */,
+				F825388A1A3F8C5C004476DC /* Cache.swift */,
+				EA395D661A448DF400EB607E /* AsyncQueue.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
 				EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */,
 				EAACE1F01A1BA93700E3C43D /* Operators.swift in Sources */,
+				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
 				EA7A042E1A1E44D8002C73AF /* Results.swift in Sources */,
 				EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */,
 				EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */,
@@ -831,7 +835,7 @@
 				EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */,
 				6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */,
 				F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */,
-				F825388B1A3F8C5C004476DC /* ImageCache.swift in Sources */,
+				F825388B1A3F8C5C004476DC /* Cache.swift in Sources */,
 				6A696F747A9BF689A96680CC /* Main.storyboard in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
 				EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */,
