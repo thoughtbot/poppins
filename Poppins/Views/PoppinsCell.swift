@@ -7,6 +7,7 @@ private let operationQueue = AsyncQueue(name: "PoppinsCacheQueue", maxOperations
 class PoppinsCell: UICollectionViewCell {
     @IBOutlet weak var animatedView: AnimatedView?
     @IBOutlet weak var shadowView: UIView?
+    @IBOutlet weak var rootView: UIView?
 
     @IBInspectable var cornerRadius: CGFloat = 6.0
 
@@ -54,7 +55,7 @@ class PoppinsCell: UICollectionViewCell {
 
 extension PoppinsCell {
     func setupCornerRadius() {
-        animatedView?.layer.cornerRadius = cornerRadius
+        rootView?.layer.cornerRadius = cornerRadius
     }
 
     func setupDropShadow() {
