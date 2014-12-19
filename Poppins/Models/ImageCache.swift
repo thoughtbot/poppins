@@ -1,7 +1,8 @@
-class Cache<T> {
+class Cache<T>: NSObject {
     var cache: [String: T] = [:]
 
-    init() {
+    override init() {
+        super.init()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("didRecieveMemoryWarning"), name: UIApplicationDidReceiveMemoryWarningNotification, object: .None)
     }
 
