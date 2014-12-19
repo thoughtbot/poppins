@@ -33,9 +33,11 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     }
 
     func reloadFiles() {
-        images = SyncManager.sharedManager.getFiles() ?? []
-        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-            _ = self.collectionView?.reloadData()
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) { [unowned self] in
+            self.images = SyncManager.sharedManager.getFiles() ?? []
+            dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+                _ = self.collectionView?.reloadData()
+            }
         }
     }
 
