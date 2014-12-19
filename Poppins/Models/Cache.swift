@@ -1,18 +1,7 @@
-class Cache<T>: NSObject {
+import Gifu
+
+class Cache<T> {
     var cache: [String: T] = [:]
-
-    override init() {
-        super.init()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("didRecieveMemoryWarning"), name: UIApplicationDidReceiveMemoryWarningNotification, object: .None)
-    }
-
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-
-    func didRecieveMemoryWarning() {
-        cache.removeAll(keepCapacity: false)
-    }
 
     func itemForKey(key: String) -> T? {
         return cache[key]
@@ -21,4 +10,29 @@ class Cache<T>: NSObject {
     func setItem(item: T, forKey key: String) {
         cache[key] = item
     }
+
+    func purge() {
+        println("purging cache")
+        cache = [:]
+    }
+}
+
+@objc class CachePurger {
+    let cache: Cache<[AnimatedFrame]>
+
+    init(cache: Cache<[AnimatedFrame]>) {
+        self.cache = cache
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("didRecieveMemoryWarning"), name: UIApplicationDidReceiveMemoryWarningNotification, object: .None)
+    }
+
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
+    func thumbsUpGoodJob() { }
+
+    func didRecieveMemoryWarning() {
+        cache.purge()
+    }
+
 }
