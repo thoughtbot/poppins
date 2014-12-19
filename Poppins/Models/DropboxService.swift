@@ -52,21 +52,24 @@ public class DropboxService : SyncableService {
         DBFilesystem(account: account) >>- DBFilesystem.setSharedFilesystem
         let filesystem = DBFilesystem.sharedFilesystem()
 
+        watchForFileChanges()
         filesystem.addObserver(self) {
             if filesystem.completedFirstSync && !filesystem.status.metadata.inProgress {
                 var token: dispatch_once_t = 0
                 dispatch_once(&token, self.completePreload)
             }
         }
-
     }
 
     private func completePreload() {
         let filesystem = DBFilesystem.sharedFilesystem()
         filesystem.removeObserver(self)
         NSNotificationCenter.defaultCenter().postNotificationName(InitialSyncCompletedNotificationName, object: .None)
+        watchForFileChanges()
+    }
 
-        filesystem.addObserver(self, forPathAndDescendants: DBPath.root()) {
+    private func watchForFileChanges() {
+        DBFilesystem.sharedFilesystem().addObserver(self, forPathAndDescendants: DBPath.root()) {
             dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
                 _ = SyncManager.sharedManager.preload <^> SyncManager.sharedManager.getFiles()
             }

@@ -34,7 +34,9 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
     func reloadFiles() {
         images = SyncManager.sharedManager.getFiles() ?? []
-        collectionView?.reloadData()
+        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+            _ = self.collectionView?.reloadData()
+        }
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
