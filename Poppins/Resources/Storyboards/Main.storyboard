@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AfL-xs-nH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AfL-xs-nH3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -44,16 +44,33 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNX-tu-WQi" userLabel="ShadowView">
                                             <rect key="frame" x="8" y="8" width="480" height="451"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzu-vH-G2h" customClass="AnimatedView" customModule="Gifu">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4I6-ev-TGc">
                                                     <rect key="frame" x="0.0" y="0.0" width="480" height="451"/>
+                                                    <subviews>
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VvM-jD-gRj">
+                                                            <rect key="frame" x="230" y="216" width="20" height="20"/>
+                                                        </activityIndicatorView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzu-vH-G2h" customClass="AnimatedView" customModule="Gifu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="480" height="451"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="centerX" secondItem="VvM-jD-gRj" secondAttribute="centerX" id="4GD-hD-1f0"/>
+                                                        <constraint firstAttribute="centerY" secondItem="VvM-jD-gRj" secondAttribute="centerY" id="6By-hx-3QP"/>
+                                                        <constraint firstItem="Qzu-vH-G2h" firstAttribute="leading" secondItem="4I6-ev-TGc" secondAttribute="leading" id="FP9-HM-cvP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Qzu-vH-G2h" secondAttribute="bottom" id="I9q-6X-pt2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qzu-vH-G2h" secondAttribute="trailing" id="LEL-qE-Vwh"/>
+                                                        <constraint firstItem="Qzu-vH-G2h" firstAttribute="top" secondItem="4I6-ev-TGc" secondAttribute="top" id="WyQ-vk-9gk"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Qzu-vH-G2h" secondAttribute="trailing" id="GVY-sg-tZe"/>
-                                                <constraint firstItem="Qzu-vH-G2h" firstAttribute="top" secondItem="jNX-tu-WQi" secondAttribute="top" id="ViS-uR-LSA"/>
-                                                <constraint firstAttribute="bottom" secondItem="Qzu-vH-G2h" secondAttribute="bottom" id="bPv-ES-Zgn"/>
-                                                <constraint firstItem="Qzu-vH-G2h" firstAttribute="leading" secondItem="jNX-tu-WQi" secondAttribute="leading" id="blO-Rp-Fpc"/>
+                                                <constraint firstItem="4I6-ev-TGc" firstAttribute="top" secondItem="jNX-tu-WQi" secondAttribute="top" id="6iT-A6-rUR"/>
+                                                <constraint firstAttribute="bottom" secondItem="4I6-ev-TGc" secondAttribute="bottom" id="O1O-0T-fSU"/>
+                                                <constraint firstItem="4I6-ev-TGc" firstAttribute="leading" secondItem="jNX-tu-WQi" secondAttribute="leading" id="S1m-c3-SOe"/>
+                                                <constraint firstAttribute="trailing" secondItem="4I6-ev-TGc" secondAttribute="trailing" id="YuD-yp-ubD"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -66,8 +83,14 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="jNX-tu-WQi" secondAttribute="bottom" constant="-8" id="Khd-xo-LMf"/>
                                 </constraints>
                                 <size key="customSize" width="496" height="459"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.1450980392" green="0.15686274510000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="animatedView" destination="Qzu-vH-G2h" id="dJj-Xn-5zU"/>
+                                    <outlet property="rootView" destination="4I6-ev-TGc" id="F1N-ae-P3c"/>
                                     <outlet property="shadowView" destination="jNX-tu-WQi" id="ifj-bM-r9p"/>
                                 </connections>
                             </collectionViewCell>
@@ -183,7 +206,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DesignPlaceholder" width="301" height="226"/>
         <image name="poppin-logo" width="449" height="126"/>
     </resources>
 </document>
