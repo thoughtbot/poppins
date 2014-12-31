@@ -1,3 +1,5 @@
+import LlamaKit
+
 public let AccountLinkedNotificationName = "PoppinsAccountLinked"
 let PreloadCompletedNotificationName = "PoppinsPreloadCompleted"
 let InitialSyncCompletedNotificationName = "PoppinsInitialSyncCompleted"

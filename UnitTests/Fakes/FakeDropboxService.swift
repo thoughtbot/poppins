@@ -1,4 +1,5 @@
 import Poppins
+import LlamaKit
 
 class FakeDropboxService: SyncableService {
     var lastCall: String = ""
@@ -39,17 +40,17 @@ class FakeDropboxService: SyncableService {
         lastCall = "saveFile"
         self.filename = filename
         self.data = data
-        return .success(())
+        return success(())
     }
 
     func getFiles() -> Result<[String]> {
         lastCall = "getFiles"
-        return .success([])
+        return success([])
     }
 
     func getFile(filename: String) -> Result<NSData> {
         lastCall = "getFile"
         self.filename = filename
-        return .success(NSData())
+        return success(NSData())
     }
 }

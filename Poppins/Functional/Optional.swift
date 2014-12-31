@@ -1,3 +1,5 @@
+import LlamaKit
+
 func >>-<A, B>(a: A?, f: A -> B?) -> B? {
     switch a {
     case let .Some(x): return f(x)
@@ -22,8 +24,8 @@ func <*><A, B>(f: (A -> B)?, a: A?) -> B? {
 extension Optional {
     func toResult() -> Result<T> {
         switch self {
-        case let .Some(x): return .success(x)
-        case .None: return .error(NSError(domain: "", code: 0, userInfo: .None))
+        case let .Some(x): return success(x)
+        case .None: return failure(NSError(domain: "", code: 0, userInfo: .None))
         }
     }
 }
