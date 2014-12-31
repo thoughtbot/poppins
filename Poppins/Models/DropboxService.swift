@@ -12,7 +12,7 @@ public class DropboxService : SyncableService {
         }
     }
 
-    public func initiateAuthentication<A>(controller: A) {
+    public func initiateAuthentication<T>(controller: T) {
         controller as? UIViewController >>- DBAccountManager.sharedManager().linkFromController
     }
 
