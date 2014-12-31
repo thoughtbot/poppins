@@ -1,5 +1,6 @@
-github "Quick/Quick"
-github "Quick/Nimble"
 github "thoughtbot/Cascade"
 github "tonyd256/gifu"
 github "LlamaKit/LlamaKit"
+
+github "Quick/Quick"
+github "Quick/Nimble"
