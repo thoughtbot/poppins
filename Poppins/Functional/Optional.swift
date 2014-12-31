@@ -1,10 +1,7 @@
 import LlamaKit
 
 func >>-<A, B>(a: A?, f: A -> B?) -> B? {
-    switch a {
-    case let .Some(x): return f(x)
-    case .None: return .None
-    }
+    return a.flatMap(f)
 }
 
 func <^><A, B>(f: A -> B, a: A?) -> B? {
@@ -12,13 +9,24 @@ func <^><A, B>(f: A -> B, a: A?) -> B? {
 }
 
 func <*><A, B>(f: (A -> B)?, a: A?) -> B? {
-    switch (f, a) {
-    case let (.Some(fx), .Some(x)): return fx(x)
-    default: return .None
-    }
+    return a.apply(f)
 }
 
 extension Optional {
+    func flatMap<U>(f: T -> U?) -> U? {
+        switch self {
+        case let .Some(x): return f(x)
+        case .None: return .None
+        }
+    }
+
+    func apply<U>(f: (T -> U)?) -> U? {
+        switch (self, f) {
+        case let (.Some(x), .Some(fx)): return fx(x)
+        default: return .None
+        }
+    }
+
     func toResult() -> Result<T> {
         switch self {
         case let .Some(x): return success(x)
