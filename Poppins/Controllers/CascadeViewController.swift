@@ -1,5 +1,6 @@
 import Cascade
 import Gifu
+import LlamaKit
 
 class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     var images: [String] = []
@@ -54,7 +55,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let path = safeValue(images, indexPath.row)
         let data: Result<NSData> = path.toResult() >>- SyncManager.sharedManager.getFile
-        return data.toOptional() >>- imageForData >>- { $0.size } ?? CGSize(width: 1, height: 1)
+        return data.value() >>- imageForData >>- { $0.size } ?? CGSize(width: 1, height: 1)
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: CascadeLayout, numberOfColumnsInSectionAtIndexPath indexPath: NSIndexPath) -> Int {
@@ -63,7 +64,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let imagePath = safeValue(images, indexPath.row)
-        let data = imagePath >>- { SyncManager.sharedManager.getFile($0).toOptional() }
+        let data = imagePath >>- { SyncManager.sharedManager.getFile($0).value() }
         let gifItemSource = GifItemSource.create <^> data
 
         if let source = gifItemSource {

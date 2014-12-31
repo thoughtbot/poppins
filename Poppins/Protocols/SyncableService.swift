@@ -1,3 +1,5 @@
+import LlamaKit
+
 public protocol SyncableService {
     var type: Service { get }
 
