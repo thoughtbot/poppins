@@ -65,6 +65,7 @@
 		F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
 		F825388B1A3F8C5C004476DC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* Cache.swift */; };
 		F825388D1A3F8D4B004476DC /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
+		F88CBD8D1A542F1F009F8D53 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +249,7 @@
 		F825387D1A3F818A004476DC /* ApplicationAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
 		F825388A1A3F8C5C004476DC /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		F825388C1A3F8D4B004476DC /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
+		F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dropbox.framework; path = Frameworks/Dropbox.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 				F80BE3E31A41E5B9009192A4 /* MobileCoreServices.framework in Frameworks */,
 				F80BE3E41A41E5B9009192A4 /* QuartzCore.framework in Frameworks */,
 				F80BE3E51A41E5B9009192A4 /* QuickLook.framework in Frameworks */,
+				F88CBD8D1A542F1F009F8D53 /* Dropbox.framework in Frameworks */,
 				F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */,
 				F80BE3E71A41E5B9009192A4 /* SystemConfiguration.framework in Frameworks */,
 				F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */,
@@ -473,6 +476,7 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */,
 				F80BE3D51A41E5B9009192A4 /* AssetsLibrary.framework */,
 				F80BE3D61A41E5B9009192A4 /* CoreGraphics.framework */,
 				F80BE3D71A41E5B9009192A4 /* CoreText.framework */,
@@ -904,6 +908,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/HockeySDK.embeddedframework",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -938,6 +943,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/HockeySDK.embeddedframework",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
