@@ -21,8 +21,8 @@ extension Optional {
     }
 
     func apply<U>(f: (T -> U)?) -> U? {
-        switch (self, f) {
-        case let (.Some(x), .Some(fx)): return fx(x)
+        switch f {
+        case let .Some(fx): return self.map(fx)
         default: return .None
         }
     }

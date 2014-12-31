@@ -14,10 +14,8 @@ func <*><T, U>(f: Result<T -> U>, a: Result<T>) -> Result<U> {
 
 extension Result {
     func apply<U>(f: Result<T -> U>) -> Result<U> {
-        switch (self, f) {
-        case let (.Success(aBox), .Success(fBox)): return success(fBox.unbox(aBox.unbox))
-        case let (.Failure(err), _): return failure(err)
-        case let (_, .Failure(err)): return failure(err)
+        switch f {
+        case let .Success(fx): return self.map(fx.unbox)
         default: return failure(NSError())
         }
     }
