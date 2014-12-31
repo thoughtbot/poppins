@@ -1,14 +1,14 @@
 import LlamaKit
 
-func >>-<A, B>(a: A?, f: A -> B?) -> B? {
+func >>-<T, U>(a: T?, f: T -> U?) -> U? {
     return a.flatMap(f)
 }
 
-func <^><A, B>(f: A -> B, a: A?) -> B? {
+func <^><T, U>(f: T -> U, a: T?) -> U? {
     return a.map(f)
 }
 
-func <*><A, B>(f: (A -> B)?, a: A?) -> B? {
+func <*><T, U>(f: (T -> U)?, a: T?) -> U? {
     return a.apply(f)
 }
 

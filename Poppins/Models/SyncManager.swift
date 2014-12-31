@@ -27,7 +27,7 @@ public class SyncManager: SyncableService {
         self.service = service
     }
 
-    public func initiateAuthentication<A>(meta: A) {
+    public func initiateAuthentication<T>(meta: T) {
         service.initiateAuthentication(meta)
     }
 

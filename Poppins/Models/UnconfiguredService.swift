@@ -5,7 +5,7 @@ public class UnconfiguredService: SyncableService {
 
     public func setup() {}
 
-    public func initiateAuthentication<A>(_: A) {}
+    public func initiateAuthentication<T>(_: T) {}
 
     public func finalizeAuthentication(_: NSURL) -> Bool {
         return false
