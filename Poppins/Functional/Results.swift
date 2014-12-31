@@ -1,14 +1,14 @@
 import LlamaKit
 
-func >>-<A, B>(a: Result<A>, f: A -> Result<B>) -> Result<B> {
+func >>-<T, U>(a: Result<T>, f: T -> Result<U>) -> Result<U> {
     return a.flatMap(f)
 }
 
-func <^><A, B>(f: A -> B, a: Result<A>) -> Result<B> {
+func <^><T, U>(f: T -> U, a: Result<T>) -> Result<U> {
     return a.map(f)
 }
 
-func <*><A, B>(f: Result<A -> B>, a: Result<A>) -> Result<B> {
+func <*><T, U>(f: Result<T -> U>, a: Result<T>) -> Result<U> {
     return a.apply(f)
 }
 

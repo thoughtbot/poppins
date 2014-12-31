@@ -4,7 +4,7 @@ public protocol SyncableService {
     var type: Service { get }
 
     func setup()
-    func initiateAuthentication<A>(A)
+    func initiateAuthentication<T>(T)
     func finalizeAuthentication(NSURL) -> Bool
     func isLinked() -> Bool
     func unLink()
