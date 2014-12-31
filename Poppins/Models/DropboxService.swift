@@ -1,3 +1,5 @@
+import LlamaKit
+
 public class DropboxService : SyncableService {
     public let type: Service = .Dropbox
 

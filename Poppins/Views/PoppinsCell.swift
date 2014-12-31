@@ -32,7 +32,7 @@ class PoppinsCell: UICollectionViewCell {
         if image == nil {
             if operation?.cancelled ?? true { return }
             image = curry(AnimatedFrame.createWithData)
-                <^> SyncManager.sharedManager.getFile(path).toOptional()
+                <^> SyncManager.sharedManager.getFile(path).value()
                 <*> animatedView?.frame.size
 
             curry(ImageCache.setItem) <^> image <*> path
