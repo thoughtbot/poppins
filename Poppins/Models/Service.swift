@@ -1,25 +1,24 @@
 let StoredServiceKey = "PoppinsStoredServiceKey"
 
+private let UnconfiguredServiceName = "Unconfigured"
+private let DropboxServiceName = "Dropbox"
+
 public enum Service: Printable {
     case Unconfigured
     case Dropbox
 
     public var description: String {
         switch self {
-        case .Unconfigured: return "Unconfigured"
-        case .Dropbox: return "Dropbox"
+        case .Unconfigured: return UnconfiguredServiceName
+        case .Dropbox: return DropboxServiceName
         }
     }
 
     init?(string: String?) {
-        if let s = string {
-            switch s {
-            case "Unconfigured": self = .Unconfigured
-            case "Dropbox": self = .Dropbox
-            default: return nil
-            }
-        } else {
-            return nil
+        switch string {
+        case .Some(UnconfiguredServiceName): self = .Unconfigured
+        case .Some(DropboxServiceName): self = .Dropbox
+        default: return nil
         }
     }
 }
