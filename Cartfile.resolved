@@ -1,4 +1,5 @@
 github "thoughtbot/Cascade" "v0.1.1"
+github "bitstadium/HockeySDK-iOS" "3.6.2"
 github "LlamaKit/LlamaKit" "0.2.0"
 github "Quick/Nimble" "v0.2.0"
 github "Quick/Quick" "v0.2.2"
