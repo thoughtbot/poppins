@@ -2,4 +2,4 @@
 
 set -o pipefail
 
-xcodebuild test -workspace Poppins.xcworkspace -scheme Poppins -sdk iphonesimulator BUILD_ACTIVE_ARCH=NO | xcpretty -t -c
+xcodebuild test -project Poppins.xcodeproj -scheme Poppins -sdk iphonesimulator BUILD_ACTIVE_ARCH=NO | xcpretty -t -c
