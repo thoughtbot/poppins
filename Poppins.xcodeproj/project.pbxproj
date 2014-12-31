@@ -60,6 +60,8 @@
 		F88CBDF01A543D12009F8D53 /* LlamaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBDDB1A543CC9009F8D53 /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F88CBDF11A543D19009F8D53 /* Gifu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBD9A1A543018009F8D53 /* Gifu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F88CBDF21A543D20009F8D53 /* Cascade.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBD9F1A543025009F8D53 /* Cascade.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F897DAC61A54582F00F0CBC6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBDAB1A543036009F8D53 /* Quick.framework */; };
+		F897DAD11A54583B00F0CBC6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBDB51A543044009F8D53 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,6 +280,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F897DAC61A54582F00F0CBC6 /* Quick.framework in Frameworks */,
+				F897DAD11A54583B00F0CBC6 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
