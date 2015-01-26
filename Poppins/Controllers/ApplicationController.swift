@@ -9,6 +9,12 @@
         }
     }
 
+    var rootViewController: UIViewController {
+        let vc = RootViewController()
+        vc.controller = RootController()
+        return vc
+    }
+
     func configureLinkedService() {
         HockeyManager.configure()
 

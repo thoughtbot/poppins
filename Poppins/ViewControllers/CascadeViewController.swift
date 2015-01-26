@@ -21,14 +21,6 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         }
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if !SyncManager.sharedManager.isLinked() {
-            performSegueWithIdentifier("LinkAccountSegue", sender: self)
-        }
-    }
-
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
