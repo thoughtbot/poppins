@@ -2,6 +2,7 @@ github "bitstadium/HockeySDK-iOS"
 github "thoughtbot/Cascade"
 github "tonyd256/gifu"
 github "LlamaKit/LlamaKit"
+github "ReactiveCocoa/ReactiveCocoa" "swift-development"
 
 github "Quick/Quick"
 github "Quick/Nimble"
