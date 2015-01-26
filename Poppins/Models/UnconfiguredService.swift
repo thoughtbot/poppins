@@ -17,15 +17,15 @@ public class UnconfiguredService: SyncableService {
 
     public func unLink() {}
 
-    public func saveFile(filename: String, data: NSData) -> Result<()> {
+    public func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
     }
 
-    public func getFiles() -> Result<[String]> {
+    public func getFiles() -> Result<[String], NSError> {
         return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
     }
 
-    public func getFile(filename: String) -> Result<NSData> {
+    public func getFile(filename: String) -> Result<NSData, NSError> {
         return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
     }
 }

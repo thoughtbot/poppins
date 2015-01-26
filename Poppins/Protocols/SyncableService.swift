@@ -9,7 +9,7 @@ public protocol SyncableService {
     func isLinked() -> Bool
     func unLink()
 
-    func saveFile(filename: String, data: NSData) -> Result<()>
-    func getFiles() -> Result<[String]>
-    func getFile(path: String) -> Result<NSData>
+    func saveFile(filename: String, data: NSData) -> Result<(), NSError>
+    func getFiles() -> Result<[String], NSError>
+    func getFile(path: String) -> Result<NSData, NSError>
 }

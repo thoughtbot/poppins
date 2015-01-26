@@ -1,22 +1,22 @@
 import LlamaKit
 
-func >>-<T, U>(a: Result<T>, f: T -> Result<U>) -> Result<U> {
+func >>-<T, U, E>(a: Result<T, E>, f: T -> Result<U, E>) -> Result<U, E> {
     return a.flatMap(f)
 }
 
-func <^><T, U>(f: T -> U, a: Result<T>) -> Result<U> {
+func <^><T, U, E>(f: T -> U, a: Result<T, E>) -> Result<U, E> {
     return a.map(f)
 }
 
-func <*><T, U>(f: Result<T -> U>, a: Result<T>) -> Result<U> {
+func <*><T, U, E>(f: Result<T -> U, E>, a: Result<T, E>) -> Result<U, E> {
     return a.apply(f)
 }
 
 extension Result {
-    func apply<U>(f: Result<T -> U>) -> Result<U> {
+    func apply<U>(f: Result<T -> U, E>) -> Result<U, E> {
         switch f {
         case let .Success(fx): return self.map(fx.unbox)
-        default: return failure(NSError())
+        case let .Failure(e): return failure(e.unbox)
         }
     }
 }

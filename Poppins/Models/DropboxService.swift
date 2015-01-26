@@ -30,18 +30,18 @@ public class DropboxService : SyncableService {
         DBAccountManager.sharedManager().linkedAccount?.unlink()
     }
 
-    public func saveFile(filename: String, data: NSData) -> Result<()> {
+    public func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         let path = DBPath.root().childPath(filename)
         return DBFilesystem.sharedFilesystem().createFile(path) >>- { $0.writeData(data) }
     }
 
-    public func getFiles() -> Result<[String]> {
+    public func getFiles() -> Result<[String], NSError> {
         let result = DBFilesystem.sharedFilesystem().listFolder(DBPath.root())
         let filePaths: [DBFileInfo] -> [String] = { $0.map { $0.path.stringValue() } }
         return filePaths <^> result
     }
 
-    public func getFile(filename: String) -> Result<NSData> {
+    public func getFile(filename: String) -> Result<NSData, NSError> {
         let path = DBPath.root().childPath(filename)
         return DBFilesystem.sharedFilesystem().openFile(path) >>- { file in
             let data = file.readData()
