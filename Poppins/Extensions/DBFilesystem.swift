@@ -1,7 +1,7 @@
 import LlamaKit
 
 extension DBFilesystem {
-    func createFile(path: DBPath) -> Result<DBFile> {
+    func createFile(path: DBPath) -> Result<DBFile, NSError> {
         var error: DBError?
         let file = createFile(path, error: &error)
 
@@ -11,7 +11,7 @@ extension DBFilesystem {
         }
     }
 
-    func openFile(path: DBPath) -> Result<DBFile> {
+    func openFile(path: DBPath) -> Result<DBFile, NSError> {
         var error: DBError?
         let file = openFile(path, error: &error)
 
@@ -21,7 +21,7 @@ extension DBFilesystem {
         }
     }
 
-    func listFolder(path: DBPath) -> Result<[DBFileInfo]> {
+    func listFolder(path: DBPath) -> Result<[DBFileInfo], NSError> {
         var error: DBError?
         let files = listFolder(path, error: &error)
 

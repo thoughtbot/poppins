@@ -1,7 +1,7 @@
 import LlamaKit
 
 extension DBFile {
-    func writeData(data: NSData) -> Result<()> {
+    func writeData(data: NSData) -> Result<(), NSError> {
         var error: DBError?
         writeData(data, error: &error)
 
@@ -11,7 +11,7 @@ extension DBFile {
         }
     }
 
-    func readData() -> Result<NSData> {
+    func readData() -> Result<NSData, NSError> {
         var error: DBError?
         let data = readData(&error)
 

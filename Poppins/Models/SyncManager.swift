@@ -51,15 +51,15 @@ public class SyncManager: SyncableService {
         service.unLink()
     }
 
-    public func saveFile(filename: String, data: NSData) -> Result<()> {
+    public func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         return service.saveFile(filename, data: data)
     }
 
-    public func getFile(path: String) -> Result<NSData> {
+    public func getFile(path: String) -> Result<NSData, NSError> {
         return service.getFile(path)
     }
 
-    public func getFiles() -> Result<[String]> {
+    public func getFiles() -> Result<[String], NSError> {
         return service.getFiles()
     }
 
