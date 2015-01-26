@@ -1,5 +1,7 @@
 # Poppins #
 
+Journey to Version 1.0
+
 ## Setup ##
 
 Run `bin/setup`
