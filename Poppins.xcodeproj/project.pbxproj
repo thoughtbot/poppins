@@ -346,8 +346,6 @@
 			isa = PBXGroup;
 			children = (
 				636D3C7953B819874CE387DA /* AppDelegate.swift */,
-				EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */,
-				EAB193191A2FA0740002C6D0 /* LinkAccountViewController.swift */,
 				EAB1931B1A2FA8920002C6D0 /* ApplicationController.swift */,
 				F825387D1A3F818A004476DC /* ApplicationAppearance.swift */,
 			);
@@ -363,6 +361,7 @@
 				97EECE52D262452A82126E4F /* Models */,
 				7F98ED4DFBE763233E37A145 /* ViewModels */,
 				C10628858FBC5CFBEF2E82A5 /* Controllers */,
+				EA4A511F1A76E0E400DCEAA8 /* ViewControllers */,
 				3B8F3C69D1C7435C4717945C /* Views */,
 				EEF0CA746796050EB40ADC3E /* Resources */,
 				EAB192E41A2F8D420002C6D0 /* Frameworks */,
@@ -385,6 +384,15 @@
 				2687C52B5525793534A0348B /* UnitTests-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA4A511F1A76E0E400DCEAA8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */,
+				EAB193191A2FA0740002C6D0 /* LinkAccountViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		EA7A04331A23BB3B002C73AF /* Models */ = {
