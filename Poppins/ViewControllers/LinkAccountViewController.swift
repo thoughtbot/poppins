@@ -3,6 +3,8 @@ class LinkAccountViewController: UIViewController {
     @IBOutlet weak var syncingViewOffsetConstraint: NSLayoutConstraint!
     @IBOutlet weak var linkDropboxButton: Button!
 
+    var controller: LinkAccountController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,14 +25,10 @@ class LinkAccountViewController: UIViewController {
     }
 
     func initialSyncCompleted() {
-        dispatch_async(dispatch_get_main_queue()) {
-            _ = self.presentingViewController?.dismissViewControllerAnimated(true, completion: .None)
-        }
+        NSNotificationCenter.defaultCenter().postNotificationName("LinkingComplete", object: .None)
     }
     
     @IBAction func linkDropbox() {
-        SyncManager.sharedManager.setService(DropboxService())
-        SyncManager.sharedManager.setup()
-        SyncManager.sharedManager.initiateAuthentication(self)
+        controller?.linkAccount(self)
     }
 }
