@@ -6,4 +6,8 @@ class RootController {
     var linkAccountController: LinkAccountController {
         return LinkAccountController()
     }
+
+    var cascadeController: CascadeController {
+        return CascadeController()
+    }
 }
