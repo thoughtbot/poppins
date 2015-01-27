@@ -1,4 +1,5 @@
 import LlamaKit
+import Runes
 
 public let AccountLinkedNotificationName = "PoppinsAccountLinked"
 let PreloadCompletedNotificationName = "PoppinsPreloadCompleted"
@@ -6,17 +7,17 @@ let InitialSyncCompletedNotificationName = "PoppinsInitialSyncCompleted"
 
 public let ServiceKey = "PoppinsService"
 
-public class SyncManager: SyncableService {
-    public var service: SyncableService
-    public var type: Service {
-        return service.type
+public class SyncManager: SyncableService, ServiceUpdateObserver {
+    public var observer: ServiceUpdateObserver?
+
+    public var service: SyncableService {
+        didSet {
+            service.observer = self
+        }
     }
 
-    public class var sharedManager: SyncManager {
-        struct Static {
-            static let instance: SyncManager = SyncManager(service: UnconfiguredService())
-        }
-        return Static.instance
+    public var type: Service {
+        return service.type
     }
 
     init(service: SyncableService) {
@@ -66,6 +67,12 @@ public class SyncManager: SyncableService {
     func preload(files: [String]) {
         Async.map(files, self.getFile).done {
             NSNotificationCenter.defaultCenter().postNotificationName(PreloadCompletedNotificationName, object: .None)
+        }
+    }
+
+    public func serviceDidUpdate() {
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+            _ = self.preload <^> self.getFiles()
         }
     }
 }

@@ -2,6 +2,7 @@ import LlamaKit
 
 public class UnconfiguredService: SyncableService {
     public let type: Service = .Unconfigured
+    public var observer: ServiceUpdateObserver? = .None
 
     public func setup() {}
 

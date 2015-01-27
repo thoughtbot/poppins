@@ -2,6 +2,7 @@ import LlamaKit
 
 public protocol SyncableService {
     var type: Service { get }
+    var observer: ServiceUpdateObserver? { get set }
 
     func setup()
     func initiateAuthentication<T>(T)

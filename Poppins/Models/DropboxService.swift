@@ -3,6 +3,7 @@ import Runes
 
 public class DropboxService : SyncableService {
     public let type: Service = .Dropbox
+    public var observer: ServiceUpdateObserver? = .None
 
     public func setup() {
         let manager = DBAccountManager(appKey: "j77mzt1vvjloikh", secret: "y3rw9dlmd72dkr3")
@@ -73,9 +74,7 @@ public class DropboxService : SyncableService {
 
     private func watchForFileChanges() {
         DBFilesystem.sharedFilesystem().addObserver(self, forPathAndDescendants: DBPath.root()) {
-            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-                _ = SyncManager.sharedManager.preload <^> SyncManager.sharedManager.getFiles()
-            }
+            _ = self.observer?.serviceDidUpdate()
         }
     }
 }

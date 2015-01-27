@@ -16,6 +16,9 @@
 		EA13D8C81A7800F500E2611C /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
 		EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */; };
 		EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */; };
+		EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */; };
+		EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */; };
+		EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
 		EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
 		EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
@@ -201,6 +204,9 @@
 		EA13D8C71A7800F500E2611C /* CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeController.swift; sourceTree = "<group>"; };
 		EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModel.swift; sourceTree = "<group>"; };
 		EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelObserver.swift; sourceTree = "<group>"; };
+		EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinsCellViewModel.swift; sourceTree = "<group>"; };
+		EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinsCellController.swift; sourceTree = "<group>"; };
+		EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceUpdateObserver.swift; sourceTree = "<group>"; };
 		EA34E7841A1CFD4F00875CFC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		EA395D661A448DF400EB607E /* AsyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncQueue.swift; sourceTree = "<group>"; };
 		EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -330,6 +336,7 @@
 			children = (
 				EA835D811A1BA0560033AE00 /* SyncableService.swift */,
 				EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */,
+				EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -365,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */,
+				EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -432,6 +440,7 @@
 				EA4A51581A76E49D00DCEAA8 /* RootController.swift */,
 				EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */,
 				EA13D8C71A7800F500E2611C /* CascadeController.swift */,
+				EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -863,6 +872,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */,
 				EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
@@ -894,9 +904,11 @@
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
 				F80BE3EA1A41E659009192A4 /* HockeyManager.swift in Sources */,
+				EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */,
 				EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */,
+				EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
