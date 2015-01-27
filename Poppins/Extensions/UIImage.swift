@@ -1,3 +1,6 @@
+import UIKit
+import Foundation
+
 func imageForData(data: NSData) -> UIImage? {
     return UIImage(data: data)
 }

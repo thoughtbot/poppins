@@ -1,37 +1,38 @@
 import LlamaKit
+import Runes
 
 public let AccountLinkedNotificationName = "PoppinsAccountLinked"
 let PreloadCompletedNotificationName = "PoppinsPreloadCompleted"
 let InitialSyncCompletedNotificationName = "PoppinsInitialSyncCompleted"
 
-public let ServiceKey = "PoppinsService"
+let ServiceKey = "PoppinsService"
 
-public class SyncManager: SyncableService {
-    public var service: SyncableService
-    public var type: Service {
-        return service.type
+class SyncManager: SyncableService, ServiceUpdateObserver {
+    var observer: ServiceUpdateObserver?
+
+    var service: SyncableService {
+        didSet {
+            service.observer = self
+        }
     }
 
-    public class var sharedManager: SyncManager {
-        struct Static {
-            static let instance: SyncManager = SyncManager(service: UnconfiguredService())
-        }
-        return Static.instance
+    var type: Service {
+        return service.type
     }
 
     init(service: SyncableService) {
         self.service = service
     }
 
-    public func setService(service: SyncableService) {
+    func setService(service: SyncableService) {
         self.service = service
     }
 
-    public func initiateAuthentication<T>(meta: T) {
+    func initiateAuthentication<T>(meta: T) {
         service.initiateAuthentication(meta)
     }
 
-    public func finalizeAuthentication(url: NSURL) -> Bool {
+    func finalizeAuthentication(url: NSURL) -> Bool {
         let handled = service.finalizeAuthentication(url)
         if handled {
             NSNotificationCenter.defaultCenter().postNotificationName(AccountLinkedNotificationName, object: .None)
@@ -39,33 +40,39 @@ public class SyncManager: SyncableService {
         return handled
     }
 
-    public func setup() {
+    func setup() {
         service.setup()
     }
 
-    public func isLinked() -> Bool {
+    func isLinked() -> Bool {
         return service.isLinked()
     }
 
-    public func unLink() {
+    func unLink() {
         service.unLink()
     }
 
-    public func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
+    func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         return service.saveFile(filename, data: data)
     }
 
-    public func getFile(path: String) -> Result<NSData, NSError> {
+    func getFile(path: String) -> Result<NSData, NSError> {
         return service.getFile(path)
     }
 
-    public func getFiles() -> Result<[String], NSError> {
+    func getFiles() -> Result<[String], NSError> {
         return service.getFiles()
     }
 
     func preload(files: [String]) {
         Async.map(files, self.getFile).done {
             NSNotificationCenter.defaultCenter().postNotificationName(PreloadCompletedNotificationName, object: .None)
+        }
+    }
+
+    func serviceDidUpdate() {
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+            _ = self.preload <^> self.getFiles()
         }
     }
 }

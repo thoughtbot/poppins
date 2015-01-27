@@ -1,4 +1,6 @@
 @objc class ApplicationController {
+    let manager = SyncManager(service: UnconfiguredService())
+
     var linkedService: Service {
         get {
             let str = NSUserDefaults.standardUserDefaults().objectForKey(StoredServiceKey) as? String
@@ -11,7 +13,7 @@
 
     var rootViewController: UIViewController {
         let vc = RootViewController()
-        vc.controller = RootController()
+        vc.controller = RootController(manager: manager)
         return vc
     }
 
@@ -19,11 +21,11 @@
         HockeyManager.configure()
 
         switch linkedService {
-        case .Dropbox: SyncManager.sharedManager.setService(DropboxService())
-        case .Unconfigured: SyncManager.sharedManager.setService(UnconfiguredService())
+        case .Dropbox: manager.setService(DropboxService())
+        case .Unconfigured: manager.setService(UnconfiguredService())
         }
 
-        SyncManager.sharedManager.setup()
+        manager.setup()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setLinkedService", name: AccountLinkedNotificationName, object: .None)
     }
 
@@ -36,6 +38,10 @@
     }
 
     func setLinkedService() {
-        linkedService = SyncManager.sharedManager.type
+        linkedService = manager.type
+    }
+
+    func handleExternalURL(url: NSURL) -> Bool {
+        return manager.finalizeAuthentication(url)
     }
 }
