@@ -12,6 +12,7 @@
 		5D8975CA1A43807D00F72C27 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8975C91A43807D00F72C27 /* Button.swift */; };
 		6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D3C7953B819874CE387DA /* AppDelegate.swift */; };
 		6A696F747A9BF689A96680CC /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
+		EA13D8B71A77F53C00E2611C /* LinkAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
 		EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
 		EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
@@ -133,6 +134,7 @@
 		75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		A7291FA7576673F55122E623 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB0894473AAFE7E68C6396D /* Poppins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppins.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkAccountController.swift; sourceTree = "<group>"; };
 		EA34E7841A1CFD4F00875CFC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		EA395D661A448DF400EB607E /* AsyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncQueue.swift; sourceTree = "<group>"; };
 		EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				EAB1931B1A2FA8920002C6D0 /* ApplicationController.swift */,
 				F825387D1A3F818A004476DC /* ApplicationAppearance.swift */,
 				EA4A51581A76E49D00DCEAA8 /* RootController.swift */,
+				EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				D01FF001B12CC6AF740546A8 /* Sources */,
 				D6B504CCA3352A78D13680B4 /* Frameworks */,
 				5723682AFF856008F564888D /* Resources */,
+				EA4A51681A76ED2700DCEAA8 /* Run Script */,
 				7751DD704587A0B455FDB517 /* Warn for TODO and FIXME comments */,
 				F80BE3EB1A41FCE7009192A4 /* Set version number */,
 				EAB1930E1A2F8DC40002C6D0 /* Embed Frameworks */,
@@ -638,6 +642,25 @@
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/Carthage\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
+		EA4A51681A76ED2700DCEAA8 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cascade.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		F80BE3EB1A41FCE7009192A4 /* Set version number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -677,6 +700,7 @@
 				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
 				EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */,
 				EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */,
+				EA13D8B71A77F53C00E2611C /* LinkAccountController.swift in Sources */,
 				EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */,
 				EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */,
 				EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */,
