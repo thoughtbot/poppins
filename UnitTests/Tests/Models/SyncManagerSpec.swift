@@ -5,24 +5,25 @@ import Poppins
 class SyncManagerSpec: QuickSpec {
     override func spec() {
         describe("SyncManagerSpec") {
-            describe("singleton") {
-                it("should use the unconfigured service") {
-                    expect(SyncManager.sharedManager.type).to(equal(Service.Unconfigured))
+            describe("type") {
+                it("should return the type of the given service") {
+                    let manager = SyncManager(service: UnconfiguredService())
+                    expect(manager.type).to(equal(Service.Unconfigured))
                 }
             }
 
             describe("setService") {
                 it("should change the service") {
-                    SyncManager.sharedManager.setService(FakeDropboxService())
-                    expect(SyncManager.sharedManager.type).to(equal(Service.Dropbox))
+                    let manager = SyncManager(service: FakeDropboxService())
+                    expect(manager.type).to(equal(Service.Dropbox))
                 }
             }
 
             describe("setup") {
                 it("should call setup on the service") {
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    SyncManager.sharedManager.setup()
+                    let manager = SyncManager(service: fake)
+                    manager.setup()
                     expect(fake.lastCall).to(equal("setup"))
                 }
             }
@@ -31,8 +32,8 @@ class SyncManagerSpec: QuickSpec {
                 it("should call connect on the service") {
                     let vc = UIViewController()
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    SyncManager.sharedManager.initiateAuthentication(vc)
+                    let manager = SyncManager(service: fake)
+                    manager.initiateAuthentication(vc)
                     expect(fake.lastCall).to(equal("connect"))
                     expect(fake.controller).to(equal(vc))
                 }
@@ -42,8 +43,8 @@ class SyncManagerSpec: QuickSpec {
                 it("should call handleURL on the service") {
                     let url = NSURL(string: "http://test.com")
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    SyncManager.sharedManager.finalizeAuthentication(url!)
+                    let manager = SyncManager(service: fake)
+                    manager.finalizeAuthentication(url!)
                     expect(fake.lastCall).to(equal("handleURL"))
                     expect(fake.url).to(equal(url))
                 }
@@ -54,8 +55,8 @@ class SyncManagerSpec: QuickSpec {
                         let fake = FakeDropboxService()
                         let notificationListener = NotificationListener(notificationName: AccountLinkedNotificationName)
 
-                        SyncManager.sharedManager.setService(fake)
-                        SyncManager.sharedManager.finalizeAuthentication(url!)
+                        let manager = SyncManager(service: fake)
+                        manager.finalizeAuthentication(url!)
                         expect(notificationListener.fired).toEventually(beTruthy())
                     }
                 }
@@ -64,8 +65,8 @@ class SyncManagerSpec: QuickSpec {
             describe("isLinked") {
                 it("should call isLinked on the service") {
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    let status = SyncManager.sharedManager.isLinked()
+                    let manager = SyncManager(service: fake)
+                    let status = manager.isLinked()
                     expect(fake.lastCall).to(equal("isLinked"))
                     expect(status).to(beFalsy())
                 }
@@ -74,8 +75,8 @@ class SyncManagerSpec: QuickSpec {
             describe("unlink") {
                 it("should call unlink on the service") {
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    SyncManager.sharedManager.unLink()
+                    let manager = SyncManager(service: fake)
+                    manager.unLink()
                     expect(fake.lastCall).to(equal("unlink"))
                 }
             }
@@ -85,8 +86,8 @@ class SyncManagerSpec: QuickSpec {
                     let filename = "thefile.gif"
                     let data = NSData()
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    SyncManager.sharedManager.saveFile(filename, data: data)
+                    let manager = SyncManager(service: fake)
+                    manager.saveFile(filename, data: data)
                     expect(fake.lastCall).to(equal("saveFile"))
                     expect(fake.filename).to(equal(filename))
                     expect(fake.data).to(equal(data))
@@ -97,8 +98,8 @@ class SyncManagerSpec: QuickSpec {
                 it("should call getFile on the service") {
                     let filename = "thefile.gif"
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    SyncManager.sharedManager.getFile(filename)
+                    let manager = SyncManager(service: fake)
+                    manager.getFile(filename)
                     expect(fake.lastCall).to(equal("getFile"))
                     expect(fake.filename).to(equal(filename))
                 }
@@ -107,8 +108,8 @@ class SyncManagerSpec: QuickSpec {
             describe("getFiles") {
                 it("should call getFiles on the service") {
                     let fake = FakeDropboxService()
-                    SyncManager.sharedManager.setService(fake)
-                    SyncManager.sharedManager.getFiles()
+                    let manager = SyncManager(service: fake)
+                    manager.getFiles()
                     expect(fake.lastCall).to(equal("getFiles"))
                 }
             }

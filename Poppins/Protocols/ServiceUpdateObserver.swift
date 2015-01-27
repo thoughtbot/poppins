@@ -1,0 +1,3 @@
+protocol ServiceUpdateObserver {
+    func serviceDidUpdate()
+}
