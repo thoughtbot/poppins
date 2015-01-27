@@ -19,7 +19,12 @@
 		EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51581A76E49D00DCEAA8 /* RootController.swift */; };
 		EA4A515B1A76E5B500DCEAA8 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4A515A1A76E5B500DCEAA8 /* Authentication.storyboard */; };
 		EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
-		EA7A042E1A1E44D8002C73AF /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Results.swift */; };
+		EA4A515F1A76EC5A00DCEAA8 /* Cascade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A515E1A76EC5A00DCEAA8 /* Cascade.framework */; };
+		EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */; };
+		EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */; };
+		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
+		EA4A51671A76EC6800DCEAA8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51661A76EC6800DCEAA8 /* ReactiveCocoa.framework */; };
+		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
 		EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */; };
 		EA7A04321A23B176002C73AF /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04311A23B176002C73AF /* DBFile.swift */; };
 		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
@@ -30,7 +35,6 @@
 		EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* SyncableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
 		EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */; };
-		EAACE1F01A1BA93700E3C43D /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1EF1A1BA93700E3C43D /* Operators.swift */; };
 		EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
 		EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */; };
 		EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */; };
@@ -62,9 +66,6 @@
 		F825388B1A3F8C5C004476DC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* Cache.swift */; };
 		F825388D1A3F8D4B004476DC /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
 		F88CBD8D1A542F1F009F8D53 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */; };
-		F88CBDF01A543D12009F8D53 /* LlamaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBDDB1A543CC9009F8D53 /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F88CBDF11A543D19009F8D53 /* Gifu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBD9A1A543018009F8D53 /* Gifu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F88CBDF21A543D20009F8D53 /* Cascade.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBD9F1A543025009F8D53 /* Cascade.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F897DAC61A54582F00F0CBC6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBDAB1A543036009F8D53 /* Quick.framework */; };
 		F897DAD11A54583B00F0CBC6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBDB51A543044009F8D53 /* Nimble.framework */; };
 /* End PBXBuildFile section */
@@ -97,20 +98,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1E5A459016F0DFC200B55C04;
 			remoteInfo = HockeySDKTests;
-		};
-		F88CBD991A543018009F8D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00B8C73E1A364DA400C188E7;
-			remoteInfo = Gifu;
-		};
-		F88CBD9E1A543025009F8D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EAB193041A2F8D910002C6D0 /* Cascade.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8FB72591A1F9654004265D5;
-			remoteInfo = Cascade;
 		};
 		F88CBDA61A543036009F8D53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -168,34 +155,6 @@
 			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
 			remoteInfo = "Nimble-OSXTests";
 		};
-		F88CBDDA1A543CC9009F8D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F88CBDD11A543CC8009F8D53 /* LlamaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FB2F8D8119BF637B00E4C49E;
-			remoteInfo = "LlamaKit-iOS";
-		};
-		F88CBDDC1A543CC9009F8D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F88CBDD11A543CC8009F8D53 /* LlamaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FB2F8D8C19BF637B00E4C49E;
-			remoteInfo = "LlamaKit-iOSTests";
-		};
-		F88CBDDE1A543CC9009F8D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F88CBDD11A543CC8009F8D53 /* LlamaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D0297D1019D67999009986A9;
-			remoteInfo = "LlamaKit-Mac";
-		};
-		F88CBDE01A543CC9009F8D53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F88CBDD11A543CC8009F8D53 /* LlamaKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D0297D1A19D67999009986A9;
-			remoteInfo = "LlamaKit-MacTests";
-		};
 		F88CBDEC1A543CC9009F8D53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAB192E51A2F8D820002C6D0 /* Quick.xcodeproj */;
@@ -213,19 +172,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EAB1930E1A2F8DC40002C6D0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F88CBDF01A543D12009F8D53 /* LlamaKit.framework in Embed Frameworks */,
-				F88CBDF11A543D19009F8D53 /* Gifu.framework in Embed Frameworks */,
-				F88CBDF21A543D20009F8D53 /* Cascade.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EAB211181A23D6520069A5C6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,7 +200,12 @@
 		EA4A51581A76E49D00DCEAA8 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		EA4A515A1A76E5B500DCEAA8 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
-		EA7A042D1A1E44D8002C73AF /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		EA4A515E1A76EC5A00DCEAA8 /* Cascade.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cascade.framework; path = ../Carthage/Build/iOS/Cascade.framework; sourceTree = "<group>"; };
+		EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gifu.framework; path = ../Carthage/Build/iOS/Gifu.framework; sourceTree = "<group>"; };
+		EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = ../Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
+		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		EA4A51661A76EC6800DCEAA8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ../Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFilesystem.swift; sourceTree = "<group>"; };
 		EA7A04311A23B176002C73AF /* DBFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFile.swift; sourceTree = "<group>"; };
 		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
@@ -266,11 +217,9 @@
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
-		EAACE1EF1A1BA93700E3C43D /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		EAACE1F11A1BA9BF00E3C43D /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		EAB192E51A2F8D820002C6D0 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		EAB192F51A2F8D8A0002C6D0 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Carthage/Checkouts/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
-		EAB193041A2F8D910002C6D0 /* Cascade.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cascade.xcodeproj; path = Carthage/Checkouts/Cascade/Cascade.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewController.swift; sourceTree = "<group>"; };
 		EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinsCell.swift; sourceTree = "<group>"; };
 		EAB193191A2FA0740002C6D0 /* LinkAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkAccountViewController.swift; sourceTree = "<group>"; };
@@ -280,7 +229,6 @@
 		EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDropboxService.swift; sourceTree = "<group>"; };
 		EAB211221A2508C50069A5C6 /* NotificationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListener.swift; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gifu.xcodeproj; path = Carthage/Checkouts/gifu/Gifu.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAF49CD01A3F37D200B395DF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		EAF49CDE1A3F582100B395DF /* GifItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifItemSource.swift; sourceTree = "<group>"; };
 		EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionSpec.swift; sourceTree = "<group>"; };
@@ -301,7 +249,6 @@
 		F825388A1A3F8C5C004476DC /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		F825388C1A3F8D4B004476DC /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 		F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dropbox.framework; path = Frameworks/Dropbox.framework; sourceTree = SOURCE_ROOT; };
-		F88CBDD11A543CC8009F8D53 /* LlamaKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LlamaKit.xcodeproj; path = Carthage/Checkouts/LlamaKit/LlamaKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +278,11 @@
 				F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */,
 				F80BE3E71A41E5B9009192A4 /* SystemConfiguration.framework in Frameworks */,
 				F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */,
+				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
+				EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */,
+				EA4A51671A76EC6800DCEAA8 /* ReactiveCocoa.framework in Frameworks */,
+				EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */,
+				EA4A515F1A76EC5A00DCEAA8 /* Cascade.framework in Frameworks */,
 				EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */,
 				EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */,
 				EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */,
@@ -527,9 +479,8 @@
 		EAACE1EE1A1BA90800E3C43D /* Functional */ = {
 			isa = PBXGroup;
 			children = (
-				EAACE1EF1A1BA93700E3C43D /* Operators.swift */,
 				EAACE1F11A1BA9BF00E3C43D /* Optional.swift */,
-				EA7A042D1A1E44D8002C73AF /* Results.swift */,
+				EA7A042D1A1E44D8002C73AF /* Result.swift */,
 				F825388C1A3F8D4B004476DC /* Curry.swift */,
 			);
 			path = Functional;
@@ -538,6 +489,11 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA4A51661A76EC6800DCEAA8 /* ReactiveCocoa.framework */,
+				EA4A51641A76EC6500DCEAA8 /* Runes.framework */,
+				EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */,
+				EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */,
+				EA4A515E1A76EC5A00DCEAA8 /* Cascade.framework */,
 				F8104BEB1A545E4400A829A7 /* CrashReporter.framework */,
 				F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */,
 				F80BE3D51A41E5B9009192A4 /* AssetsLibrary.framework */,
@@ -551,9 +507,6 @@
 				F80BE3DD1A41E5B9009192A4 /* SystemConfiguration.framework */,
 				F80BE3DE1A41E5B9009192A4 /* UIKit.framework */,
 				F8104BDC1A545E1500A829A7 /* HockeySDK.xcodeproj */,
-				F88CBDD11A543CC8009F8D53 /* LlamaKit.xcodeproj */,
-				EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */,
-				EAB193041A2F8D910002C6D0 /* Cascade.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -595,22 +548,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F88CBD961A543018009F8D53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F88CBD9A1A543018009F8D53 /* Gifu.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F88CBD9B1A543025009F8D53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F88CBD9F1A543025009F8D53 /* Cascade.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F88CBDA01A543036009F8D53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,17 +568,6 @@
 				F88CBDB71A543044009F8D53 /* NimbleTests.xctest */,
 				F88CBDB91A543044009F8D53 /* Nimble.framework */,
 				F88CBDBB1A543044009F8D53 /* NimbleTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F88CBDD21A543CC8009F8D53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F88CBDDB1A543CC9009F8D53 /* LlamaKit.framework */,
-				F88CBDDD1A543CC9009F8D53 /* LlamaKit-iOSTests.xctest */,
-				F88CBDDF1A543CC9009F8D53 /* LlamaKit.framework */,
-				F88CBDE11A543CC9009F8D53 /* LlamaKit-MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -685,9 +611,9 @@
 				D01FF001B12CC6AF740546A8 /* Sources */,
 				D6B504CCA3352A78D13680B4 /* Frameworks */,
 				5723682AFF856008F564888D /* Resources */,
+				EA4A51681A76ED2700DCEAA8 /* ShellScript */,
 				7751DD704587A0B455FDB517 /* Warn for TODO and FIXME comments */,
 				F80BE3EB1A41FCE7009192A4 /* Set version number */,
-				EAB1930E1A2F8DC40002C6D0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -725,20 +651,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F88CBD9B1A543025009F8D53 /* Products */;
-					ProjectRef = EAB193041A2F8D910002C6D0 /* Cascade.xcodeproj */;
-				},
-				{
-					ProductGroup = F88CBD961A543018009F8D53 /* Products */;
-					ProjectRef = EAF49C741A38EC8100B395DF /* Gifu.xcodeproj */;
-				},
-				{
 					ProductGroup = F8104BDD1A545E1500A829A7 /* Products */;
 					ProjectRef = F8104BDC1A545E1500A829A7 /* HockeySDK.xcodeproj */;
-				},
-				{
-					ProductGroup = F88CBDD21A543CC8009F8D53 /* Products */;
-					ProjectRef = F88CBDD11A543CC8009F8D53 /* LlamaKit.xcodeproj */;
 				},
 				{
 					ProductGroup = F88CBDAE1A543044009F8D53 /* Products */;
@@ -777,20 +691,6 @@
 			fileType = wrapper.cfbundle;
 			path = HockeySDKTests.xctest;
 			remoteRef = F8104BE81A545E1600A829A7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F88CBD9A1A543018009F8D53 /* Gifu.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Gifu.framework;
-			remoteRef = F88CBD991A543018009F8D53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F88CBD9F1A543025009F8D53 /* Cascade.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Cascade.framework;
-			remoteRef = F88CBD9E1A543025009F8D53 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		F88CBDA71A543036009F8D53 /* Quick.framework */ = {
@@ -849,34 +749,6 @@
 			remoteRef = F88CBDBA1A543044009F8D53 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F88CBDDB1A543CC9009F8D53 /* LlamaKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LlamaKit.framework;
-			remoteRef = F88CBDDA1A543CC9009F8D53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F88CBDDD1A543CC9009F8D53 /* LlamaKit-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "LlamaKit-iOSTests.xctest";
-			remoteRef = F88CBDDC1A543CC9009F8D53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F88CBDDF1A543CC9009F8D53 /* LlamaKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LlamaKit.framework;
-			remoteRef = F88CBDDE1A543CC9009F8D53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F88CBDE11A543CC9009F8D53 /* LlamaKit-MacTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "LlamaKit-MacTests.xctest";
-			remoteRef = F88CBDE01A543CC9009F8D53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		F88CBDED1A543CC9009F8D53 /* QuickFocused-OSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -928,6 +800,23 @@
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/Carthage\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
+		EA4A51681A76ED2700DCEAA8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cascade.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		F80BE3EB1A41FCE7009192A4 /* Set version number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -964,11 +853,10 @@
 				EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
 				EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */,
-				EAACE1F01A1BA93700E3C43D /* Operators.swift in Sources */,
 				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
 				EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */,
 				EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */,
-				EA7A042E1A1E44D8002C73AF /* Results.swift in Sources */,
+				EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */,
 				EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */,
 				EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */,
 				5D8975CA1A43807D00F72C27 /* Button.swift in Sources */,
@@ -1033,11 +921,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: THOUGHTBOT INC";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: THOUGHTBOT INC";
 				DSTROOT = /tmp/xcodeproj.dst;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Checkouts/HockeySDK-iOS/Vendor",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -1068,11 +956,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/xcodeproj.dst;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/Carthage/Checkouts/HockeySDK-iOS/Vendor",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

@@ -1,4 +1,5 @@
 import LlamaKit
+import Runes
 
 func >>-<T, U, E>(a: Result<T, E>, f: T -> Result<U, E>) -> Result<U, E> {
     return a.flatMap(f)
