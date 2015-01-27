@@ -6,28 +6,52 @@ class RootViewController: UIViewController {
 
     var initialViewController: UIViewController {
         if controller?.isLinked ?? false {
-            return linkAccountViewController
-        } else {
             return cascadeViewController
+        } else {
+            return linkAccountViewController
         }
     }
 
     var linkAccountViewController: LinkAccountViewController {
         let storyboard = UIStoryboard(name: "Authentication", bundle: .None)
         let vc = storyboard.instantiateInitialViewController() as LinkAccountViewController
+        vc.controller = controller?.linkAccountController
         return vc
     }
 
-    var cascadeViewController: CascadeViewController {
+    var cascadeViewController: UINavigationController {
         let storyboard = UIStoryboard(name: "Main", bundle: .None)
         let nav = storyboard.instantiateInitialViewController() as UINavigationController
         let vc = nav.topViewController as CascadeViewController
-        return vc
+        return nav
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         showViewController(initialViewController)
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "transitionToMainFlow", name: "LinkingComplete", object: .None)
+    }
+
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
+    func transitionToMainFlow() {
+        let cascade = cascadeViewController
+        addChildViewController(cascade)
+        cascade.didMoveToParentViewController(self)
+        cascade.view.transform = CGAffineTransformMakeScale(0.9, 0.9)
+
+        transitionFromViewController(activeViewController!, toViewController: cascade, duration: 0.33, options: .CurveEaseInOut, animations: {
+            self.view.sendSubviewToBack(cascade.view)
+            cascade.view.transform = CGAffineTransformIdentity
+            self.activeViewController?.view.frame = CGRectOffset(self.view.bounds, 0, self.view.bounds.height)
+            }) { _ in
+                self.activeViewController?.willMoveToParentViewController(.None)
+                self.activeViewController?.removeFromParentViewController()
+                self.activeViewController = cascade
+        }
     }
 
     func showViewController(viewController: UIViewController) {
