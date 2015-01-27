@@ -23,6 +23,7 @@ class RootViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .None)
         let nav = storyboard.instantiateInitialViewController() as UINavigationController
         let vc = nav.topViewController as CascadeViewController
+        vc.controller = controller?.cascadeController
         return nav
     }
 
