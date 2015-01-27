@@ -1,3 +1,3 @@
-public protocol ServiceUpdateObserver {
+protocol ServiceUpdateObserver {
     func serviceDidUpdate()
 }

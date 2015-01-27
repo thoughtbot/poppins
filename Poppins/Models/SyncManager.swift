@@ -5,18 +5,18 @@ public let AccountLinkedNotificationName = "PoppinsAccountLinked"
 let PreloadCompletedNotificationName = "PoppinsPreloadCompleted"
 let InitialSyncCompletedNotificationName = "PoppinsInitialSyncCompleted"
 
-public let ServiceKey = "PoppinsService"
+let ServiceKey = "PoppinsService"
 
-public class SyncManager: SyncableService, ServiceUpdateObserver {
-    public var observer: ServiceUpdateObserver?
+class SyncManager: SyncableService, ServiceUpdateObserver {
+    var observer: ServiceUpdateObserver?
 
-    public var service: SyncableService {
+    var service: SyncableService {
         didSet {
             service.observer = self
         }
     }
 
-    public var type: Service {
+    var type: Service {
         return service.type
     }
 
@@ -24,15 +24,15 @@ public class SyncManager: SyncableService, ServiceUpdateObserver {
         self.service = service
     }
 
-    public func setService(service: SyncableService) {
+    func setService(service: SyncableService) {
         self.service = service
     }
 
-    public func initiateAuthentication<T>(meta: T) {
+    func initiateAuthentication<T>(meta: T) {
         service.initiateAuthentication(meta)
     }
 
-    public func finalizeAuthentication(url: NSURL) -> Bool {
+    func finalizeAuthentication(url: NSURL) -> Bool {
         let handled = service.finalizeAuthentication(url)
         if handled {
             NSNotificationCenter.defaultCenter().postNotificationName(AccountLinkedNotificationName, object: .None)
@@ -40,27 +40,27 @@ public class SyncManager: SyncableService, ServiceUpdateObserver {
         return handled
     }
 
-    public func setup() {
+    func setup() {
         service.setup()
     }
 
-    public func isLinked() -> Bool {
+    func isLinked() -> Bool {
         return service.isLinked()
     }
 
-    public func unLink() {
+    func unLink() {
         service.unLink()
     }
 
-    public func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
+    func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         return service.saveFile(filename, data: data)
     }
 
-    public func getFile(path: String) -> Result<NSData, NSError> {
+    func getFile(path: String) -> Result<NSData, NSError> {
         return service.getFile(path)
     }
 
-    public func getFiles() -> Result<[String], NSError> {
+    func getFiles() -> Result<[String], NSError> {
         return service.getFiles()
     }
 
@@ -70,7 +70,7 @@ public class SyncManager: SyncableService, ServiceUpdateObserver {
         }
     }
 
-    public func serviceDidUpdate() {
+    func serviceDidUpdate() {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
             _ = self.preload <^> self.getFiles()
         }

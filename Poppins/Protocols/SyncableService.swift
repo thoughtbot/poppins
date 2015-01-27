@@ -1,6 +1,6 @@
 import LlamaKit
 
-public protocol SyncableService {
+protocol SyncableService {
     var type: Service { get }
     var observer: ServiceUpdateObserver? { get set }
 

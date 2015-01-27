@@ -1,32 +1,32 @@
 import LlamaKit
 
-public class UnconfiguredService: SyncableService {
-    public let type: Service = .Unconfigured
-    public var observer: ServiceUpdateObserver? = .None
+class UnconfiguredService: SyncableService {
+    let type: Service = .Unconfigured
+    var observer: ServiceUpdateObserver? = .None
 
-    public func setup() {}
+    func setup() {}
 
-    public func initiateAuthentication<T>(_: T) {}
+    func initiateAuthentication<T>(_: T) {}
 
-    public func finalizeAuthentication(_: NSURL) -> Bool {
+    func finalizeAuthentication(_: NSURL) -> Bool {
         return false
     }
 
-    public func isLinked() -> Bool {
+    func isLinked() -> Bool {
         return false
     }
 
-    public func unLink() {}
+    func unLink() {}
 
-    public func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
+    func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
     }
 
-    public func getFiles() -> Result<[String], NSError> {
+    func getFiles() -> Result<[String], NSError> {
         return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
     }
 
-    public func getFile(filename: String) -> Result<NSData, NSError> {
+    func getFile(filename: String) -> Result<NSData, NSError> {
         return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
     }
 }

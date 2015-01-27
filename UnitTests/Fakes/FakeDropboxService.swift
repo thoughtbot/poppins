@@ -7,6 +7,7 @@ class FakeDropboxService: SyncableService {
     var url: NSURL?
     var filename: String?
     var data: NSData?
+    var observer: ServiceUpdateObserver?
 
     let type: Service = .Dropbox
 
@@ -36,19 +37,19 @@ class FakeDropboxService: SyncableService {
         lastCall = "unlink"
     }
 
-    func saveFile(filename: String, data: NSData) -> Result<()> {
+    func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         lastCall = "saveFile"
         self.filename = filename
         self.data = data
         return success(())
     }
 
-    func getFiles() -> Result<[String]> {
+    func getFiles() -> Result<[String], NSError> {
         lastCall = "getFiles"
         return success([])
     }
 
-    func getFile(filename: String) -> Result<NSData> {
+    func getFile(filename: String) -> Result<NSData, NSError> {
         lastCall = "getFile"
         self.filename = filename
         return success(NSData())

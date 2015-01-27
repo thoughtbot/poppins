@@ -1,11 +1,11 @@
 import LlamaKit
 import Runes
 
-public class DropboxService : SyncableService {
-    public let type: Service = .Dropbox
-    public var observer: ServiceUpdateObserver? = .None
+class DropboxService : SyncableService {
+    let type: Service = .Dropbox
+    var observer: ServiceUpdateObserver? = .None
 
-    public func setup() {
+    func setup() {
         let manager = DBAccountManager(appKey: "j77mzt1vvjloikh", secret: "y3rw9dlmd72dkr3")
         DBAccountManager.setSharedManager(manager)
 
@@ -14,36 +14,36 @@ public class DropboxService : SyncableService {
         }
     }
 
-    public func initiateAuthentication<T>(controller: T) {
+    func initiateAuthentication<T>(controller: T) {
         DBAccountManager.sharedManager().linkFromController <^> controller as? UIViewController
     }
 
-    public func finalizeAuthentication(url: NSURL) -> Bool {
+    func finalizeAuthentication(url: NSURL) -> Bool {
         let account = DBAccountManager.sharedManager().handleOpenURL(url)
         setupFilesystem <^> account
         return account != .None
     }
 
-    public func isLinked() -> Bool {
+    func isLinked() -> Bool {
         return DBAccountManager.sharedManager().linkedAccount != .None
     }
 
-    public func unLink() {
+    func unLink() {
         DBAccountManager.sharedManager().linkedAccount?.unlink()
     }
 
-    public func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
+    func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
         let path = DBPath.root().childPath(filename)
         return DBFilesystem.sharedFilesystem().createFile(path) >>- { $0.writeData(data) }
     }
 
-    public func getFiles() -> Result<[String], NSError> {
+    func getFiles() -> Result<[String], NSError> {
         let result = DBFilesystem.sharedFilesystem().listFolder(DBPath.root())
         let filePaths: [DBFileInfo] -> [String] = { $0.map { $0.path.stringValue() } }
         return filePaths <^> result
     }
 
-    public func getFile(filename: String) -> Result<NSData, NSError> {
+    func getFile(filename: String) -> Result<NSData, NSError> {
         let path = DBPath.root().childPath(filename)
         return DBFilesystem.sharedFilesystem().openFile(path) >>- { file in
             let data = file.readData()
