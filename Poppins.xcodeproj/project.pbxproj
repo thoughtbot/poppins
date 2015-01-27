@@ -69,7 +69,6 @@
 		EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */; };
 		EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */; };
 		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
-		EA4A51671A76EC6800DCEAA8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51661A76EC6800DCEAA8 /* ReactiveCocoa.framework */; };
 		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
 		EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */; };
 		EA7A04321A23B176002C73AF /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04311A23B176002C73AF /* DBFile.swift */; };
@@ -189,7 +188,6 @@
 		EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gifu.framework; path = ../Carthage/Build/iOS/Gifu.framework; sourceTree = "<group>"; };
 		EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = ../Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
-		EA4A51661A76EC6800DCEAA8 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ../Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFilesystem.swift; sourceTree = "<group>"; };
 		EA7A04311A23B176002C73AF /* DBFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFile.swift; sourceTree = "<group>"; };
@@ -263,7 +261,6 @@
 				F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */,
 				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
 				EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */,
-				EA4A51671A76EC6800DCEAA8 /* ReactiveCocoa.framework in Frameworks */,
 				EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */,
 				EA4A515F1A76EC5A00DCEAA8 /* Cascade.framework in Frameworks */,
 				EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */,
@@ -479,7 +476,6 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA4A51661A76EC6800DCEAA8 /* ReactiveCocoa.framework */,
 				EA4A51641A76EC6500DCEAA8 /* Runes.framework */,
 				EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */,
 				EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */,
@@ -698,7 +694,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Cascade.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
