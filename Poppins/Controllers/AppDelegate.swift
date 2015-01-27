@@ -19,6 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return SyncManager.sharedManager.finalizeAuthentication(url)
+        return controller.handleExternalURL(url)
     }
 }

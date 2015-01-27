@@ -16,6 +16,48 @@
 		EA13D8C81A7800F500E2611C /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
 		EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */; };
 		EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */; };
+		EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */; };
+		EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */; };
+		EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */; };
+		EA13D8D31A78360700E2611C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
+		EA13D8D41A78360A00E2611C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
+		EA13D8D51A78360D00E2611C /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
+		EA13D8D61A78361000E2611C /* DBFilesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */; };
+		EA13D8D71A78361400E2611C /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04311A23B176002C73AF /* DBFile.swift */; };
+		EA13D8D81A78361C00E2611C /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */; };
+		EA13D8D91A78361C00E2611C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
+		EA13D8DA1A78361C00E2611C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
+		EA13D8DB1A78361C00E2611C /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
+		EA13D8DC1A78362A00E2611C /* SyncableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* SyncableService.swift */; };
+		EA13D8DD1A78362A00E2611C /* ViewModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */; };
+		EA13D8DE1A78362A00E2611C /* ServiceUpdateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */; };
+		EA13D8DF1A78362A00E2611C /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
+		EA13D8E01A78362A00E2611C /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */; };
+		EA13D8E11A78362A00E2611C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
+		EA13D8E21A78362A00E2611C /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
+		EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111B1A24D7650069A5C6 /* UnconfiguredService.swift */; };
+		EA13D8E41A78362A00E2611C /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
+		EA13D8E51A78362A00E2611C /* HockeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80BE3E91A41E659009192A4 /* HockeyManager.swift */; };
+		EA13D8E61A78362A00E2611C /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* Cache.swift */; };
+		EA13D8E71A78362A00E2611C /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
+		EA13D8E81A78362A00E2611C /* CascadeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */; };
+		EA13D8E91A78362A00E2611C /* PoppinsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */; };
+		EA13D8EA1A78362A00E2611C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D3C7953B819874CE387DA /* AppDelegate.swift */; };
+		EA13D8EB1A78362A00E2611C /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1931B1A2FA8920002C6D0 /* ApplicationController.swift */; };
+		EA13D8EC1A78362A00E2611C /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
+		EA13D8ED1A78362A00E2611C /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51581A76E49D00DCEAA8 /* RootController.swift */; };
+		EA13D8EE1A78362A00E2611C /* LinkAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */; };
+		EA13D8EF1A78362A00E2611C /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
+		EA13D8F01A78362A00E2611C /* PoppinsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */; };
+		EA13D8F11A78362A00E2611C /* CascadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */; };
+		EA13D8F21A78362A00E2611C /* LinkAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193191A2FA0740002C6D0 /* LinkAccountViewController.swift */; };
+		EA13D8F31A78362A00E2611C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51411A76E41300DCEAA8 /* RootViewController.swift */; };
+		EA13D8F41A78362A00E2611C /* PoppinsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */; };
+		EA13D8F51A78362A00E2611C /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8975C91A43807D00F72C27 /* Button.swift */; };
+		EA13D9001A78373400E2611C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA13D8FE1A78373400E2611C /* Nimble.framework */; };
+		EA13D9011A78373400E2611C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA13D8FF1A78373400E2611C /* Quick.framework */; };
+		EA13D9021A78374D00E2611C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA13D8FE1A78373400E2611C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA13D9031A78374D00E2611C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA13D8FF1A78373400E2611C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
 		EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
 		EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
@@ -34,6 +76,7 @@
 		EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7F1A1AA7310033AE00 /* libz.dylib */; };
 		EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* SyncableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
+		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
 		EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */; };
 		EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
 		EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */; };
@@ -122,6 +165,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EA13D9021A78374D00E2611C /* Nimble.framework in CopyFiles */,
+				EA13D9031A78374D00E2611C /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +186,11 @@
 		EA13D8C71A7800F500E2611C /* CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeController.swift; sourceTree = "<group>"; };
 		EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModel.swift; sourceTree = "<group>"; };
 		EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelObserver.swift; sourceTree = "<group>"; };
+		EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinsCellViewModel.swift; sourceTree = "<group>"; };
+		EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinsCellController.swift; sourceTree = "<group>"; };
+		EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceUpdateObserver.swift; sourceTree = "<group>"; };
+		EA13D8FE1A78373400E2611C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		EA13D8FF1A78373400E2611C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		EA34E7841A1CFD4F00875CFC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		EA395D661A448DF400EB607E /* AsyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncQueue.swift; sourceTree = "<group>"; };
 		EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -160,6 +210,7 @@
 		EA835D811A1BA0560033AE00 /* SyncableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableService.swift; sourceTree = "<group>"; };
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModelSpec.swift; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		EAACE1F11A1BA9BF00E3C43D /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +257,8 @@
 			files = (
 				F80E7A491AB26E000099227F /* Quick.framework in Frameworks */,
 				F80E7A481AB26E000099227F /* Nimble.framework in Frameworks */,
+				EA13D9001A78373400E2611C /* Nimble.framework in Frameworks */,
+				EA13D9011A78373400E2611C /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +284,9 @@
 				F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */,
 				F80E7A431AB26DED0099227F /* Gifu.framework in Frameworks */,
 				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
+				EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */,
+				EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */,
+				EA4A515F1A76EC5A00DCEAA8 /* Cascade.framework in Frameworks */,
 				EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */,
 				EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */,
 				EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */,
@@ -270,6 +326,7 @@
 			children = (
 				EA835D811A1BA0560033AE00 /* SyncableService.swift */,
 				EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */,
+				EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -305,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */,
+				EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -349,6 +407,8 @@
 		9FE417C441FA1B4E62E13330 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EA13D9051A792E7400E2611C /* Controllers */,
+				EA13D9041A792E1E00E2611C /* ViewModels */,
 				EAF49CEE1A3F86F100B395DF /* Extensions */,
 				EA7A04331A23BB3B002C73AF /* Models */,
 			);
@@ -372,6 +432,7 @@
 				EA4A51581A76E49D00DCEAA8 /* RootController.swift */,
 				EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */,
 				EA13D8C71A7800F500E2611C /* CascadeController.swift */,
+				EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -408,6 +469,21 @@
 				2687C52B5525793534A0348B /* UnitTests-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA13D9041A792E1E00E2611C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EA13D9051A792E7400E2611C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EA4A511F1A76E0E400DCEAA8 /* ViewControllers */ = {
@@ -496,6 +572,12 @@
 				F80E7A531AB26F050099227F /* libHockeySDK.a */,
 				F80E7A551AB26F050099227F /* HockeySDKResources.bundle */,
 				F80E7A571AB26F050099227F /* HockeySDKTests.xctest */,
+		F8104BDD1A545E1500A829A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8104BE51A545E1600A829A7 /* libHockeySDK.a */,
+				F8104BE71A545E1600A829A7 /* HockeySDKResources.bundle */,
+				F8104BE91A545E1600A829A7 /* HockeySDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -505,6 +587,8 @@
 			children = (
 				F80E7A461AB26E000099227F /* Nimble.framework */,
 				F80E7A471AB26E000099227F /* Quick.framework */,
+				EA13D8FE1A78373400E2611C /* Nimble.framework */,
+				EA13D8FF1A78373400E2611C /* Quick.framework */,
 			);
 			name = Frameworks;
 			path = ..;
@@ -582,6 +666,8 @@
 				{
 					ProductGroup = F80E7A4B1AB26F050099227F /* Products */;
 					ProjectRef = F80E7A4A1AB26F050099227F /* HockeySDK.xcodeproj */;
+					ProductGroup = F8104BDD1A545E1500A829A7 /* Products */;
+					ProjectRef = F8104BDC1A545E1500A829A7 /* HockeySDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -612,6 +698,7 @@
 			fileType = wrapper.cfbundle;
 			path = HockeySDKTests.xctest;
 			remoteRef = F80E7A561AB26F050099227F /* PBXContainerItemProxy */;
+			remoteRef = F8104BE81A545E1600A829A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -661,7 +748,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Cascade.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -691,9 +777,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA13D8E01A78362A00E2611C /* SyncManager.swift in Sources */,
+				EA13D8F41A78362A00E2611C /* PoppinsCell.swift in Sources */,
+				EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */,
+				EA13D8E81A78362A00E2611C /* CascadeViewModel.swift in Sources */,
+				EA13D8DD1A78362A00E2611C /* ViewModelObserver.swift in Sources */,
+				EA13D8D61A78361000E2611C /* DBFilesystem.swift in Sources */,
+				EA13D8EA1A78362A00E2611C /* AppDelegate.swift in Sources */,
+				EA13D8DE1A78362A00E2611C /* ServiceUpdateObserver.swift in Sources */,
+				EA13D8E41A78362A00E2611C /* GifItemSource.swift in Sources */,
+				EA13D8D91A78361C00E2611C /* UIImage.swift in Sources */,
+				EA13D8F31A78362A00E2611C /* RootViewController.swift in Sources */,
+				EA13D8D41A78360A00E2611C /* Result.swift in Sources */,
 				EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */,
+				EA13D8DB1A78361C00E2611C /* UIWindow.swift in Sources */,
+				EA13D8E91A78362A00E2611C /* PoppinsCellViewModel.swift in Sources */,
+				EA13D8F21A78362A00E2611C /* LinkAccountViewController.swift in Sources */,
+				EA13D8E21A78362A00E2611C /* Async.swift in Sources */,
+				EA13D8E61A78362A00E2611C /* Cache.swift in Sources */,
+				EA13D8EF1A78362A00E2611C /* CascadeController.swift in Sources */,
+				EA13D8D31A78360700E2611C /* Optional.swift in Sources */,
 				EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */,
+				EA13D8E71A78362A00E2611C /* AsyncQueue.swift in Sources */,
+				EA13D8E11A78362A00E2611C /* Service.swift in Sources */,
+				EA13D8F11A78362A00E2611C /* CascadeViewController.swift in Sources */,
+				EA13D8D51A78360D00E2611C /* Curry.swift in Sources */,
+				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
+				EA13D8EC1A78362A00E2611C /* ApplicationAppearance.swift in Sources */,
+				EA13D8EE1A78362A00E2611C /* LinkAccountController.swift in Sources */,
+				EA13D8DC1A78362A00E2611C /* SyncableService.swift in Sources */,
+				EA13D8D71A78361400E2611C /* DBFile.swift in Sources */,
+				EA13D8F01A78362A00E2611C /* PoppinsCellController.swift in Sources */,
 				EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */,
+				EA13D8DA1A78361C00E2611C /* Array.swift in Sources */,
+				EA13D8D81A78361C00E2611C /* UIApplication.swift in Sources */,
+				EA13D8E51A78362A00E2611C /* HockeyManager.swift in Sources */,
+				EA13D8EB1A78362A00E2611C /* ApplicationController.swift in Sources */,
+				EA13D8ED1A78362A00E2611C /* RootController.swift in Sources */,
+				EA13D8DF1A78362A00E2611C /* DropboxService.swift in Sources */,
+				EA13D8F51A78362A00E2611C /* Button.swift in Sources */,
 				EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,6 +824,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */,
 				EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
@@ -733,9 +856,11 @@
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
 				F80BE3EA1A41E659009192A4 /* HockeyManager.swift in Sources */,
+				EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */,
 				EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */,
+				EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

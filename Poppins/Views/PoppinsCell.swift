@@ -1,12 +1,8 @@
 import Gifu
 import Runes
 
-private let ImageCache = Cache<[AnimatedFrame]>()
-private let purger = CachePurger(cache: ImageCache)
-private let operationQueue = AsyncQueue(name: "PoppinsCacheQueue", maxOperations: 10)
-
 @IBDesignable
-class PoppinsCell: UICollectionViewCell {
+class PoppinsCell: UICollectionViewCell, ViewModelObserver {
     @IBOutlet weak var animatedView: AnimatedView?
     @IBOutlet weak var shadowView: UIView?
     @IBOutlet weak var rootView: UIView?
@@ -18,34 +14,18 @@ class PoppinsCell: UICollectionViewCell {
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 2, height: 2)
     @IBInspectable var shadowSpread: CGFloat = 14
 
-    private var operation: NSBlockOperation?
-
-    func configureWithImagePath(path: String) {
-        operation?.cancel()
-        animatedView?.setAnimatedFrames([])
-        operation = NSBlockOperation(block: { [unowned self] in self.fetchImage(path) })
-        operationQueue.addOperation <^> operation
+    var controller: PoppinsCellController? {
+        didSet {
+            controller?.observer = self
+            viewModelDidChange()
+            controller?.fetchImage <*> animatedView?.frame.size
+        }
     }
 
-    func fetchImage(path: String) {
-        purger.thumbsUpGoodJob()
-        var image = ImageCache.itemForKey(path)
-        if image == nil {
-            if operation?.cancelled ?? true { return }
-            image = curry(AnimatedFrame.createWithData)
-                <^> SyncManager.sharedManager.getFile(path).value
-                <*> animatedView?.frame.size
-
-            curry(ImageCache.setItem) <^> image <*> path
-        }
-
-        if let x = image {
-            if self.operation?.cancelled ?? true { return }
-            dispatch_async(dispatch_get_main_queue()) {
-                if self.operation?.cancelled ?? true { return }
-                self.animatedView?.setAnimatedFrames(x)
-                self.animatedView?.resumeAnimation()
-            }
+    func viewModelDidChange() {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.animatedView?.setAnimatedFrames(self.controller?.viewModel.frames ?? [])
+            self.animatedView?.resumeAnimation()
         }
     }
 

@@ -33,9 +33,9 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate, 
     }
 
     func viewModelDidChange() {
-//        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
             _ = self.collectionView?.reloadData()
-//        }
+        }
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,7 +44,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate, 
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PoppinsCell", forIndexPath: indexPath) as PoppinsCell
-        cell.configureWithImagePath <^> controller?.viewModel.imagePathForIndexPath(indexPath)
+        cell.controller = controller?.cellControllerForIndexPath(indexPath)
         return cell
     }
 

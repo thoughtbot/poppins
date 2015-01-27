@@ -1,13 +1,15 @@
-class RootController {
+struct RootController {
+    let manager: SyncManager
+
     var isLinked: Bool {
-        return SyncManager.sharedManager.isLinked()
+        return manager.isLinked()
     }
 
     var linkAccountController: LinkAccountController {
-        return LinkAccountController()
+        return LinkAccountController(manager: manager)
     }
 
     var cascadeController: CascadeController {
-        return CascadeController()
+        return CascadeController(manager: manager)
     }
 }
