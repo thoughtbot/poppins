@@ -52,6 +52,15 @@ class FakeDropboxService: SyncableService {
     func getFile(filename: String) -> Result<NSData, NSError> {
         lastCall = "getFile"
         self.filename = filename
-        return success(NSData())
+
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+        CGContextFillRect(context, rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return success(UIImagePNGRepresentation(image))
     }
 }

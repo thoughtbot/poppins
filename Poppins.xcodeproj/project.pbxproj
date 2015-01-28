@@ -79,6 +79,7 @@
 		EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7F1A1AA7310033AE00 /* libz.dylib */; };
 		EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* SyncableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
+		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
 		EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */; };
 		EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
 		EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */; };
@@ -199,6 +200,7 @@
 		EA835D811A1BA0560033AE00 /* SyncableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableService.swift; sourceTree = "<group>"; };
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModelSpec.swift; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		EAACE1F11A1BA9BF00E3C43D /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewController.swift; sourceTree = "<group>"; };
@@ -383,6 +385,8 @@
 		9FE417C441FA1B4E62E13330 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EA13D9051A792E7400E2611C /* Controllers */,
+				EA13D9041A792E1E00E2611C /* ViewModels */,
 				EAF49CEE1A3F86F100B395DF /* Extensions */,
 				EA7A04331A23BB3B002C73AF /* Models */,
 			);
@@ -443,6 +447,21 @@
 				2687C52B5525793534A0348B /* UnitTests-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA13D9041A792E1E00E2611C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EA13D9051A792E7400E2611C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EA4A511F1A76E0E400DCEAA8 /* ViewControllers */ = {
@@ -725,6 +744,7 @@
 			files = (
 				EA13D8E01A78362A00E2611C /* SyncManager.swift in Sources */,
 				EA13D8F41A78362A00E2611C /* PoppinsCell.swift in Sources */,
+				EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */,
 				EA13D8E81A78362A00E2611C /* CascadeViewModel.swift in Sources */,
 				EA13D8DD1A78362A00E2611C /* ViewModelObserver.swift in Sources */,
 				EA13D8D61A78361000E2611C /* DBFilesystem.swift in Sources */,

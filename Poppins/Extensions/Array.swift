@@ -1,7 +1,9 @@
 func safeValue<T>(array: [T], index: Int) -> T? {
-    if contains(array.startIndex..<array.endIndex, index) {
-        return array[index]
-    } else {
-        return .None
+    return array.safeValue(index)
+}
+
+extension Array {
+    func safeValue(index: Int) -> T? {
+        return contains(startIndex..<endIndex, index) ? self[index] : .None
     }
 }

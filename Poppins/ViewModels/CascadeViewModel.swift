@@ -10,7 +10,7 @@ struct CascadeViewModel {
     }
 
     func imagePathForIndexPath(indexPath: NSIndexPath) -> String? {
-        return safeValue(images, indexPath.row)
+        return images.safeValue(indexPath.row)
     }
 
     func imageSizeForIndexPath(indexPath: NSIndexPath) -> CGSize? {
