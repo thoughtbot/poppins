@@ -1,3 +1,4 @@
+import Foundation
 import Gifu
 import Runes
 
@@ -6,6 +7,7 @@ class ImageFetcher {
     let purger: CachePurger
     let operationQueue: AsyncQueue
     let manager: SyncManager
+    var operations: [String: NSOperation] = [:]
 
     init(manager: SyncManager) {
         imageCache = Cache<[AnimatedFrame]>()
@@ -14,20 +16,23 @@ class ImageFetcher {
         self.manager = manager
     }
 
-    func fetchImage(size: CGSize, path: String, callback: ([AnimatedFrame] -> ())?) {
+    func fetchImage(size: CGSize, path: String, callback: [AnimatedFrame] -> ()) {
         if let image = imageCache.itemForKey(path) {
-            callback?(image)
+            callback(image)
         } else {
-            let operation = NSBlockOperation(block: { [unowned self] in
+            let operation = ImageFetchOperation(size: size, path: path, manager: manager) {
                 self.purger.thumbsUpGoodJob()
-                let image = curry(AnimatedFrame.createWithData)
-                        <^> self.manager.getFile(path).value
-                        <*> size
-
-                curry(self.imageCache.setItem) <^> image <*> path
-                callback <*> image
-            })
+                curry(self.imageCache.setItem) <^> $0 <*> path
+                self.operations.removeValueForKey(path)
+                callback($0)
+            }
             operationQueue.addOperation(operation)
+            operations[path] = operation
         }
+    }
+
+    func cancelFetchForImageAtPath(path: String) {
+        operations[path]?.cancel()
+        operations.removeValueForKey(path)
     }
 }
