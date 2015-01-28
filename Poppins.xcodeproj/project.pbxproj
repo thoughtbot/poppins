@@ -16,6 +16,7 @@
 		EA137CCB1A7962F000A92B85 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CC91A7962F000A92B85 /* ImageFetcher.swift */; };
 		EA137CD21A79773200A92B85 /* ImageFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */; };
 		EA137CD31A79773200A92B85 /* ImageFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */; };
+		EA137CE11A79943500A92B85 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA137CE01A79943500A92B85 /* DropboxSDK.framework */; };
 		EA13D8B71A77F53C00E2611C /* LinkAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */; };
 		EA13D8C81A7800F500E2611C /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
 		EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */; };
@@ -74,7 +75,6 @@
 		EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */; };
 		EA7A04321A23B176002C73AF /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04311A23B176002C73AF /* DBFile.swift */; };
 		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
-		EA835D741A1AA6E10033AE00 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D731A1AA6E10033AE00 /* Dropbox.framework */; };
 		EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */; };
 		EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7D1A1AA7250033AE00 /* libc++.dylib */; };
 		EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7F1A1AA7310033AE00 /* libz.dylib */; };
@@ -118,7 +118,6 @@
 		F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
 		F825388B1A3F8C5C004476DC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* Cache.swift */; };
 		F825388D1A3F8D4B004476DC /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
-		F88CBD8D1A542F1F009F8D53 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +187,7 @@
 		ABB0894473AAFE7E68C6396D /* Poppins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA137CC91A7962F000A92B85 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetchOperation.swift; sourceTree = "<group>"; };
+		EA137CE01A79943500A92B85 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = ../Frameworks/DropboxSDK.framework; sourceTree = "<group>"; };
 		EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkAccountController.swift; sourceTree = "<group>"; };
 		EA13D8C71A7800F500E2611C /* CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeController.swift; sourceTree = "<group>"; };
 		EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModel.swift; sourceTree = "<group>"; };
@@ -209,7 +209,6 @@
 		EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFilesystem.swift; sourceTree = "<group>"; };
 		EA7A04311A23B176002C73AF /* DBFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFile.swift; sourceTree = "<group>"; };
 		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
-		EA835D731A1AA6E10033AE00 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EA835D7D1A1AA7250033AE00 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		EA835D7F1A1AA7310033AE00 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -253,7 +252,6 @@
 		F825387D1A3F818A004476DC /* ApplicationAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
 		F825388A1A3F8C5C004476DC /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		F825388C1A3F8D4B004476DC /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
-		F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dropbox.framework; path = Frameworks/Dropbox.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,7 +282,6 @@
 				F80E7A451AB26DED0099227F /* Runes.framework in Frameworks */,
 				F80E7A421AB26DED0099227F /* Cascade.framework in Frameworks */,
 				F80BE3E51A41E5B9009192A4 /* QuickLook.framework in Frameworks */,
-				F88CBD8D1A542F1F009F8D53 /* Dropbox.framework in Frameworks */,
 				F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */,
 				F80BE3E71A41E5B9009192A4 /* SystemConfiguration.framework in Frameworks */,
 				F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */,
@@ -296,7 +293,7 @@
 				EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */,
 				EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */,
 				EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */,
-				EA835D741A1AA6E10033AE00 /* Dropbox.framework in Frameworks */,
+				EA137CE11A79943500A92B85 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,9 +527,9 @@
 				F80E7A3F1AB26DED0099227F /* Gifu.framework */,
 				F80E7A401AB26DED0099227F /* LlamaKit.framework */,
 				F80E7A411AB26DED0099227F /* Runes.framework */,
+				EA137CE01A79943500A92B85 /* DropboxSDK.framework */,
 				EA4A51641A76EC6500DCEAA8 /* Runes.framework */,
 				F8104BEB1A545E4400A829A7 /* CrashReporter.framework */,
-				F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */,
 				F80BE3D51A41E5B9009192A4 /* AssetsLibrary.framework */,
 				F80BE3D61A41E5B9009192A4 /* CoreGraphics.framework */,
 				F80BE3D71A41E5B9009192A4 /* CoreText.framework */,
