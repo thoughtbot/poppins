@@ -34,6 +34,10 @@ class PoppinsCell: UICollectionViewCell, ViewModelObserver {
         setupCornerRadius()
         setupDropShadow()
     }
+
+    override func prepareForReuse() {
+        controller = .None
+    }
 }
 
 extension PoppinsCell {

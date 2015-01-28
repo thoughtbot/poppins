@@ -14,6 +14,8 @@
 		6A696F747A9BF689A96680CC /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
 		EA137CCA1A7962F000A92B85 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CC91A7962F000A92B85 /* ImageFetcher.swift */; };
 		EA137CCB1A7962F000A92B85 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CC91A7962F000A92B85 /* ImageFetcher.swift */; };
+		EA137CD21A79773200A92B85 /* ImageFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */; };
+		EA137CD31A79773200A92B85 /* ImageFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */; };
 		EA13D8B71A77F53C00E2611C /* LinkAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */; };
 		EA13D8C81A7800F500E2611C /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
 		EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */; };
@@ -172,6 +174,7 @@
 		A7291FA7576673F55122E623 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB0894473AAFE7E68C6396D /* Poppins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poppins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA137CC91A7962F000A92B85 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetchOperation.swift; sourceTree = "<group>"; };
 		EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkAccountController.swift; sourceTree = "<group>"; };
 		EA13D8C71A7800F500E2611C /* CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeController.swift; sourceTree = "<group>"; };
 		EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModel.swift; sourceTree = "<group>"; };
@@ -369,6 +372,7 @@
 				F825388A1A3F8C5C004476DC /* Cache.swift */,
 				EA395D661A448DF400EB607E /* AsyncQueue.swift */,
 				EA137CC91A7962F000A92B85 /* ImageFetcher.swift */,
+				EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -756,6 +760,7 @@
 				EA13D8DE1A78362A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA13D8E41A78362A00E2611C /* GifItemSource.swift in Sources */,
 				EA13D8D91A78361C00E2611C /* UIImage.swift in Sources */,
+				EA137CD31A79773200A92B85 /* ImageFetchOperation.swift in Sources */,
 				EA13D8F31A78362A00E2611C /* RootViewController.swift in Sources */,
 				EA13D8D41A78360A00E2611C /* Result.swift in Sources */,
 				EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */,
@@ -795,6 +800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
+				EA137CD21A79773200A92B85 /* ImageFetchOperation.swift in Sources */,
 				EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */,
 				EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
