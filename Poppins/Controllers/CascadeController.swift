@@ -1,6 +1,7 @@
 class CascadeController {
     let manager: SyncManager
     var observer: ViewModelObserver?
+    let imageFetcher: ImageFetcher
 
     var viewModel: CascadeViewModel {
         didSet {
@@ -11,6 +12,7 @@ class CascadeController {
     init(manager: SyncManager) {
         self.manager = manager
         viewModel = CascadeViewModel(manager: manager, images: [])
+        imageFetcher = ImageFetcher(manager: manager)
     }
 
     func fetchImages() {
@@ -22,6 +24,6 @@ class CascadeController {
 
     func cellControllerForIndexPath(indexPath: NSIndexPath) -> PoppinsCellController? {
         let path = viewModel.imagePathForIndexPath(indexPath)
-        return PoppinsCellController(manager: manager, path: path ?? "")
+        return PoppinsCellController(imageFetcher: imageFetcher, path: path ?? "")
     }
 }
