@@ -18,6 +18,10 @@ class PoppinsCellController {
         viewModel = PoppinsCellViewModel(frames: [])
     }
 
+    deinit {
+        imageFetcher.cancelFetchForImageAtPath(path)
+    }
+
     func fetchImage(size: CGSize) {
         imageFetcher.fetchImage(size, path: path) {
             self.viewModel = PoppinsCellViewModel(frames: $0)
