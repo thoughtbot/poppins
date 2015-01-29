@@ -31,7 +31,7 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         showViewController(initialViewController)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "transitionToMainFlow", name: "LinkingComplete", object: .None)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "transitionToMainFlow", name: AccountLinkedNotificationName, object: .None)
     }
 
     deinit {

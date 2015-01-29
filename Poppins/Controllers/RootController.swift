@@ -1,5 +1,5 @@
 struct RootController {
-    let manager: SyncManager
+    let manager: LinkManager
 
     var isLinked: Bool {
         return manager.isLinked()

@@ -1,8 +1,5 @@
-import LlamaKit
-
-class UnconfiguredService: SyncableService {
+class UnconfiguredService: LinkableService {
     let type: Service = .Unconfigured
-    var observer: ServiceUpdateObserver? = .None
 
     func setup() {}
 
@@ -17,16 +14,4 @@ class UnconfiguredService: SyncableService {
     }
 
     func unLink() {}
-
-    func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
-        return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
-    }
-
-    func getFiles() -> Result<[String], NSError> {
-        return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
-    }
-
-    func getFile(filename: String) -> Result<NSData, NSError> {
-        return failure(NSError(domain: "UnconfiguredServiceError", code: 404, userInfo: .None))
-    }
 }
