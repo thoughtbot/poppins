@@ -1,5 +1,5 @@
 @objc class ApplicationController {
-    let manager = SyncManager(service: UnconfiguredService())
+    let manager = LinkManager(service: UnconfiguredService())
 
     var linkedService: Service {
         get {

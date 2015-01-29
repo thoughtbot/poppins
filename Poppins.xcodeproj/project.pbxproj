@@ -27,17 +27,15 @@
 		EA13D8D31A78360700E2611C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
 		EA13D8D41A78360A00E2611C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
 		EA13D8D51A78360D00E2611C /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
-		EA13D8D61A78361000E2611C /* DBFilesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */; };
-		EA13D8D71A78361400E2611C /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04311A23B176002C73AF /* DBFile.swift */; };
 		EA13D8D81A78361C00E2611C /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */; };
 		EA13D8D91A78361C00E2611C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
 		EA13D8DA1A78361C00E2611C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
 		EA13D8DB1A78361C00E2611C /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
-		EA13D8DC1A78362A00E2611C /* SyncableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* SyncableService.swift */; };
+		EA13D8DC1A78362A00E2611C /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
 		EA13D8DD1A78362A00E2611C /* ViewModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */; };
 		EA13D8DE1A78362A00E2611C /* ServiceUpdateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */; };
 		EA13D8DF1A78362A00E2611C /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
-		EA13D8E01A78362A00E2611C /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */; };
+		EA13D8E01A78362A00E2611C /* LinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */; };
 		EA13D8E11A78362A00E2611C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
 		EA13D8E21A78362A00E2611C /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
 		EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111B1A24D7650069A5C6 /* UnconfiguredService.swift */; };
@@ -72,16 +70,14 @@
 		EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
 		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
 		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
-		EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */; };
-		EA7A04321A23B176002C73AF /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04311A23B176002C73AF /* DBFile.swift */; };
 		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
 		EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */; };
 		EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7D1A1AA7250033AE00 /* libc++.dylib */; };
 		EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7F1A1AA7310033AE00 /* libz.dylib */; };
-		EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* SyncableService.swift */; };
+		EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
 		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
-		EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */; };
+		EAACE1EA1A1BA7FD00E3C43D /* LinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */; };
 		EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
 		EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */; };
 		EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */; };
@@ -206,17 +202,15 @@
 		EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFilesystem.swift; sourceTree = "<group>"; };
-		EA7A04311A23B176002C73AF /* DBFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFile.swift; sourceTree = "<group>"; };
 		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
 		EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EA835D7D1A1AA7250033AE00 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		EA835D7F1A1AA7310033AE00 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		EA835D811A1BA0560033AE00 /* SyncableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncableService.swift; sourceTree = "<group>"; };
+		EA835D811A1BA0560033AE00 /* LinkableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkableService.swift; sourceTree = "<group>"; };
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
 		EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModelSpec.swift; sourceTree = "<group>"; };
-		EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkManager.swift; sourceTree = "<group>"; };
 		EAACE1F11A1BA9BF00E3C43D /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewController.swift; sourceTree = "<group>"; };
 		EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinsCell.swift; sourceTree = "<group>"; };
@@ -327,7 +321,7 @@
 		243AB5E3CA6007E62EFE04E7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				EA835D811A1BA0560033AE00 /* SyncableService.swift */,
+				EA835D811A1BA0560033AE00 /* LinkableService.swift */,
 				EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */,
 				EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */,
 			);
@@ -382,7 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				EA835D831A1BA09D0033AE00 /* DropboxService.swift */,
-				EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */,
+				EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */,
 				EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */,
 				EA34E7841A1CFD4F00875CFC /* Async.swift */,
 				EAB2111B1A24D7650069A5C6 /* UnconfiguredService.swift */,
@@ -399,8 +393,6 @@
 		9B88E0AB406E4C76442BEB17 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */,
-				EA7A04311A23B176002C73AF /* DBFile.swift */,
 				EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */,
 				EAF49B8A1A30FF1000B395DF /* UIImage.swift */,
 				EAF49CD01A3F37D200B395DF /* Array.swift */,
@@ -782,12 +774,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA13D8E01A78362A00E2611C /* SyncManager.swift in Sources */,
+				EA13D8E01A78362A00E2611C /* LinkManager.swift in Sources */,
 				EA13D8F41A78362A00E2611C /* PoppinsCell.swift in Sources */,
 				EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */,
 				EA13D8E81A78362A00E2611C /* CascadeViewModel.swift in Sources */,
 				EA13D8DD1A78362A00E2611C /* ViewModelObserver.swift in Sources */,
-				EA13D8D61A78361000E2611C /* DBFilesystem.swift in Sources */,
 				EA13D8EA1A78362A00E2611C /* AppDelegate.swift in Sources */,
 				EA13D8DE1A78362A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA13D8E41A78362A00E2611C /* GifItemSource.swift in Sources */,
@@ -811,8 +802,7 @@
 				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
 				EA13D8EC1A78362A00E2611C /* ApplicationAppearance.swift in Sources */,
 				EA13D8EE1A78362A00E2611C /* LinkAccountController.swift in Sources */,
-				EA13D8DC1A78362A00E2611C /* SyncableService.swift in Sources */,
-				EA13D8D71A78361400E2611C /* DBFile.swift in Sources */,
+				EA13D8DC1A78362A00E2611C /* LinkableService.swift in Sources */,
 				EA13D8F01A78362A00E2611C /* PoppinsCellController.swift in Sources */,
 				EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */,
 				EA13D8DA1A78361C00E2611C /* Array.swift in Sources */,
@@ -834,7 +824,7 @@
 				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA137CD21A79773200A92B85 /* ImageFetchOperation.swift in Sources */,
 				EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */,
-				EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */,
+				EAACE1EA1A1BA7FD00E3C43D /* LinkManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
 				EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */,
 				EA137CCA1A7962F000A92B85 /* ImageFetcher.swift in Sources */,
@@ -856,11 +846,10 @@
 				F825388B1A3F8C5C004476DC /* Cache.swift in Sources */,
 				6A696F747A9BF689A96680CC /* Main.storyboard in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
-				EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */,
+				EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */,
 				EAF49CD11A3F37D200B395DF /* Array.swift in Sources */,
 				F825388D1A3F8D4B004476DC /* Curry.swift in Sources */,
 				EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */,
-				EA7A04321A23B176002C73AF /* DBFile.swift in Sources */,
 				EA13D8C81A7800F500E2611C /* CascadeController.swift in Sources */,
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
@@ -868,7 +857,6 @@
 				EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */,
-				EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */,
 				EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

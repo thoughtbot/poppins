@@ -1,5 +1,5 @@
 struct LinkAccountController {
-    let manager: SyncManager
+    let manager: LinkManager
 
     func linkAccount(parent: UIViewController) {
         manager.setService(DropboxService())
