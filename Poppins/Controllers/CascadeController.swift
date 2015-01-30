@@ -1,25 +1,44 @@
-class CascadeController {
-    let manager: SyncManager
-    var observer: ViewModelObserver?
-    let imageFetcher: ImageFetcher
+import Foundation
+import Runes
 
-    var viewModel: CascadeViewModel {
-        didSet {
-            observer?.viewModelDidChange()
-        }
+class CascadeController {
+    private let imageFetcher: ImageFetcher
+    private let observer: ManagedObjectContextObserver
+    private let dataStore: Store
+    private let imageStore: ImageStore
+    private let syncEngine: SyncEngine
+    var viewModel: CascadeViewModel
+
+    init(syncClient: SyncClient) {
+        dataStore = Store()
+        imageStore = ImageStore(store: dataStore)
+        observer = dataStore.managedObjectContextObserver
+        imageFetcher = ImageFetcher()
+        syncEngine = SyncEngine(imageStore: imageStore, syncClient: syncClient)
+        viewModel = CascadeViewModel(images: [])
     }
 
-    init(manager: SyncManager) {
-        self.manager = manager
-        viewModel = CascadeViewModel(manager: manager, images: [])
-        imageFetcher = ImageFetcher(manager: manager)
+    func syncWithTHECLOUD() {
+        syncEngine.runSync()
     }
 
     func fetchImages() {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) { [unowned self] in
-            let images = self.manager.getFiles()
-            self.viewModel = CascadeViewModel(manager: self.manager, images: images.value ?? [])
+        viewModel = CascadeViewModel(images: imageStore.cachedImages() ?? [])
+    }
+
+    func registerForChanges(callback: ([NSIndexPath], [NSIndexPath], [NSIndexPath]) -> ()) {
+
+        observer.callback = { inserted, updated, deleted in
+            let d = deleted.map(self.createIndexPathFromImage)
+            let u = updated.map(self.createIndexPathFromImage)
+            self.fetchImages()
+            let i = inserted.map(self.createIndexPathFromImage)
+            callback(compact(i), compact(u), compact(d))
         }
+    }
+
+    private func createIndexPathFromImage(image: CachedImage) -> NSIndexPath? {
+        return find(viewModel.images.map { $0.path }, image.path) >>- { NSIndexPath(forRow: $0, inSection: 0) }
     }
 
     func cellControllerForIndexPath(indexPath: NSIndexPath) -> PoppinsCellController? {

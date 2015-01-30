@@ -17,6 +17,13 @@
 		EA137CD21A79773200A92B85 /* ImageFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */; };
 		EA137CD31A79773200A92B85 /* ImageFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */; };
 		EA137CE11A79943500A92B85 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA137CE01A79943500A92B85 /* DropboxSDK.framework */; };
+		EA137CE31A7A8FAC00A92B85 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CE21A7A8FAC00A92B85 /* DropboxClient.swift */; };
+		EA137CE91A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA137CE71A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld */; };
+		EA137CF11A7AC34800A92B85 /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF01A7AC34800A92B85 /* CachedImage.swift */; };
+		EA137CF31A7AC3FC00A92B85 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF21A7AC3FC00A92B85 /* Store.swift */; };
+		EA137CF51A7AD29300A92B85 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF41A7AD29300A92B85 /* SyncEngine.swift */; };
+		EA137CF71A7AD37F00A92B85 /* SyncClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF61A7AD37F00A92B85 /* SyncClient.swift */; };
+		EA137CF91A7AD40C00A92B85 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF81A7AD40C00A92B85 /* FileInfo.swift */; };
 		EA13D8B71A77F53C00E2611C /* LinkAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */; };
 		EA13D8C81A7800F500E2611C /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
 		EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */; };
@@ -61,14 +68,19 @@
 		EA13D9011A78373400E2611C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA13D8FF1A78373400E2611C /* Quick.framework */; };
 		EA13D9021A78374D00E2611C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA13D8FE1A78373400E2611C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA13D9031A78374D00E2611C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA13D8FF1A78373400E2611C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA2B79141A7C21310016F749 /* ManagedObjectContextObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */; };
+		EA2B791A1A7C25F60016F749 /* ManagedObjectContextObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
 		EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
 		EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
+		EA474D0B1ABB941800127CEF /* CachedImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */; };
 		EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51411A76E41300DCEAA8 /* RootViewController.swift */; };
 		EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51581A76E49D00DCEAA8 /* RootController.swift */; };
 		EA4A515B1A76E5B500DCEAA8 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4A515A1A76E5B500DCEAA8 /* Authentication.storyboard */; };
 		EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
 		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
+		EA5A86E11ABB850F00AD052A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A86E01ABB850F00AD052A /* Signal.swift */; };
+		EA5A86E21ABB850F00AD052A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A86E01ABB850F00AD052A /* Signal.swift */; };
 		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
 		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
 		EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */; };
@@ -77,6 +89,14 @@
 		EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
 		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
+		EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF61A7AD37F00A92B85 /* SyncClient.swift */; };
+		EAA614C31A7AEAA1008DA897 /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF01A7AC34800A92B85 /* CachedImage.swift */; };
+		EAA614C51A7AEAA1008DA897 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF21A7AC3FC00A92B85 /* Store.swift */; };
+		EAA614C61A7AEAA1008DA897 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF41A7AD29300A92B85 /* SyncEngine.swift */; };
+		EAA614C71A7AEAA1008DA897 /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF81A7AD40C00A92B85 /* FileInfo.swift */; };
+		EAA614CD1A7AEB92008DA897 /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CE21A7A8FAC00A92B85 /* DropboxClient.swift */; };
+		EAA614CF1A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */; };
+		EAA614D01A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */; };
 		EAACE1EA1A1BA7FD00E3C43D /* LinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */; };
 		EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
 		EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */; };
@@ -87,6 +107,8 @@
 		EAB2111E1A24DEEA0069A5C6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */; };
 		EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */; };
 		EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211221A2508C50069A5C6 /* NotificationListener.swift */; };
+		EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
+		EAD733A91A891C91004A7F6E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
 		EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
 		EAF49CD11A3F37D200B395DF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
 		EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
@@ -184,6 +206,13 @@
 		EA137CC91A7962F000A92B85 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetchOperation.swift; sourceTree = "<group>"; };
 		EA137CE01A79943500A92B85 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = ../Frameworks/DropboxSDK.framework; sourceTree = "<group>"; };
+		EA137CE21A7A8FAC00A92B85 /* DropboxClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxClient.swift; sourceTree = "<group>"; };
+		EA137CE81A7ABF5800A92B85 /* PoppinsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoppinsModel.xcdatamodel; sourceTree = "<group>"; };
+		EA137CF01A7AC34800A92B85 /* CachedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImage.swift; sourceTree = "<group>"; };
+		EA137CF21A7AC3FC00A92B85 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		EA137CF41A7AD29300A92B85 /* SyncEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		EA137CF61A7AD37F00A92B85 /* SyncClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncClient.swift; sourceTree = "<group>"; };
+		EA137CF81A7AD40C00A92B85 /* FileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileInfo.swift; sourceTree = "<group>"; };
 		EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkAccountController.swift; sourceTree = "<group>"; };
 		EA13D8C71A7800F500E2611C /* CascadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeController.swift; sourceTree = "<group>"; };
 		EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModel.swift; sourceTree = "<group>"; };
@@ -193,14 +222,17 @@
 		EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceUpdateObserver.swift; sourceTree = "<group>"; };
 		EA13D8FE1A78373400E2611C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		EA13D8FF1A78373400E2611C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextObserver.swift; sourceTree = "<group>"; };
 		EA34E7841A1CFD4F00875CFC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		EA395D661A448DF400EB607E /* AsyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncQueue.swift; sourceTree = "<group>"; };
 		EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageExtensions.swift; sourceTree = "<group>"; };
 		EA4A51411A76E41300DCEAA8 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EA4A51581A76E49D00DCEAA8 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		EA4A515A1A76E5B500DCEAA8 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		EA5A86E01ABB850F00AD052A /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
 		EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -210,6 +242,7 @@
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
 		EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModelSpec.swift; sourceTree = "<group>"; };
+		EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnconfiguredClient.swift; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkManager.swift; sourceTree = "<group>"; };
 		EAACE1F11A1BA9BF00E3C43D /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +253,7 @@
 		EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDropboxService.swift; sourceTree = "<group>"; };
 		EAB211221A2508C50069A5C6 /* NotificationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListener.swift; sourceTree = "<group>"; };
+		EAD733A71A891C91004A7F6E /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EAF49CD01A3F37D200B395DF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		EAF49CDE1A3F582100B395DF /* GifItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifItemSource.swift; sourceTree = "<group>"; };
@@ -324,6 +358,7 @@
 				EA835D811A1BA0560033AE00 /* LinkableService.swift */,
 				EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */,
 				EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */,
+				EA137CF61A7AD37F00A92B85 /* SyncClient.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -386,6 +421,15 @@
 				EA395D661A448DF400EB607E /* AsyncQueue.swift */,
 				EA137CC91A7962F000A92B85 /* ImageFetcher.swift */,
 				EA137CD11A79773200A92B85 /* ImageFetchOperation.swift */,
+				EA137CE21A7A8FAC00A92B85 /* DropboxClient.swift */,
+				EA137CF01A7AC34800A92B85 /* CachedImage.swift */,
+				EA137CF21A7AC3FC00A92B85 /* Store.swift */,
+				EA137CF41A7AD29300A92B85 /* SyncEngine.swift */,
+				EA137CF81A7AD40C00A92B85 /* FileInfo.swift */,
+				EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */,
+				EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */,
+				EAD733A71A891C91004A7F6E /* ImageStore.swift */,
+				EA5A86E01ABB850F00AD052A /* Signal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -397,6 +441,7 @@
 				EAF49B8A1A30FF1000B395DF /* UIImage.swift */,
 				EAF49CD01A3F37D200B395DF /* Array.swift */,
 				EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */,
+				EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -466,6 +511,14 @@
 				2687C52B5525793534A0348B /* UnitTests-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA137CE61A7ABF1F00A92B85 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA137CE71A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		EA13D9041A792E1E00E2611C /* ViewModels */ = {
@@ -556,6 +609,7 @@
 			isa = PBXGroup;
 			children = (
 				0A2729CDC3064EC8E18E74E8 /* Images.xcassets */,
+				EA137CE61A7ABF1F00A92B85 /* Data */,
 				49F032B1FEF5FD5EF26F9DE7 /* Storyboards */,
 				B029715156528B30CC3AA355 /* Nibs */,
 				5EAEEA5A9A711562DD19B8DF /* Other-Sources */,
@@ -780,17 +834,21 @@
 				EA13D8E81A78362A00E2611C /* CascadeViewModel.swift in Sources */,
 				EA13D8DD1A78362A00E2611C /* ViewModelObserver.swift in Sources */,
 				EA13D8EA1A78362A00E2611C /* AppDelegate.swift in Sources */,
+				EA2B791A1A7C25F60016F749 /* ManagedObjectContextObserver.swift in Sources */,
 				EA13D8DE1A78362A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA13D8E41A78362A00E2611C /* GifItemSource.swift in Sources */,
 				EA13D8D91A78361C00E2611C /* UIImage.swift in Sources */,
 				EA137CD31A79773200A92B85 /* ImageFetchOperation.swift in Sources */,
 				EA13D8F31A78362A00E2611C /* RootViewController.swift in Sources */,
 				EA13D8D41A78360A00E2611C /* Result.swift in Sources */,
+				EA5A86E21ABB850F00AD052A /* Signal.swift in Sources */,
 				EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */,
 				EA13D8DB1A78361C00E2611C /* UIWindow.swift in Sources */,
 				EA13D8E91A78362A00E2611C /* PoppinsCellViewModel.swift in Sources */,
 				EA13D8F21A78362A00E2611C /* LinkAccountViewController.swift in Sources */,
 				EA13D8E21A78362A00E2611C /* Async.swift in Sources */,
+				EAA614C61A7AEAA1008DA897 /* SyncEngine.swift in Sources */,
+				EAA614C31A7AEAA1008DA897 /* CachedImage.swift in Sources */,
 				EA13D8E61A78362A00E2611C /* Cache.swift in Sources */,
 				EA13D8EF1A78362A00E2611C /* CascadeController.swift in Sources */,
 				EA13D8D31A78360700E2611C /* Optional.swift in Sources */,
@@ -799,9 +857,12 @@
 				EA13D8E11A78362A00E2611C /* Service.swift in Sources */,
 				EA13D8F11A78362A00E2611C /* CascadeViewController.swift in Sources */,
 				EA13D8D51A78360D00E2611C /* Curry.swift in Sources */,
+				EAA614D01A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */,
+				EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */,
 				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
 				EA13D8EC1A78362A00E2611C /* ApplicationAppearance.swift in Sources */,
 				EA13D8EE1A78362A00E2611C /* LinkAccountController.swift in Sources */,
+				EAA614C71A7AEAA1008DA897 /* FileInfo.swift in Sources */,
 				EA13D8DC1A78362A00E2611C /* LinkableService.swift in Sources */,
 				EA13D8F01A78362A00E2611C /* PoppinsCellController.swift in Sources */,
 				EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */,
@@ -809,7 +870,10 @@
 				EA13D8D81A78361C00E2611C /* UIApplication.swift in Sources */,
 				EA13D8E51A78362A00E2611C /* HockeyManager.swift in Sources */,
 				EA13D8EB1A78362A00E2611C /* ApplicationController.swift in Sources */,
+				EAA614CD1A7AEB92008DA897 /* DropboxClient.swift in Sources */,
+				EAD733A91A891C91004A7F6E /* ImageStore.swift in Sources */,
 				EA13D8ED1A78362A00E2611C /* RootController.swift in Sources */,
+				EAA614C51A7AEAA1008DA897 /* Store.swift in Sources */,
 				EA13D8DF1A78362A00E2611C /* DropboxService.swift in Sources */,
 				EA13D8F51A78362A00E2611C /* Button.swift in Sources */,
 				EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */,
@@ -822,13 +886,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
+				EA137CE31A7A8FAC00A92B85 /* DropboxClient.swift in Sources */,
 				EA137CD21A79773200A92B85 /* ImageFetchOperation.swift in Sources */,
+				EA137CF71A7AD37F00A92B85 /* SyncClient.swift in Sources */,
 				EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */,
 				EAACE1EA1A1BA7FD00E3C43D /* LinkManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
 				EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */,
+				EA5A86E11ABB850F00AD052A /* Signal.swift in Sources */,
 				EA137CCA1A7962F000A92B85 /* ImageFetcher.swift in Sources */,
+				EA137CE91A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld in Sources */,
 				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
+				EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */,
 				EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */,
 				EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */,
 				EA13D8B71A77F53C00E2611C /* LinkAccountController.swift in Sources */,
@@ -840,7 +909,9 @@
 				EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */,
 				EAB2111E1A24DEEA0069A5C6 /* UIApplication.swift in Sources */,
 				EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */,
+				EA137CF31A7AC3FC00A92B85 /* Store.swift in Sources */,
 				EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */,
+				EA137CF91A7AD40C00A92B85 /* FileInfo.swift in Sources */,
 				6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */,
 				F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */,
 				F825388B1A3F8C5C004476DC /* Cache.swift in Sources */,
@@ -849,12 +920,17 @@
 				EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */,
 				EAF49CD11A3F37D200B395DF /* Array.swift in Sources */,
 				F825388D1A3F8D4B004476DC /* Curry.swift in Sources */,
+				EAA614CF1A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */,
 				EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */,
 				EA13D8C81A7800F500E2611C /* CascadeController.swift in Sources */,
+				EA474D0B1ABB941800127CEF /* CachedImageExtensions.swift in Sources */,
+				EA137CF11A7AC34800A92B85 /* CachedImage.swift in Sources */,
+				EA137CF51A7AD29300A92B85 /* SyncEngine.swift in Sources */,
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
 				F80BE3EA1A41E659009192A4 /* HockeyManager.swift in Sources */,
 				EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */,
+				EA2B79141A7C21310016F749 /* ManagedObjectContextObserver.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */,
 				EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */,
@@ -1122,6 +1198,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EA137CE71A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EA137CE81A7ABF5800A92B85 /* PoppinsModel.xcdatamodel */,
+			);
+			currentVersion = EA137CE81A7ABF5800A92B85 /* PoppinsModel.xcdatamodel */;
+			path = PoppinsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BBAD5EE8160C5BC2C5877301 /* Project object */;
 }

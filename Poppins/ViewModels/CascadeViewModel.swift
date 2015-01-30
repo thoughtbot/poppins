@@ -2,26 +2,24 @@ import LlamaKit
 import Runes
 
 struct CascadeViewModel {
-    let manager: SyncManager
-    let images: [String]
+    let images: [CachedImage]
 
     var numberOfImages: Int {
         return images.count
     }
 
     func imagePathForIndexPath(indexPath: NSIndexPath) -> String? {
-        return images.safeValue(indexPath.row)
+        return images.safeValue(indexPath.row)?.documentDirectoryPath
     }
 
     func imageSizeForIndexPath(indexPath: NSIndexPath) -> CGSize? {
-        let path = imagePathForIndexPath(indexPath)
-        let data: Result<NSData, NSError> = path.toResult() >>- manager.getFile
-        return { $0.size } <^> data.value >>- imageForData
+        let cachedImage = images.safeValue(indexPath.row)
+        return CGSize(width: 1, height: cachedImage?.aspectRatio ?? 1)
     }
 
     func gifItemSourceForIndexPath(indexPath: NSIndexPath) -> GifItemSource? {
         let path = imagePathForIndexPath(indexPath)
-        let data = path >>- { self.manager.getFile($0).value }
+        let data = path >>- { NSData(contentsOfFile: $0) }
         return GifItemSource.create <^> data
     }
 }

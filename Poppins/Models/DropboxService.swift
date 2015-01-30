@@ -2,9 +2,12 @@ import Runes
 
 class DropboxService : LinkableService {
     let type: Service = .Dropbox
+    var client: SyncClient {
+        return DropboxClient(session: DBSession.sharedSession())
+    }
 
     func setup() {
-        let session = DBSession(appKey: "***REMOVED***", secret: "***REMOVED***", root:kDBRootAppFolder)
+        let session = DBSession(appKey: "***REMOVED***", appSecret: "***REMOVED***", root:kDBRootAppFolder)
         DBSession.setSharedSession(session)
     }
 

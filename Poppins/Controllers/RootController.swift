@@ -10,6 +10,6 @@ struct RootController {
     }
 
     var cascadeController: CascadeController {
-        return CascadeController(manager: manager)
+        return CascadeController(syncClient: manager.client)
     }
 }

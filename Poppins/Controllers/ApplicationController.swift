@@ -22,11 +22,14 @@
 
         switch linkedService {
         case .Dropbox: manager.setService(DropboxService())
-        case .Unconfigured: manager.setService(UnconfiguredService())
+        default: break
         }
 
         manager.setup()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setLinkedService", name: AccountLinkedNotificationName, object: .None)
+
+        if !manager.isLinked() {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "setLinkedService", name: AccountLinkedNotificationName, object: .None)
+        }
     }
 
     func configureApplication() {
