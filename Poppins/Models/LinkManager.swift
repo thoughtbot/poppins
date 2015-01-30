@@ -11,6 +11,10 @@ class LinkManager: LinkableService {
         return service.type
     }
 
+    var client: SyncClient {
+        return service.client
+    }
+
     init(service: LinkableService) {
         self.service = service
     }

@@ -1,9 +1,9 @@
-import Gifu
 import Runes
+import CoreGraphics
 
 @IBDesignable
 class PoppinsCell: UICollectionViewCell, ViewModelObserver {
-    @IBOutlet weak var animatedView: AnimatedView?
+    @IBOutlet weak var imageView: UIImageView?
     @IBOutlet weak var shadowView: UIView?
     @IBOutlet weak var rootView: UIView?
 
@@ -18,25 +18,21 @@ class PoppinsCell: UICollectionViewCell, ViewModelObserver {
         didSet {
             controller?.observer = self
             viewModelDidChange()
-            controller?.fetchImage <*> animatedView?.frame.size
+            controller?.fetchImage <*> self.frame.size
         }
     }
 
     func viewModelDidChange() {
         dispatch_async(dispatch_get_main_queue()) {
-            self.animatedView?.setAnimatedFrames(self.controller?.viewModel.frames ?? [])
-            self.animatedView?.resumeAnimation()
+            self.imageView?.image = self.controller?.viewModel.image
+            return
         }
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setupCornerRadius()
         setupDropShadow()
-    }
-
-    override func prepareForReuse() {
-        controller = .None
     }
 }
 

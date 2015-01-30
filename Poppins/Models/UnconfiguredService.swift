@@ -1,5 +1,6 @@
 class UnconfiguredService: LinkableService {
     let type: Service = .Unconfigured
+    let client: SyncClient = UnconfiguredClient()
 
     func setup() {}
 

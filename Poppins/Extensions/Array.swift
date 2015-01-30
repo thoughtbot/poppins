@@ -7,3 +7,7 @@ extension Array {
         return contains(startIndex..<endIndex, index) ? self[index] : .None
     }
 }
+
+func compact<T>(ts: [T?]) -> [T] {
+    return ts.reduce([]) { accum, item in item.map { accum + [$0] } ?? accum }
+}
