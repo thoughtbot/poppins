@@ -1,22 +1,17 @@
+import CoreData
 import Cascade
 import Gifu
 import LlamaKit
 import Runes
 
-class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate, ViewModelObserver {
-    var controller: CascadeController? {
-        didSet {
-            controller?.observer = self
-        }
-    }
+class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
+    var controller: CascadeController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout = collectionView?.collectionViewLayout as? CascadeLayout
         layout?.delegate = self
-
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fetchImages", name: PreloadCompletedNotificationName, object: .None)
-
+        controller?.syncWithTHECLOUD()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -24,17 +19,14 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate, 
         fetchImages()
     }
 
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-
     func fetchImages() {
         controller?.fetchImages()
-    }
-
-    func viewModelDidChange() {
-        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
-            _ = self.collectionView?.reloadData()
+        controller?.registerForChanges { inserted, updated, deleted in
+            _ = self.collectionView?.performBatchUpdates({
+                self.collectionView?.insertItemsAtIndexPaths(inserted)
+                self.collectionView?.reloadItemsAtIndexPaths(updated)
+                self.collectionView?.deleteItemsAtIndexPaths(deleted)
+            }, completion: .None)
         }
     }
 

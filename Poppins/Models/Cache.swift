@@ -18,9 +18,9 @@ class Cache<T> {
 }
 
 @objc class CachePurger {
-    let cache: Cache<[AnimatedFrame]>
+    let cache: Cache<UIImage>
 
-    init(cache: Cache<[AnimatedFrame]>) {
+    init(cache: Cache<UIImage>) {
         self.cache = cache
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("didRecieveMemoryWarning"), name: UIApplicationDidReceiveMemoryWarningNotification, object: .None)
     }
@@ -28,8 +28,6 @@ class Cache<T> {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-
-    func thumbsUpGoodJob() { }
 
     func didRecieveMemoryWarning() {
         cache.purge()

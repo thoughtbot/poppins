@@ -1,38 +1,37 @@
 import Foundation
-import Gifu
 import Runes
 
 class ImageFetcher {
-    let imageCache: Cache<[AnimatedFrame]>
+    let imageCache: Cache<UIImage>
     let purger: CachePurger
     let operationQueue: AsyncQueue
-    let manager: SyncManager
+    let lockQueue = dispatch_queue_create("com.thoughtbot.pop-n-lock", nil)
     var operations: [String: NSOperation] = [:]
 
-    init(manager: SyncManager) {
-        imageCache = Cache<[AnimatedFrame]>()
+    init() {
+        imageCache = Cache<UIImage>()
         purger = CachePurger(cache: imageCache)
         operationQueue = AsyncQueue(name: "PoppinsCacheQueue", maxOperations: 10)
-        self.manager = manager
     }
 
-    func fetchImage(size: CGSize, path: String, callback: [AnimatedFrame] -> ()) {
+    func fetchImage(size: CGSize, path: String) -> UIImage? {
         if let image = imageCache.itemForKey(path) {
-            callback(image)
+            return image
         } else {
-            let operation = ImageFetchOperation(size: size, path: path, manager: manager) {
-                self.purger.thumbsUpGoodJob()
-                curry(self.imageCache.setItem) <^> $0 <*> path
-                self.operations.removeValueForKey(path)
-                callback($0)
-            }
-            operationQueue.addOperation(operation)
-            operations[path] = operation
-        }
-    }
+            dispatch_sync(lockQueue) {
+                if contains(self.operations.keys, path) { return }
 
-    func cancelFetchForImageAtPath(path: String) {
-        operations[path]?.cancel()
-        operations.removeValueForKey(path)
+                let operation = ImageFetchOperation(size: size, path: path) {
+                    curry(self.imageCache.setItem) <^> $0 <*> path
+                    dispatch_sync(self.lockQueue) {
+                        _ = self.operations.removeValueForKey(path)
+                    }
+                    NSNotificationCenter.defaultCenter().postNotificationName("CacheDidUpdate", object: .None)
+                }
+                self.operationQueue.addOperation(operation)
+                self.operations[path] = operation
+            }
+            return .None
+        }
     }
 }

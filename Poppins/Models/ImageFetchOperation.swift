@@ -1,27 +1,32 @@
 import Foundation
-import Gifu
 import Runes
+import ImageIO
 
 class ImageFetchOperation: NSOperation {
     let size: CGSize
     let path: String
-    let manager: SyncManager
-    let callback: [AnimatedFrame] -> ()
+    let callback: UIImage? -> ()
 
-    init(size: CGSize, path: String, manager: SyncManager, callback: [AnimatedFrame] -> ()) {
+    init(size: CGSize, path: String, callback: UIImage? -> ()) {
         self.size = size
         self.path = path
-        self.manager = manager
         self.callback = callback
     }
 
     override func main() {
         if cancelled { return }
-        let image = curry(AnimatedFrame.createWithData)
-                <^> manager.getFile(path).value
-                <*> size
+        let data = NSData(contentsOfFile: path)
 
         if cancelled { return }
-        callback <^> image
+        let imageSource = data >>- { CGImageSourceCreateWithData($0, nil) }
+
+        let options = [
+            kCGImageSourceThumbnailMaxPixelSize as NSString: max(size.width, size.height) * 2,
+            kCGImageSourceCreateThumbnailFromImageIfAbsent as NSString: true
+        ]
+        let scaledImage = imageSource >>- { UIImage(CGImage: CGImageSourceCreateThumbnailAtIndex($0, 0, options)) }
+
+        if cancelled { return }
+        callback(scaledImage)
     }
 }
