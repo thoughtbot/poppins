@@ -1,7 +1,7 @@
 github "bitstadium/HockeySDK-iOS"
 github "thoughtbot/Cascade"
 github "tonyd256/gifu"
-github "LlamaKit/LlamaKit"
+github "LlamaKit/LlamaKit" == 0.2.0
 
-github "Quick/Quick"
-github "Quick/Nimble"
+github "Quick/Quick" == 0.2.2
+github "Quick/Nimble" == 0.3.1
