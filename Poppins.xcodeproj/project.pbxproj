@@ -82,10 +82,17 @@
 		EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */; };
 		EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */; };
 		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
+		EA59E6561ABC94A500425348 /* PreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA59E6551ABC94A500425348 /* PreviewView.xib */; };
+		EA59E65D1ABC95F500425348 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65C1ABC95F500425348 /* PreviewView.swift */; };
+		EA59E6601ABC96D900425348 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65F1ABC96D800425348 /* PreviewController.swift */; };
+		EA59E6621ABC9AF100425348 /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */; };
 		EA5A86E11ABB850F00AD052A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A86E01ABB850F00AD052A /* Signal.swift */; };
 		EA5A86E21ABB850F00AD052A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A86E01ABB850F00AD052A /* Signal.swift */; };
 		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
 		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
+		EA7B52301ABC9F40002FA083 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65C1ABC95F500425348 /* PreviewView.swift */; };
+		EA7B52361ABC9F45002FA083 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65F1ABC96D800425348 /* PreviewController.swift */; };
+		EA7B52371ABC9F49002FA083 /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */; };
 		EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D751A1AA6FB0033AE00 /* CFNetwork.framework */; };
 		EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7D1A1AA7250033AE00 /* libc++.dylib */; };
 		EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA835D7F1A1AA7310033AE00 /* libz.dylib */; };
@@ -222,6 +229,10 @@
 		EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gifu.framework; path = ../Carthage/Build/iOS/Gifu.framework; sourceTree = "<group>"; };
 		EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = ../Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		EA59E6551ABC94A500425348 /* PreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewView.xib; sourceTree = "<group>"; };
+		EA59E65C1ABC95F500425348 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		EA59E65F1ABC96D800425348 /* PreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewModel.swift; sourceTree = "<group>"; };
 		EA5A86E01ABB850F00AD052A /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
@@ -346,6 +357,7 @@
 			children = (
 				EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */,
 				5D8975C91A43807D00F72C27 /* Button.swift */,
+				EA59E65C1ABC95F500425348 /* PreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -373,6 +385,7 @@
 			children = (
 				EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */,
 				EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */,
+				EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -439,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */,
+				EA59E6551ABC94A500425348 /* PreviewView.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -453,6 +467,7 @@
 				EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */,
 				EA13D8C71A7800F500E2611C /* CascadeController.swift */,
 				EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */,
+				EA59E65F1ABC96D800425348 /* PreviewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -732,6 +747,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA4A515B1A76E5B500DCEAA8 /* Authentication.storyboard in Resources */,
+				EA59E6561ABC94A500425348 /* PreviewView.xib in Resources */,
 				52F67282AB2CBF409064A361 /* Images.xcassets in Resources */,
 				F8104BED1A545E7700A829A7 /* HockeySDKResources.bundle in Resources */,
 			);
@@ -793,6 +809,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7B52371ABC9F49002FA083 /* PreviewViewModel.swift in Sources */,
 				EA13D8E01A78362A00E2611C /* LinkManager.swift in Sources */,
 				EA13D8F41A78362A00E2611C /* PoppinsCell.swift in Sources */,
 				EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */,
@@ -822,6 +839,7 @@
 				EA13D8E11A78362A00E2611C /* Service.swift in Sources */,
 				EA13D8F11A78362A00E2611C /* CascadeViewController.swift in Sources */,
 				EA13D8D51A78360D00E2611C /* Curry.swift in Sources */,
+				EA7B52301ABC9F40002FA083 /* PreviewView.swift in Sources */,
 				EAA614D01A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */,
 				EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */,
 				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
@@ -840,6 +858,7 @@
 				EA13D8ED1A78362A00E2611C /* RootController.swift in Sources */,
 				EAA614C51A7AEAA1008DA897 /* Store.swift in Sources */,
 				EA13D8DF1A78362A00E2611C /* DropboxService.swift in Sources */,
+				EA7B52361ABC9F45002FA083 /* PreviewController.swift in Sources */,
 				EA13D8F51A78362A00E2611C /* Button.swift in Sources */,
 				EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */,
 				EA137CCB1A7962F000A92B85 /* ImageFetcher.swift in Sources */,
@@ -853,6 +872,7 @@
 				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA137CE31A7A8FAC00A92B85 /* DropboxClient.swift in Sources */,
 				EA137CD21A79773200A92B85 /* ImageFetchOperation.swift in Sources */,
+				EA59E6601ABC96D900425348 /* PreviewController.swift in Sources */,
 				EA137CF71A7AD37F00A92B85 /* SyncClient.swift in Sources */,
 				EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */,
 				EAACE1EA1A1BA7FD00E3C43D /* LinkManager.swift in Sources */,
@@ -884,6 +904,7 @@
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
 				EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */,
 				EAF49CD11A3F37D200B395DF /* Array.swift in Sources */,
+				EA59E6621ABC9AF100425348 /* PreviewViewModel.swift in Sources */,
 				F825388D1A3F8D4B004476DC /* Curry.swift in Sources */,
 				EAA614CF1A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */,
 				EA13D8CA1A78014A00E2611C /* CascadeViewModel.swift in Sources */,
@@ -895,6 +916,7 @@
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
 				F80BE3EA1A41E659009192A4 /* HockeyManager.swift in Sources */,
 				EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */,
+				EA59E65D1ABC95F500425348 /* PreviewView.swift in Sources */,
 				EA2B79141A7C21310016F749 /* ManagedObjectContextObserver.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */,
