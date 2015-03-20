@@ -2,6 +2,7 @@ github "bitstadium/HockeySDK-iOS"
 github "thoughtbot/Cascade"
 github "tonyd256/gifu"
 github "LlamaKit/LlamaKit" == 0.2.0
+github "thoughtbot/Runes"
 github "ReactiveCocoa/ReactiveCocoa" "swift-development"
 
 github "Quick/Quick" == 0.2.2
