@@ -18,8 +18,6 @@
     }
 
     func configureLinkedService() {
-        HockeyManager.configure()
-
         switch linkedService {
         case .Dropbox: manager.setService(DropboxService())
         default: break
