@@ -27,7 +27,6 @@ class CascadeController {
     }
 
     func registerForChanges(callback: ([NSIndexPath], [NSIndexPath], [NSIndexPath]) -> ()) {
-
         observer.callback = { inserted, updated, deleted in
             let d = deleted.map(self.createIndexPathFromImage)
             let u = updated.map(self.createIndexPathFromImage)
