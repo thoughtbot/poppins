@@ -19,7 +19,8 @@
 		EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51581A76E49D00DCEAA8 /* RootController.swift */; };
 		EA4A515B1A76E5B500DCEAA8 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4A515A1A76E5B500DCEAA8 /* Authentication.storyboard */; };
 		EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
-		EA7A042E1A1E44D8002C73AF /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Results.swift */; };
+		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
+		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
 		EA7A04301A23ADB8002C73AF /* DBFilesystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */; };
 		EA7A04321A23B176002C73AF /* DBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04311A23B176002C73AF /* DBFile.swift */; };
 		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
@@ -30,7 +31,6 @@
 		EA835D821A1BA0560033AE00 /* SyncableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* SyncableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
 		EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */; };
-		EAACE1F01A1BA93700E3C43D /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1EF1A1BA93700E3C43D /* Operators.swift */; };
 		EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
 		EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */; };
 		EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */; };
@@ -140,7 +140,8 @@
 		EA4A51581A76E49D00DCEAA8 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		EA4A515A1A76E5B500DCEAA8 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
-		EA7A042D1A1E44D8002C73AF /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA7A042F1A23ADB8002C73AF /* DBFilesystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFilesystem.swift; sourceTree = "<group>"; };
 		EA7A04311A23B176002C73AF /* DBFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFile.swift; sourceTree = "<group>"; };
 		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
-		EAACE1EF1A1BA93700E3C43D /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		EAACE1F11A1BA9BF00E3C43D /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewController.swift; sourceTree = "<group>"; };
 		EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinsCell.swift; sourceTree = "<group>"; };
@@ -222,6 +222,7 @@
 				F80BE3E71A41E5B9009192A4 /* SystemConfiguration.framework in Frameworks */,
 				F80BE3E81A41E5B9009192A4 /* UIKit.framework in Frameworks */,
 				F80E7A431AB26DED0099227F /* Gifu.framework in Frameworks */,
+				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
 				EA835D801A1AA7310033AE00 /* libz.dylib in Frameworks */,
 				EA835D7E1A1AA7250033AE00 /* libc++.dylib in Frameworks */,
 				EA835D761A1AA6FB0033AE00 /* CFNetwork.framework in Frameworks */,
@@ -418,9 +419,8 @@
 		EAACE1EE1A1BA90800E3C43D /* Functional */ = {
 			isa = PBXGroup;
 			children = (
-				EAACE1EF1A1BA93700E3C43D /* Operators.swift */,
 				EAACE1F11A1BA9BF00E3C43D /* Optional.swift */,
-				EA7A042D1A1E44D8002C73AF /* Results.swift */,
+				EA7A042D1A1E44D8002C73AF /* Result.swift */,
 				F825388C1A3F8D4B004476DC /* Curry.swift */,
 			);
 			path = Functional;
@@ -434,6 +434,7 @@
 				F80E7A3F1AB26DED0099227F /* Gifu.framework */,
 				F80E7A401AB26DED0099227F /* LlamaKit.framework */,
 				F80E7A411AB26DED0099227F /* Runes.framework */,
+				EA4A51641A76EC6500DCEAA8 /* Runes.framework */,
 				F8104BEB1A545E4400A829A7 /* CrashReporter.framework */,
 				F88CBD8C1A542F1F009F8D53 /* Dropbox.framework */,
 				F80BE3D51A41E5B9009192A4 /* AssetsLibrary.framework */,
@@ -673,11 +674,10 @@
 				EAACE1EA1A1BA7FD00E3C43D /* SyncManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
 				EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */,
-				EAACE1F01A1BA93700E3C43D /* Operators.swift in Sources */,
 				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
 				EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */,
 				EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */,
-				EA7A042E1A1E44D8002C73AF /* Results.swift in Sources */,
+				EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */,
 				EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */,
 				EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */,
 				5D8975CA1A43807D00F72C27 /* Button.swift in Sources */,

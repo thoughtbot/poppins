@@ -1,4 +1,5 @@
 import Gifu
+import Runes
 
 private let ImageCache = Cache<[AnimatedFrame]>()
 private let purger = CachePurger(cache: ImageCache)

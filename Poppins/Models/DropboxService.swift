@@ -1,4 +1,5 @@
 import LlamaKit
+import Runes
 
 public class DropboxService : SyncableService {
     public let type: Service = .Dropbox
@@ -8,17 +9,17 @@ public class DropboxService : SyncableService {
         DBAccountManager.setSharedManager(manager)
 
         if isLinked() {
-            DBAccountManager.sharedManager().linkedAccount >>- setupFilesystem
+            setupFilesystem <^> DBAccountManager.sharedManager().linkedAccount
         }
     }
 
     public func initiateAuthentication<T>(controller: T) {
-        controller as? UIViewController >>- DBAccountManager.sharedManager().linkFromController
+        DBAccountManager.sharedManager().linkFromController <^> controller as? UIViewController
     }
 
     public func finalizeAuthentication(url: NSURL) -> Bool {
         let account = DBAccountManager.sharedManager().handleOpenURL(url)
-        account >>- setupFilesystem
+        setupFilesystem <^> account
         return account != .None
     }
 
@@ -51,7 +52,7 @@ public class DropboxService : SyncableService {
     }
 
     private func setupFilesystem(account: DBAccount) {
-        DBFilesystem(account: account) >>- DBFilesystem.setSharedFilesystem
+        DBFilesystem.setSharedFilesystem <^> DBFilesystem(account: account)
         let filesystem = DBFilesystem.sharedFilesystem()
 
         watchForFileChanges()
