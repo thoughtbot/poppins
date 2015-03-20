@@ -1,6 +1,7 @@
 import Cascade
 import Gifu
 import LlamaKit
+import Runes
 
 class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     var images: [String] = []
@@ -47,7 +48,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let path = safeValue(images, indexPath.row)
         let data: Result<NSData, NSError> = path.toResult() >>- SyncManager.sharedManager.getFile
-        return data.value >>- imageForData >>- { $0.size } ?? CGSize(width: 1, height: 1)
+        return ({ $0.size } <^> data.value >>- imageForData) ?? CGSize(width: 1, height: 1)
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: CascadeLayout, numberOfColumnsInSectionAtIndexPath indexPath: NSIndexPath) -> Int {
