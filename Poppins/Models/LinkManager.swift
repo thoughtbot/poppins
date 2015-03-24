@@ -29,7 +29,7 @@ class LinkManager: LinkableService {
 
     func finalizeAuthentication(url: NSURL) -> Bool {
         let handled = service.finalizeAuthentication(url)
-        if handled {
+        if handled && isLinked() {
             NSNotificationCenter.defaultCenter().postNotificationName(AccountLinkedNotificationName, object: .None)
         }
         return handled
