@@ -22,4 +22,9 @@ struct ImageStore {
         store.insertObject(cachedImage)
         store.save()
     }
+
+    func deleteCachedImage(cachedImage: CachedImage) {
+        store.deleteObject(cachedImage)
+        store.save()
+    }
 }
