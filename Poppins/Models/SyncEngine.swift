@@ -61,6 +61,6 @@ class SyncEngine {
     }
 
     private func deleteFile(cachedImage: CachedImage) {
-        cachedImage.delete(.None)
+        store.deleteCachedImage(cachedImage)
     }
 }
