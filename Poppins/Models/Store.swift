@@ -50,6 +50,12 @@ class Store {
         }
     }
 
+    func deleteObject<A: NSManagedObject>(object: A) {
+        managedObjectContext.performBlockAndWait {
+            self.managedObjectContext.deleteObject(object)
+        }
+    }
+
     func save() {
         managedObjectContext.performBlockAndWait {
             _ = self.managedObjectContext.save(nil);
