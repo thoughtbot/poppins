@@ -12,8 +12,10 @@ class SyncEngine {
     }
 
     func runSync() {
-        client.getFiles().observe {
-            _ = self.processFiles <^> $0.value
+        client.getFiles().observe { result in
+            dispatch_to_user_initiated {
+                _ = self.processFiles <^> result.value
+            }
         }
     }
 
@@ -51,13 +53,23 @@ class SyncEngine {
     }
 
     private func syncFile(cachedImage: CachedImage) {
-        client.getFile(cachedImage.path, destinationPath: cachedImage.documentDirectoryPath).observe {
-            let data = $0.value >>- { NSData(contentsOfFile: $0) }
-            let image = data >>- imageForData
-            let aspectRatio = Double(image?.aspectRatio ?? 1.0)
-            cachedImage.aspectRatio = aspectRatio
-            self.store.saveCachedImage(cachedImage)
+        var semaphore = dispatch_semaphore_create(0)
+
+        dispatch_to_main {
+            _ = self.client.getFile(cachedImage.path, destinationPath: cachedImage.documentDirectoryPath).observe { result in
+                dispatch_to_user_initiated {
+                    let data = result.value >>- { NSData(contentsOfFile: $0) }
+                    let image = data >>- imageForData
+                    let aspectRatio = Double(image?.aspectRatio ?? 1.0)
+                    cachedImage.aspectRatio = aspectRatio
+                    dispatch_to_main {
+                        self.store.saveCachedImage(cachedImage)
+                        dispatch_semaphore_signal(semaphore)
+                    }
+                }
+            }
         }
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
     }
 
     private func deleteFile(cachedImage: CachedImage) {
