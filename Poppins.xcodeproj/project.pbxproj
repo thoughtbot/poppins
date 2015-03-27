@@ -93,6 +93,8 @@
 		EA7B52301ABC9F40002FA083 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65C1ABC95F500425348 /* PreviewView.swift */; };
 		EA7B52361ABC9F45002FA083 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65F1ABC96D800425348 /* PreviewController.swift */; };
 		EA7B52371ABC9F49002FA083 /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */; };
+		EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */; };
+		EA7CED011AC5A13700AE8CBC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */; };
 		EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
 		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
@@ -200,6 +202,7 @@
 		EA5A86E01ABB850F00AD052A /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
+		EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
 		EA835D811A1BA0560033AE00 /* LinkableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkableService.swift; sourceTree = "<group>"; };
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -369,6 +372,7 @@
 				EAF49CD01A3F37D200B395DF /* Array.swift */,
 				EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */,
 				EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */,
+				EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -729,6 +733,7 @@
 				EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */,
 				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
 				EA13D8EC1A78362A00E2611C /* ApplicationAppearance.swift in Sources */,
+				EA7CED011AC5A13700AE8CBC /* dispatch.swift in Sources */,
 				EA13D8EE1A78362A00E2611C /* LinkAccountController.swift in Sources */,
 				EAA614C71A7AEAA1008DA897 /* FileInfo.swift in Sources */,
 				EA13D8DC1A78362A00E2611C /* LinkableService.swift in Sources */,
@@ -767,6 +772,7 @@
 				EA137CCA1A7962F000A92B85 /* ImageFetcher.swift in Sources */,
 				EA137CE91A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld in Sources */,
 				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
+				EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */,
 				EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */,
 				EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */,
 				EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */,
