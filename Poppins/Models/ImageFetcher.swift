@@ -4,32 +4,31 @@ import Runes
 class ImageFetcher {
     let imageCache: Cache<UIImage>
     let purger: CachePurger
-    let operationQueue: AsyncQueue
     let lockQueue = dispatch_queue_create("com.thoughtbot.pop-n-lock", nil)
-    var operations: [String: NSOperation] = [:]
+    var inProgress: [String] = []
 
     init() {
         imageCache = Cache<UIImage>()
         purger = CachePurger(cache: imageCache)
-        operationQueue = AsyncQueue(name: "PoppinsCacheQueue", maxOperations: 10)
     }
 
     func fetchImage(size: CGSize, path: String) -> UIImage? {
+        if size == CGSizeZero { return .None }
+
         if let image = imageCache.itemForKey(path) {
             return image
         } else {
-            dispatch_sync(lockQueue) {
-                if contains(self.operations.keys, path) { return }
+            dispatch_async(lockQueue) {
+                if contains(self.inProgress, path) { return }
 
-                let operation = ImageFetchOperation(size: size, path: path) {
-                    curry(self.imageCache.setItem) <^> $0 <*> path
-                    dispatch_sync(self.lockQueue) {
-                        _ = self.operations.removeValueForKey(path)
-                    }
-                    NSNotificationCenter.defaultCenter().postNotificationName("CacheDidUpdate", object: .None)
-                }
-                self.operationQueue.addOperation(operation)
-                self.operations[path] = operation
+                let data = NSData(contentsOfFile: path)
+                let image = data >>- imageForData
+                let scaledImage = image?.imageForSize(size)
+
+                curry(self.imageCache.setItem) <^> scaledImage <*> path
+
+                self.inProgress.removeAtIndex <^> find(self.inProgress, path)
+                NSNotificationCenter.defaultCenter().postNotificationName("CacheDidUpdate", object: .None)
             }
             return .None
         }
