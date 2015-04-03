@@ -75,22 +75,27 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         }
     }
 
-    var preview: PreviewView?
+    var previewViewController: PreviewViewController?
+    var transitionDelegate: PreviewTransitioningDelegate?
 
     func hold(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .Began {
             let point = gesture.locationInView(collectionView)
             let indexPath = collectionView?.indexPathForItemAtPoint(point)
+            let frame = (indexPath >>- { self.collectionView?.layoutAttributesForItemAtIndexPath($0) })?.frame
+            let realFrame = collectionView?.convertRect(frame!, toView: navigationController?.view)
+
+            transitionDelegate = realFrame.map { PreviewTransitioningDelegate(startingFrame: $0) }
+            previewViewController = PreviewViewController.create()
+            previewViewController?.transitioningDelegate = transitionDelegate
+
             let path = indexPath >>- { self.controller?.viewModel.imagePathForIndexPath($0) }
             let size = indexPath >>- { self.controller?.viewModel.imageSizeForIndexPath($0) }
 
-            preview = PreviewView.create()
-            preview?.controller = path >>- { p in size.map { PreviewController(path: p, size: $0) } }
-            preview?.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-            preview.map { self.view.addSubview($0) }
+            previewViewController?.controller = path >>- { p in size.map { PreviewController(path: p, size: $0) } }
+            previewViewController.map { self.presentViewController($0, animated: true, completion: .None) }
         } else if gesture.state == .Ended {
-            preview?.removeFromSuperview()
-            preview = .None
+            dismissViewControllerAnimated(true, completion: .None)
         }
     }
 }
