@@ -10,18 +10,29 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let layout = collectionView?.collectionViewLayout as? CascadeLayout
         layout?.delegate = self
-        controller?.syncWithTHECLOUD()
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("sync"), name: UIApplicationDidBecomeActiveNotification, object: .None)
+        sync()
 
         holdGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "hold:")
         holdGestureRecognizer?.minimumPressDuration = 0.5
         holdGestureRecognizer >>- { self.collectionView?.addGestureRecognizer($0) }
     }
 
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         fetchImages()
+    }
+
+    @objc func sync() {
+        controller?.syncWithTHECLOUD()
     }
 
     func fetchImages() {
