@@ -5,7 +5,7 @@ import Runes
 class PreviewPresentationAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     let isPresenting: Bool
     let startingFrame: CGRect
-    let duration: NSTimeInterval = 0.5
+    let duration: NSTimeInterval = 0.3
 
     init(isPresenting: Bool, startingFrame: CGRect) {
         self.isPresenting = isPresenting
@@ -40,7 +40,7 @@ class PreviewPresentationAnimationController: NSObject, UIViewControllerAnimated
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: options, animations: {
             presentedControllerView?.alpha = 1
-            finalFrame >>- { presentedControllerView?.frame = $0 }
+            presentedControllerView?.frame = finalFrame ?? CGRectZero
             return
             }, completion: { completed in
                 transitionContext.completeTransition(completed)
