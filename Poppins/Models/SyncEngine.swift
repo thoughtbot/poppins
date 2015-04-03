@@ -2,6 +2,8 @@ import Foundation
 import LlamaKit
 import Runes
 
+private let SupportedFileExtensions = ["gif", "png", "jpg", "jpeg"]
+
 class SyncEngine {
     let store: ImageStore
     var client: SyncClient
@@ -14,7 +16,11 @@ class SyncEngine {
     func runSync() {
         client.getFiles().observe { result in
             dispatch_to_user_initiated {
-                _ = self.processFiles <^> result.value
+                let files = result.value?.filter {
+                    contains(SupportedFileExtensions, $0.path.pathExtension.lowercaseString)
+                }
+
+                self.processFiles <^> files
             }
         }
     }
