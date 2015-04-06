@@ -13,8 +13,10 @@ class PreviewPresentationController: UIPresentationController {
     }
 
     override func presentationTransitionWillBegin() {
-        dimmingView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
         dimmingView.frame = containerView.bounds
+        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
+        blurView.frame = containerView.bounds
+        dimmingView.addSubview(blurView)
         dimmingView.alpha = 0
 
         containerView.addSubview(dimmingView)
