@@ -4,40 +4,36 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewViewController" customModule="Poppins" customModuleProvider="target">
+            <connections>
+                <outlet property="gifView" destination="adW-dm-zhZ" id="kOL-5m-ZU0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kLx-fw-8Bi"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PreviewView" customModule="Poppins" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x6A-Be-3Zh">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x6A-Be-3Zh">
                     <rect key="frame" x="290" y="290" width="20" height="20"/>
                 </activityIndicatorView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="adW-dm-zhZ" customClass="AnimatableImageView" customModule="Gifu">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="adW-dm-zhZ" customClass="AnimatableImageView" customModule="Gifu">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <constraints>
-                        <constraint firstAttribute="height" priority="500" constant="800" id="blJ-Ev-ExZ"/>
-                        <constraint firstAttribute="width" priority="500" constant="600" id="wvd-w2-12M"/>
-                    </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.14509803921568629" green="0.15686274509803921" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="adW-dm-zhZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="8rE-kM-8Qt"/>
-                <constraint firstItem="adW-dm-zhZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="MIn-l0-b10"/>
-                <constraint firstAttribute="centerY" secondItem="x6A-Be-3Zh" secondAttribute="centerY" id="UTz-7Q-zbt"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="adW-dm-zhZ" secondAttribute="trailing" id="cv6-nO-i8H"/>
-                <constraint firstAttribute="centerX" secondItem="adW-dm-zhZ" secondAttribute="centerX" id="oHI-0d-MyA"/>
-                <constraint firstAttribute="centerY" secondItem="adW-dm-zhZ" secondAttribute="centerY" id="q6a-Tf-pqK"/>
-                <constraint firstAttribute="centerX" secondItem="x6A-Be-3Zh" secondAttribute="centerX" id="soU-5W-WMg"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="adW-dm-zhZ" secondAttribute="bottom" id="v6o-X9-mn2"/>
+                <constraint firstAttribute="centerX" secondItem="x6A-Be-3Zh" secondAttribute="centerX" id="5Qd-4i-taX"/>
+                <constraint firstAttribute="bottom" secondItem="adW-dm-zhZ" secondAttribute="bottom" id="8Ba-My-nV9"/>
+                <constraint firstItem="adW-dm-zhZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9IV-wr-PIr"/>
+                <constraint firstAttribute="trailing" secondItem="adW-dm-zhZ" secondAttribute="trailing" id="Jzw-3D-6br"/>
+                <constraint firstItem="adW-dm-zhZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WbG-aN-6Tl"/>
+                <constraint firstAttribute="centerY" secondItem="x6A-Be-3Zh" secondAttribute="centerY" id="rfj-xp-QH2"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <connections>
-                <outlet property="gifHeightConstraint" destination="blJ-Ev-ExZ" id="v7b-sR-LZy"/>
-                <outlet property="gifView" destination="adW-dm-zhZ" id="SGH-kk-Z9U"/>
-                <outlet property="gifWidthConstraint" destination="wvd-w2-12M" id="C5O-Kc-Mlg"/>
-            </connections>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="365" y="731"/>
         </view>
     </objects>
 </document>

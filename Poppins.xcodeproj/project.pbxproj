@@ -70,6 +70,14 @@
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
 		EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
 		EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
+		EA4112401ACEFA3900243547 /* PreviewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */; };
+		EA4112421ACF017B00243547 /* PreviewPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4112411ACF017B00243547 /* PreviewPresentationAnimationController.swift */; };
+		EA4112441ACF06B300243547 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4112431ACF06B300243547 /* PreviewViewController.swift */; };
+		EA4112461ACF1AD400243547 /* PreviewTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4112451ACF1AD400243547 /* PreviewTransitioningDelegate.swift */; };
+		EA4112471ACF2A2C00243547 /* PreviewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */; };
+		EA4112481ACF2A2C00243547 /* PreviewPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4112411ACF017B00243547 /* PreviewPresentationAnimationController.swift */; };
+		EA4112491ACF2A2C00243547 /* PreviewTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4112451ACF1AD400243547 /* PreviewTransitioningDelegate.swift */; };
+		EA41124A1ACF2A3000243547 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4112431ACF06B300243547 /* PreviewViewController.swift */; };
 		EA474D0B1ABB941800127CEF /* CachedImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */; };
 		EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51411A76E41300DCEAA8 /* RootViewController.swift */; };
 		EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51581A76E49D00DCEAA8 /* RootController.swift */; };
@@ -80,7 +88,6 @@
 		EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */; };
 		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
 		EA59E6561ABC94A500425348 /* PreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA59E6551ABC94A500425348 /* PreviewView.xib */; };
-		EA59E65D1ABC95F500425348 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65C1ABC95F500425348 /* PreviewView.swift */; };
 		EA59E6601ABC96D900425348 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65F1ABC96D800425348 /* PreviewController.swift */; };
 		EA59E6621ABC9AF100425348 /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */; };
 		EA5A86E11ABB850F00AD052A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A86E01ABB850F00AD052A /* Signal.swift */; };
@@ -88,7 +95,6 @@
 		EA6967651ABCC70200318ABD /* CachedImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */; };
 		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
 		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
-		EA7B52301ABC9F40002FA083 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65C1ABC95F500425348 /* PreviewView.swift */; };
 		EA7B52361ABC9F45002FA083 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65F1ABC96D800425348 /* PreviewController.swift */; };
 		EA7B52371ABC9F49002FA083 /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */; };
 		EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */; };
@@ -183,6 +189,10 @@
 		EA34E7841A1CFD4F00875CFC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		EA395D661A448DF400EB607E /* AsyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncQueue.swift; sourceTree = "<group>"; };
 		EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewPresentationController.swift; sourceTree = "<group>"; };
+		EA4112411ACF017B00243547 /* PreviewPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewPresentationAnimationController.swift; sourceTree = "<group>"; };
+		EA4112431ACF06B300243547 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		EA4112451ACF1AD400243547 /* PreviewTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewTransitioningDelegate.swift; sourceTree = "<group>"; };
 		EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageExtensions.swift; sourceTree = "<group>"; };
 		EA4A51411A76E41300DCEAA8 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EA4A51581A76E49D00DCEAA8 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
@@ -193,7 +203,6 @@
 		EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = ../Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		EA59E6551ABC94A500425348 /* PreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewView.xib; sourceTree = "<group>"; };
-		EA59E65C1ABC95F500425348 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		EA59E65F1ABC96D800425348 /* PreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewModel.swift; sourceTree = "<group>"; };
 		EA5A86E01ABB850F00AD052A /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
@@ -294,7 +303,6 @@
 			children = (
 				EAB193171A2F9BD90002C6D0 /* PoppinsCell.swift */,
 				5D8975C91A43807D00F72C27 /* Button.swift */,
-				EA59E65C1ABC95F500425348 /* PreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -404,6 +412,9 @@
 				EA13D8C71A7800F500E2611C /* CascadeController.swift */,
 				EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */,
 				EA59E65F1ABC96D800425348 /* PreviewController.swift */,
+				EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */,
+				EA4112411ACF017B00243547 /* PreviewPresentationAnimationController.swift */,
+				EA4112451ACF1AD400243547 /* PreviewTransitioningDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -471,6 +482,7 @@
 				EAB193151A2F8F8A0002C6D0 /* CascadeViewController.swift */,
 				EAB193191A2FA0740002C6D0 /* LinkAccountViewController.swift */,
 				EA4A51411A76E41300DCEAA8 /* RootViewController.swift */,
+				EA4112431ACF06B300243547 /* PreviewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -708,6 +720,7 @@
 				EA13D8F31A78362A00E2611C /* RootViewController.swift in Sources */,
 				EA13D8D41A78360A00E2611C /* Result.swift in Sources */,
 				EA5A86E21ABB850F00AD052A /* Signal.swift in Sources */,
+				EA4112471ACF2A2C00243547 /* PreviewPresentationController.swift in Sources */,
 				EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */,
 				EA13D8DB1A78361C00E2611C /* UIWindow.swift in Sources */,
 				EA13D8E91A78362A00E2611C /* PoppinsCellViewModel.swift in Sources */,
@@ -720,10 +733,11 @@
 				EA13D8D31A78360700E2611C /* Optional.swift in Sources */,
 				EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */,
 				EA13D8E71A78362A00E2611C /* AsyncQueue.swift in Sources */,
+				EA4112481ACF2A2C00243547 /* PreviewPresentationAnimationController.swift in Sources */,
 				EA13D8E11A78362A00E2611C /* Service.swift in Sources */,
+				EA41124A1ACF2A3000243547 /* PreviewViewController.swift in Sources */,
 				EA13D8F11A78362A00E2611C /* CascadeViewController.swift in Sources */,
 				EA13D8D51A78360D00E2611C /* Curry.swift in Sources */,
-				EA7B52301ABC9F40002FA083 /* PreviewView.swift in Sources */,
 				EAA614D01A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */,
 				EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */,
 				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
@@ -739,6 +753,7 @@
 				EA13D8D81A78361C00E2611C /* UIApplication.swift in Sources */,
 				EA13D8EB1A78362A00E2611C /* ApplicationController.swift in Sources */,
 				EAA614CD1A7AEB92008DA897 /* DropboxClient.swift in Sources */,
+				EA4112491ACF2A2C00243547 /* PreviewTransitioningDelegate.swift in Sources */,
 				EAD733A91A891C91004A7F6E /* ImageStore.swift in Sources */,
 				EA13D8ED1A78362A00E2611C /* RootController.swift in Sources */,
 				EAA614C51A7AEAA1008DA897 /* Store.swift in Sources */,
@@ -754,6 +769,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4112461ACF1AD400243547 /* PreviewTransitioningDelegate.swift in Sources */,
 				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA137CE31A7A8FAC00A92B85 /* DropboxClient.swift in Sources */,
 				EA59E6601ABC96D900425348 /* PreviewController.swift in Sources */,
@@ -762,6 +778,7 @@
 				EAACE1EA1A1BA7FD00E3C43D /* LinkManager.swift in Sources */,
 				EAB193161A2F8F8A0002C6D0 /* CascadeViewController.swift in Sources */,
 				EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */,
+				EA4112401ACEFA3900243547 /* PreviewPresentationController.swift in Sources */,
 				EA5A86E11ABB850F00AD052A /* Signal.swift in Sources */,
 				EA137CCA1A7962F000A92B85 /* ImageFetcher.swift in Sources */,
 				EA137CE91A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld in Sources */,
@@ -797,14 +814,15 @@
 				EA474D0B1ABB941800127CEF /* CachedImageExtensions.swift in Sources */,
 				EA137CF11A7AC34800A92B85 /* CachedImage.swift in Sources */,
 				EA137CF51A7AD29300A92B85 /* SyncEngine.swift in Sources */,
+				EA4112421ACF017B00243547 /* PreviewPresentationAnimationController.swift in Sources */,
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
 				EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */,
-				EA59E65D1ABC95F500425348 /* PreviewView.swift in Sources */,
 				EA2B79141A7C21310016F749 /* ManagedObjectContextObserver.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */,
 				EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */,
+				EA4112441ACF06B300243547 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
