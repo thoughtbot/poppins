@@ -26,15 +26,15 @@ class PreviewPresentationAnimationController: NSObject, UIViewControllerAnimated
     }
 
     func animatePresentationWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? PreviewViewController
         let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)
         let containerView = transitionContext.containerView()
 
         let finalFrame = presentedController.map { transitionContext.finalFrameForViewController($0) }
         presentedControllerView?.frame = startingFrame
+        presentedController?.gifView.frame = CGRect(origin: CGPointZero, size: startingFrame.size)
         presentedControllerView?.alpha = 0
         presentedControllerView.map(containerView.addSubview)
-        presentedControllerView?.setNeedsLayout()
 
         let options = UIViewAnimationOptions.AllowAnimatedContent | UIViewAnimationOptions.LayoutSubviews
 
