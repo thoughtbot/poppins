@@ -94,6 +94,8 @@
 		EA7CED011AC5A13700AE8CBC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */; };
 		EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
+		EA9EE89E1AD49CEA00742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
+		EA9EE89F1AD49E0100742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
 		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
 		EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF61A7AD37F00A92B85 /* SyncClient.swift */; };
 		EAA614C31A7AEAA1008DA897 /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF01A7AC34800A92B85 /* CachedImage.swift */; };
@@ -201,6 +203,7 @@
 		EA835D811A1BA0560033AE00 /* LinkableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkableService.swift; sourceTree = "<group>"; };
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherOperation.swift; sourceTree = "<group>"; };
 		EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModelSpec.swift; sourceTree = "<group>"; };
 		EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnconfiguredClient.swift; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkManager.swift; sourceTree = "<group>"; };
@@ -353,6 +356,7 @@
 				EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */,
 				EAD733A71A891C91004A7F6E /* ImageStore.swift */,
 				EA5A86E01ABB850F00AD052A /* Signal.swift */,
+				EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -721,6 +725,7 @@
 				EA13D8D51A78360D00E2611C /* Curry.swift in Sources */,
 				EA7B52301ABC9F40002FA083 /* PreviewView.swift in Sources */,
 				EAA614D01A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */,
+				EA9EE89F1AD49E0100742B68 /* ImageFetcherOperation.swift in Sources */,
 				EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */,
 				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
 				EA7CED011AC5A13700AE8CBC /* dispatch.swift in Sources */,
@@ -791,6 +796,7 @@
 				EA474D0B1ABB941800127CEF /* CachedImageExtensions.swift in Sources */,
 				EA137CF11A7AC34800A92B85 /* CachedImage.swift in Sources */,
 				EA137CF51A7AD29300A92B85 /* SyncEngine.swift in Sources */,
+				EA9EE89E1AD49CEA00742B68 /* ImageFetcherOperation.swift in Sources */,
 				0A29E77C11C2C881B0361ADD /* LaunchScreen.xib in Sources */,
 				EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */,
 				EA13D8CE1A7824FF00E2611C /* PoppinsCellViewModel.swift in Sources */,
