@@ -46,6 +46,8 @@ extension PoppinsCell {
         shadowView?.layer.shadowOpacity = shadowOpacity
         shadowView?.layer.shadowOffset = shadowOffset
         shadowView?.layer.shadowRadius = shadowSpread
+        shadowView?.layer.shouldRasterize = true
+        shadowView?.layer.rasterizationScale = UIScreen.mainScreen().scale
     }
 }
 
