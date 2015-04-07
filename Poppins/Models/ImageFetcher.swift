@@ -30,6 +30,7 @@ class ImageFetcher {
             if size == CGSizeZero { return .None }
             dispatch_async(lockQueue) {
                 if contains(self.inProgress, path) { return }
+                self.inProgress.append(path)
 
                 let operation = ImageFetcherOperation(path: path, size: size) { image in
                     dispatch_async(self.lockQueue) {
