@@ -1,7 +1,7 @@
 import Foundation
 import Runes
 
-class ImageFetcher {
+@objc class ImageFetcher {
     let imageCache: Cache<UIImage>
     let purger: CachePurger
     let operationQueue: AsyncQueue
