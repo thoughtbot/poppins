@@ -11,7 +11,7 @@ class ImageFetcher {
     init() {
         imageCache = Cache<UIImage>()
         purger = CachePurger(cache: imageCache)
-        operationQueue = AsyncQueue(name: "PoppinsCacheQueue", maxOperations: 10)
+        operationQueue = AsyncQueue(name: "PoppinsCacheQueue", maxOperations: NSOperationQueueDefaultMaxConcurrentOperationCount)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("didReceiveMemoryWarning"), name: UIApplicationDidReceiveMemoryWarningNotification, object: .None)
     }
 
