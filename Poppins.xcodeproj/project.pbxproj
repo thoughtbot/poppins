@@ -102,6 +102,7 @@
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
 		EA9EE89E1AD49CEA00742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
 		EA9EE89F1AD49E0100742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
+		EA9EE8A61AD58A9D00742B68 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */; };
 		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
 		EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF61A7AD37F00A92B85 /* SyncClient.swift */; };
 		EAA614C31A7AEAA1008DA897 /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF01A7AC34800A92B85 /* CachedImage.swift */; };
@@ -213,6 +214,7 @@
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherOperation.swift; sourceTree = "<group>"; };
+		EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = SOURCE_ROOT; };
 		EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModelSpec.swift; sourceTree = "<group>"; };
 		EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnconfiguredClient.swift; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkManager.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			files = (
 				F80BE3E41A41E5B9009192A4 /* QuartzCore.framework in Frameworks */,
 				F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */,
+				EA9EE8A61AD58A9D00742B68 /* FBSDKMessengerShareKit.framework in Frameworks */,
 				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
 				EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */,
 				EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */,
@@ -508,6 +511,7 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */,
 				EA137CE01A79943500A92B85 /* DropboxSDK.framework */,
 				EA4A51641A76EC6500DCEAA8 /* Runes.framework */,
 				EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */,
