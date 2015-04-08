@@ -70,7 +70,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         let gifItemSource = controller?.viewModel.gifItemSourceForIndexPath(indexPath)
 
         if let source = gifItemSource {
-            let activityVC = UIActivityViewController(activityItems: [source], applicationActivities: [])
+            let activityVC = UIActivityViewController(activityItems: [source], applicationActivities: [FacebookMessengerActivity()])
             presentViewController(activityVC, animated: true, completion: .None)
         }
     }
