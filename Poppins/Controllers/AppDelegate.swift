@@ -11,7 +11,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         controller.configureLinkedService()
-        controller.configureApplication()
 
         window?.rootViewController = controller.rootViewController
         window?.makeKeyAndVisible()

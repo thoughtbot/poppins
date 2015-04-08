@@ -51,7 +51,6 @@
 		EA13D8E91A78362A00E2611C /* PoppinsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */; };
 		EA13D8EA1A78362A00E2611C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D3C7953B819874CE387DA /* AppDelegate.swift */; };
 		EA13D8EB1A78362A00E2611C /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB1931B1A2FA8920002C6D0 /* ApplicationController.swift */; };
-		EA13D8EC1A78362A00E2611C /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
 		EA13D8ED1A78362A00E2611C /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51581A76E49D00DCEAA8 /* RootController.swift */; };
 		EA13D8EE1A78362A00E2611C /* LinkAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */; };
 		EA13D8EF1A78362A00E2611C /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
@@ -122,7 +121,6 @@
 		EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */; };
 		F80BE3E41A41E5B9009192A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BE3DA1A41E5B9009192A4 /* QuartzCore.framework */; };
 		F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80BE3DC1A41E5B9009192A4 /* Security.framework */; };
-		F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825387D1A3F818A004476DC /* ApplicationAppearance.swift */; };
 		F825388B1A3F8C5C004476DC /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* Cache.swift */; };
 		F825388D1A3F8D4B004476DC /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
 /* End PBXBuildFile section */
@@ -222,7 +220,6 @@
 		EAF49CEF1A3F872300B395DF /* ArrayExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionSpec.swift; sourceTree = "<group>"; };
 		F80BE3DA1A41E5B9009192A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F80BE3DC1A41E5B9009192A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F825387D1A3F818A004476DC /* ApplicationAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAppearance.swift; sourceTree = "<group>"; };
 		F825388A1A3F8C5C004476DC /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		F825388C1A3F8D4B004476DC /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -398,7 +395,6 @@
 			children = (
 				636D3C7953B819874CE387DA /* AppDelegate.swift */,
 				EAB1931B1A2FA8920002C6D0 /* ApplicationController.swift */,
-				F825387D1A3F818A004476DC /* ApplicationAppearance.swift */,
 				EA4A51581A76E49D00DCEAA8 /* RootController.swift */,
 				EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */,
 				EA13D8C71A7800F500E2611C /* CascadeController.swift */,
@@ -727,7 +723,6 @@
 				EAA614D01A7AEC13008DA897 /* UnconfiguredClient.swift in Sources */,
 				EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */,
 				EA13D8E31A78362A00E2611C /* UnconfiguredService.swift in Sources */,
-				EA13D8EC1A78362A00E2611C /* ApplicationAppearance.swift in Sources */,
 				EA7CED011AC5A13700AE8CBC /* dispatch.swift in Sources */,
 				EA13D8EE1A78362A00E2611C /* LinkAccountController.swift in Sources */,
 				EAA614C71A7AEAA1008DA897 /* FileInfo.swift in Sources */,
@@ -783,7 +778,6 @@
 				EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */,
 				EA137CF91A7AD40C00A92B85 /* FileInfo.swift in Sources */,
 				6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */,
-				F825387E1A3F818A004476DC /* ApplicationAppearance.swift in Sources */,
 				F825388B1A3F8C5C004476DC /* Cache.swift in Sources */,
 				6A696F747A9BF689A96680CC /* Main.storyboard in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
