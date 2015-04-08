@@ -64,6 +64,7 @@
 		EA13D9011A78373400E2611C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA13D8FF1A78373400E2611C /* Quick.framework */; };
 		EA13D9021A78374D00E2611C /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA13D8FE1A78373400E2611C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA13D9031A78374D00E2611C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA13D8FF1A78373400E2611C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA168CFC1AD5A0B30032E5B7 /* FacebookMessengerActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */; };
 		EA2B79141A7C21310016F749 /* ManagedObjectContextObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */; };
 		EA2B791A1A7C25F60016F749 /* ManagedObjectContextObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
@@ -103,6 +104,7 @@
 		EA9EE89E1AD49CEA00742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
 		EA9EE89F1AD49E0100742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
 		EA9EE8A61AD58A9D00742B68 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */; };
+		EA9EE8A91AD5903400742B68 /* FacebookMessengerActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */; };
 		EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */; };
 		EAA614C21A7AEAA1008DA897 /* SyncClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF61A7AD37F00A92B85 /* SyncClient.swift */; };
 		EAA614C31A7AEAA1008DA897 /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF01A7AC34800A92B85 /* CachedImage.swift */; };
@@ -215,6 +217,7 @@
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherOperation.swift; sourceTree = "<group>"; };
 		EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = SOURCE_ROOT; };
+		EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMessengerActivity.swift; sourceTree = "<group>"; };
 		EAA320591A793AB10039E234 /* CascadeViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadeViewModelSpec.swift; sourceTree = "<group>"; };
 		EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnconfiguredClient.swift; sourceTree = "<group>"; };
 		EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkManager.swift; sourceTree = "<group>"; };
@@ -368,6 +371,7 @@
 				EAD733A71A891C91004A7F6E /* ImageStore.swift */,
 				EA5A86E01ABB850F00AD052A /* Signal.swift */,
 				EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */,
+				EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -752,6 +756,7 @@
 				EA13D8DC1A78362A00E2611C /* LinkableService.swift in Sources */,
 				EA13D8F01A78362A00E2611C /* PoppinsCellController.swift in Sources */,
 				EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */,
+				EA168CFC1AD5A0B30032E5B7 /* FacebookMessengerActivity.swift in Sources */,
 				EA13D8DA1A78361C00E2611C /* Array.swift in Sources */,
 				EA6967651ABCC70200318ABD /* CachedImageExtensions.swift in Sources */,
 				EA13D8D81A78361C00E2611C /* UIApplication.swift in Sources */,
@@ -797,6 +802,7 @@
 				EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */,
 				5D8975CA1A43807D00F72C27 /* Button.swift in Sources */,
 				EAB1931A1A2FA0740002C6D0 /* LinkAccountViewController.swift in Sources */,
+				EA9EE8A91AD5903400742B68 /* FacebookMessengerActivity.swift in Sources */,
 				EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */,
 				EAB2111E1A24DEEA0069A5C6 /* UIApplication.swift in Sources */,
 				EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */,
