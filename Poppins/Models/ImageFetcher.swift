@@ -5,7 +5,6 @@ import Runes
     let imageCache: Cache<UIImage>
     let purger: CachePurger
     let operationQueue: AsyncQueue
-    let lockQueue = dispatch_queue_create("com.thoughtbot.pop-n-lock", nil)
     var inProgress: [String] = []
 
     init() {
@@ -28,21 +27,27 @@ import Runes
             return image
         } else {
             if size == CGSizeZero { return .None }
-            dispatch_async(lockQueue) {
+
+            dispatch_to_main {
+                objc_sync_enter(self.inProgress)
                 if contains(self.inProgress, path) { return }
                 self.inProgress.append(path)
-
+                objc_sync_exit(self.inProgress)
+                
                 let operation = ImageFetcherOperation(path: path, size: size) { image in
-                    dispatch_async(self.lockQueue) {
-                        curry(self.imageCache.setItem) <^> image <*> path
+                    curry(self.imageCache.setItem) <^> image <*> path
+                    
+                    dispatch_to_main {
+                        objc_sync_enter(self.inProgress)
                         self.inProgress.removeAtIndex <^> find(self.inProgress, path)
+                        objc_sync_exit(self.inProgress)
                         NSNotificationCenter.defaultCenter().postNotificationName("CacheDidUpdate", object: .None)
                     }
                 }
+                
                 self.operationQueue.addOperation(operation)
             }
             return .None
         }
     }
 }
-
