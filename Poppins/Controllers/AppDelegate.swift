@@ -2,7 +2,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow = .ApplicationWindow
+    var window: UIWindow? = UIWindow.ApplicationWindow
     var controller = ApplicationController()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
@@ -13,8 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         controller.configureLinkedService()
         controller.configureApplication()
 
-        window.rootViewController = controller.rootViewController
-        window.makeKeyAndVisible()
+        window?.rootViewController = controller.rootViewController
+        window?.makeKeyAndVisible()
         return true
     }
 
