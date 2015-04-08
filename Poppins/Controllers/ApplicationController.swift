@@ -30,10 +30,6 @@
         }
     }
 
-    func configureApplication() {
-        ApplicationAppearance.setupAppearance()
-    }
-
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }

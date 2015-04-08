@@ -11,6 +11,8 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "NavigationBarBackground"), forBarMetrics: .Default)
+
         let layout = collectionView?.collectionViewLayout as? CascadeLayout
         layout?.delegate = self
 
