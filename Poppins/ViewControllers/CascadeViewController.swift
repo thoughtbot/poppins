@@ -51,7 +51,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PoppinsCell", forIndexPath: indexPath) as PoppinsCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PoppinsCell", forIndexPath: indexPath) as! PoppinsCell
         cell.controller = controller?.cellControllerForIndexPath(indexPath)
         return cell
     }
