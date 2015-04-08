@@ -21,6 +21,6 @@ class GifItemSource: NSObject, UIActivityItemSource {
     }
 
     func activityViewController(activityViewController: UIActivityViewController, dataTypeIdentifierForActivityType activityType: String?) -> String {
-        return CFBridgingRetain(kUTTypeGIF) as String
+        return CFBridgingRetain(kUTTypeGIF) as! String
     }
 }

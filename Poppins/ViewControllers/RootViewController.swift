@@ -14,15 +14,15 @@ class RootViewController: UIViewController {
 
     var linkAccountViewController: LinkAccountViewController {
         let storyboard = UIStoryboard(name: "Authentication", bundle: .None)
-        let vc = storyboard.instantiateInitialViewController() as LinkAccountViewController
+        let vc = storyboard.instantiateInitialViewController() as! LinkAccountViewController
         vc.controller = controller?.linkAccountController
         return vc
     }
 
     var cascadeViewController: UINavigationController {
         let storyboard = UIStoryboard(name: "Main", bundle: .None)
-        let nav = storyboard.instantiateInitialViewController() as UINavigationController
-        let vc = nav.topViewController as CascadeViewController
+        let nav = storyboard.instantiateInitialViewController() as! UINavigationController
+        let vc = nav.topViewController as! CascadeViewController
         vc.controller = controller?.cascadeController
         return nav
     }
