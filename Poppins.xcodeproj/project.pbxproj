@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -562,7 +562,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = POP;
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
 					4E511CA83D18390E4117F469 = {
@@ -571,7 +571,7 @@
 				};
 			};
 			buildConfigurationList = 92050B833C05DE2E49F161F0 /* Build configuration list for PBXProject "Poppins" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
