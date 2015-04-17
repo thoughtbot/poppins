@@ -1,18 +1,18 @@
 import Runes
 import CoreGraphics
 
-@IBDesignable
+
 class PoppinsCell: UICollectionViewCell, ViewModelObserver {
     @IBOutlet weak var imageView: UIImageView?
     @IBOutlet weak var shadowView: UIView?
     @IBOutlet weak var rootView: UIView?
 
-    @IBInspectable var cornerRadius: CGFloat = 6.0
+    var cornerRadius: CGFloat = 6.0
 
-    @IBInspectable var shadowColor: UIColor = UIColor.blackColor()
-    @IBInspectable var shadowOpacity: Float = 0.75
-    @IBInspectable var shadowOffset: CGSize = CGSize(width: 2, height: 2)
-    @IBInspectable var shadowSpread: CGFloat = 14
+    var shadowColor: UIColor = UIColor.blackColor()
+    var shadowOpacity: Float = 0.5
+    var shadowOffset: CGSize = CGSize(width: 2, height: 2)
+    var shadowSpread: CGFloat = 4
 
     var controller: PoppinsCellController? {
         didSet {
