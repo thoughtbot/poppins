@@ -20,6 +20,11 @@ struct CascadeViewModel {
     func gifItemSourceForIndexPath(indexPath: NSIndexPath) -> GifItemSource? {
         let path = imagePathForIndexPath(indexPath)
         let data = path >>- { NSData(contentsOfFile: $0) }
-        return GifItemSource.create <^> data
+        return GifItemSource.create <^> data <*> shareURLForIndexPath(indexPath)
+    }
+
+    func shareURLForIndexPath(indexPath: NSIndexPath) -> NSURL? {
+        let cachedImage = images.safeValue(indexPath.row)
+        return cachedImage?.shareURLPath >>- { NSURL(string: "\($0)&raw=1") }
     }
 }
