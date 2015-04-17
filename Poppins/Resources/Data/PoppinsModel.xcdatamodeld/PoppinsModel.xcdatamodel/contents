@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D131" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="CachedImage" representedClassName="Poppins.CachedImage" syncable="YES">
         <attribute name="aspectRatio" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="path" attributeType="String" syncable="YES"/>
         <attribute name="rev" attributeType="String" syncable="YES"/>
+        <attribute name="shareURLPath" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CachedImage" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="CachedImage" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
