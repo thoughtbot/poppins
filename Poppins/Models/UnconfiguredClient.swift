@@ -6,4 +6,8 @@ struct UnconfiguredClient: SyncClient {
     func getFile(path: String, destinationPath: String) -> Signal<String> {
         return Signal<String>()
     }
+
+    func getShareURL(path: String) -> Signal<String> {
+        return Signal<String>()
+    }
 }
