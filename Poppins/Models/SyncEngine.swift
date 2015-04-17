@@ -69,13 +69,24 @@ class SyncEngine {
                     let aspectRatio = Double(image?.aspectRatio ?? 1.0)
                     cachedImage.aspectRatio = aspectRatio
                     dispatch_to_main {
-                        self.store.saveCachedImage(cachedImage)
-                        dispatch_semaphore_signal(semaphore)
+                        self.getShareURL(cachedImage) {
+                            self.store.saveCachedImage(cachedImage)
+                            dispatch_semaphore_signal(semaphore)
+                        }
                     }
                 }
             }
         }
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
+    }
+
+    private func getShareURL(cachedImage: CachedImage, callback: () -> ()) {
+        client.getShareURL(cachedImage.path).observe { result in
+            dispatch_to_main {
+                result.value.map { cachedImage.shareURLPath = $0 }
+                callback()
+            }
+        }
     }
 
     private func deleteFile(cachedImage: CachedImage) {
