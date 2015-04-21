@@ -72,6 +72,7 @@
 		EAB2111E1A24DEEA0069A5C6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */; };
 		EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */; };
 		EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211221A2508C50069A5C6 /* NotificationListener.swift */; };
+		EABCAC261AE6FBAB00D8DE5B /* Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */; };
 		EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
 		EAE3D1D21B1CE79C0091014B /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3D1D11B1CE79C0091014B /* EmptyState.xib */; };
 		EAE3D1D41B1CF0BD0091014B /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */; };
@@ -180,6 +181,7 @@
 		EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDropboxService.swift; sourceTree = "<group>"; };
 		EAB211221A2508C50069A5C6 /* NotificationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListener.swift; sourceTree = "<group>"; };
+		EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pasteboard.swift; sourceTree = "<group>"; };
 		EAD733A71A891C91004A7F6E /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		EAE3D1D11B1CE79C0091014B /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateViewController.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				EA5A86E01ABB850F00AD052A /* Signal.swift */,
 				EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */,
 				EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */,
+				EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				EA137CCA1A7962F000A92B85 /* ImageFetcher.swift in Sources */,
 				EA137CE91A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld in Sources */,
 				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
+				EABCAC261AE6FBAB00D8DE5B /* Pasteboard.swift in Sources */,
 				EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */,
 				EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */,
 				EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */,
