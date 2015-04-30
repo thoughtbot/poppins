@@ -6,6 +6,7 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     private let restClient: DBRestClient
     private let metaSignal = Signal<[FileInfo]>()
     private let shareURLSignal = Signal<String>()
+    private let uploadSignal = Signal<Void>()
     private var fileSignals: [String:Signal<String>] = [:]
 
     init(session: DBSession) {
@@ -30,6 +31,11 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     func getShareURL(path: String) -> Signal<String> {
         restClient.loadSharableLinkForFile("/\(path)", shortUrl: false)
         return shareURLSignal
+    }
+
+    func uploadFile(filename: String, localPath: String) -> Signal<Void> {
+        restClient.uploadFile(filename, toPath: "/", withParentRev: nil, fromPath: localPath)
+        return uploadSignal
     }
 
     func restClient(client: DBRestClient!, loadedFile destPath: String?) {
@@ -58,4 +64,14 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     func restClient(restClient: DBRestClient!, loadedSharableLink link: String!, forFile path: String!) {
         shareURLSignal.push(link)
     }
+
+    func restClient(client: DBRestClient!, uploadFileFailedWithError error: NSError!) {
+        println(error)
+        uploadSignal.fail <^> error
+    }
+
+    func restClient(client: DBRestClient!, uploadedFile destPath: String!) {
+        uploadSignal.push()
+    }
 }
+
