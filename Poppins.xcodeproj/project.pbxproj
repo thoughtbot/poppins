@@ -32,6 +32,7 @@
 		EA13D9031A78374D00E2611C /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA13D8FF1A78373400E2611C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA2B79141A7C21310016F749 /* ManagedObjectContextObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */; };
 		EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
+		EA36A9281AE7052700AD6E3B /* ImportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA36A9271AE7052700AD6E3B /* ImportView.xib */; };
 		EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
 		EA3EEDF01A1CEC1D00DE2F3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
 		EA4112401ACEFA3900243547 /* PreviewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */; };
@@ -55,6 +56,13 @@
 		EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */; };
 		EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
+		EA8A800F1AF18BC70074C13B /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A800E1AF18BC70074C13B /* ImportViewController.swift */; };
+		EA8A80111AF190BD0074C13B /* ImportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80101AF190BD0074C13B /* ImportController.swift */; };
+		EA8A80131AF1910B0074C13B /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80121AF1910B0074C13B /* ImportViewModel.swift */; };
+		EA8A80151AF1933E0074C13B /* ImportTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80141AF1933E0074C13B /* ImportTransitioningDelegate.swift */; };
+		EA8A80171AF193E10074C13B /* ImportPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80161AF193E10074C13B /* ImportPresentationAnimationController.swift */; };
+		EA8A80191AF195190074C13B /* ImportPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80181AF195190074C13B /* ImportPresentationController.swift */; };
+		EA8A801B1AF19A850074C13B /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A801A1AF19A850074C13B /* CGRect.swift */; };
 		EA8EB6401AD6DDC1006B2404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
 		EA8EB6411AD6DDC9006B2404 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */; };
 		EA9EE89E1AD49CEA00742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
@@ -142,6 +150,7 @@
 		EA13D8FF1A78373400E2611C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextObserver.swift; sourceTree = "<group>"; };
 		EA34E7841A1CFD4F00875CFC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		EA36A9271AE7052700AD6E3B /* ImportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportView.xib; sourceTree = "<group>"; };
 		EA395D661A448DF400EB607E /* AsyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncQueue.swift; sourceTree = "<group>"; };
 		EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewPresentationController.swift; sourceTree = "<group>"; };
@@ -166,6 +175,13 @@
 		EA835D811A1BA0560033AE00 /* LinkableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkableService.swift; sourceTree = "<group>"; };
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
 		EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poppins-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA8A800E1AF18BC70074C13B /* ImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		EA8A80101AF190BD0074C13B /* ImportController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportController.swift; sourceTree = "<group>"; };
+		EA8A80121AF1910B0074C13B /* ImportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportViewModel.swift; sourceTree = "<group>"; };
+		EA8A80141AF1933E0074C13B /* ImportTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportTransitioningDelegate.swift; sourceTree = "<group>"; };
+		EA8A80161AF193E10074C13B /* ImportPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportPresentationAnimationController.swift; sourceTree = "<group>"; };
+		EA8A80181AF195190074C13B /* ImportPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportPresentationController.swift; sourceTree = "<group>"; };
+		EA8A801A1AF19A850074C13B /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 		EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherOperation.swift; sourceTree = "<group>"; };
 		EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = SOURCE_ROOT; };
 		EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMessengerActivity.swift; sourceTree = "<group>"; };
@@ -294,6 +310,7 @@
 				EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */,
 				EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */,
 				EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */,
+				EA8A80121AF1910B0074C13B /* ImportViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -343,6 +360,7 @@
 				EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */,
 				EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */,
 				EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */,
+				EA8A801A1AF19A850074C13B /* CGRect.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -364,6 +382,7 @@
 				75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */,
 				EA59E6551ABC94A500425348 /* PreviewView.xib */,
 				EAE3D1D11B1CE79C0091014B /* EmptyState.xib */,
+				EA36A9271AE7052700AD6E3B /* ImportView.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -381,6 +400,10 @@
 				EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */,
 				EA4112411ACF017B00243547 /* PreviewPresentationAnimationController.swift */,
 				EA4112451ACF1AD400243547 /* PreviewTransitioningDelegate.swift */,
+				EA8A80101AF190BD0074C13B /* ImportController.swift */,
+				EA8A80141AF1933E0074C13B /* ImportTransitioningDelegate.swift */,
+				EA8A80161AF193E10074C13B /* ImportPresentationAnimationController.swift */,
+				EA8A80181AF195190074C13B /* ImportPresentationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -450,6 +473,7 @@
 				EA4A51411A76E41300DCEAA8 /* RootViewController.swift */,
 				EA4112431ACF06B300243547 /* PreviewViewController.swift */,
 				EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */,
+				EA8A800E1AF18BC70074C13B /* ImportViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -615,6 +639,7 @@
 			files = (
 				EA8EB6411AD6DDC9006B2404 /* LaunchScreen.xib in Resources */,
 				EAE3D1D21B1CE79C0091014B /* EmptyState.xib in Resources */,
+				EA36A9281AE7052700AD6E3B /* ImportView.xib in Resources */,
 				EA8EB6401AD6DDC1006B2404 /* Main.storyboard in Resources */,
 				EA4A515B1A76E5B500DCEAA8 /* Authentication.storyboard in Resources */,
 				EA59E6561ABC94A500425348 /* PreviewView.xib in Resources */,
@@ -706,7 +731,10 @@
 				EA137CE91A7ABF5800A92B85 /* PoppinsModel.xcdatamodeld in Sources */,
 				EA395D671A448DF400EB607E /* AsyncQueue.swift in Sources */,
 				EABCAC261AE6FBAB00D8DE5B /* Pasteboard.swift in Sources */,
+				EA8A80151AF1933E0074C13B /* ImportTransitioningDelegate.swift in Sources */,
 				EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */,
+				EA8A801B1AF19A850074C13B /* CGRect.swift in Sources */,
+				EA8A80111AF190BD0074C13B /* ImportController.swift in Sources */,
 				EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */,
 				EA4A51591A76E49D00DCEAA8 /* RootController.swift in Sources */,
 				EA4A51421A76E41300DCEAA8 /* RootViewController.swift in Sources */,
@@ -721,10 +749,13 @@
 				EAB2111E1A24DEEA0069A5C6 /* UIApplication.swift in Sources */,
 				EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */,
 				EA137CF31A7AC3FC00A92B85 /* Store.swift in Sources */,
+				EA8A80191AF195190074C13B /* ImportPresentationController.swift in Sources */,
+				EA8A80171AF193E10074C13B /* ImportPresentationAnimationController.swift in Sources */,
 				EA34E7851A1CFD4F00875CFC /* Async.swift in Sources */,
 				EA137CF91A7AD40C00A92B85 /* FileInfo.swift in Sources */,
 				6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */,
 				F825388B1A3F8C5C004476DC /* Cache.swift in Sources */,
+				EA8A80131AF1910B0074C13B /* ImportViewModel.swift in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
 				EAE3D1D41B1CF0BD0091014B /* EmptyStateViewController.swift in Sources */,
 				EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */,
@@ -744,6 +775,7 @@
 				EA2B79141A7C21310016F749 /* ManagedObjectContextObserver.swift in Sources */,
 				EAB2111C1A24D7650069A5C6 /* UnconfiguredService.swift in Sources */,
 				EA13D8CC1A780EA600E2611C /* ViewModelObserver.swift in Sources */,
+				EA8A800F1AF18BC70074C13B /* ImportViewController.swift in Sources */,
 				EA13D8D01A78265700E2611C /* PoppinsCellController.swift in Sources */,
 				EA4112441ACF06B300243547 /* PreviewViewController.swift in Sources */,
 			);
