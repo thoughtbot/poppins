@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImportViewController" customModule="Poppins" customModuleProvider="target">
             <connections>
+                <outlet property="extensionPicker" destination="gfA-HY-p7J" id="kS8-Ed-FBV"/>
                 <outlet property="imageNameField" destination="zlU-AC-Mal" id="t5a-sJ-fCa"/>
                 <outlet property="imageView" destination="crd-Tk-fre" id="gFt-Pp-frU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0wb-D0-tNX"/>
@@ -43,7 +44,7 @@
                     <rect key="frame" x="0.0" y="266" width="216" height="89"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Image Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zlU-AC-Mal">
-                            <rect key="frame" x="0.0" y="0.0" width="216" height="32"/>
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="cfD-0E-Jk3"/>
@@ -78,23 +79,53 @@
                                 <action selector="cancel" destination="-1" eventType="touchUpInside" id="kYQ-Ip-HLX"/>
                             </connections>
                         </button>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Klt-HF-50s">
+                            <rect key="frame" x="150" y="0.0" width="66" height="32"/>
+                            <subviews>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-HY-p7J">
+                                    <rect key="frame" x="0.0" y="-65" width="66" height="162"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="16J-0y-q4U"/>
+                                        <constraint firstAttribute="width" constant="66" id="FhO-17-3zF"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="16J-0y-q4U"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="z3b-dc-Ta0"/>
+                                        <outlet property="delegate" destination="-1" id="Ik3-0G-QHi"/>
+                                    </connections>
+                                </pickerView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="gfA-HY-p7J" firstAttribute="leading" secondItem="Klt-HF-50s" secondAttribute="leading" id="B6x-pO-sf3"/>
+                                <constraint firstAttribute="trailing" secondItem="gfA-HY-p7J" secondAttribute="trailing" id="D8y-OB-S8Q"/>
+                                <constraint firstAttribute="centerY" secondItem="gfA-HY-p7J" secondAttribute="centerY" id="ETL-Cb-Jws"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="wZm-Ye-llg" secondAttribute="centerX" id="195-9e-zf5"/>
                         <constraint firstAttribute="bottom" secondItem="wZm-Ye-llg" secondAttribute="bottom" id="1KA-SH-Qb3"/>
-                        <constraint firstAttribute="trailing" secondItem="zlU-AC-Mal" secondAttribute="trailing" id="36f-u7-ACA"/>
                         <constraint firstAttribute="bottom" secondItem="1yr-vi-cMj" secondAttribute="bottom" id="74R-tY-j09"/>
+                        <constraint firstItem="Klt-HF-50s" firstAttribute="leading" secondItem="zlU-AC-Mal" secondAttribute="trailing" id="8yy-UP-NRo"/>
                         <constraint firstItem="aZd-nK-gl5" firstAttribute="top" secondItem="zlU-AC-Mal" secondAttribute="bottom" constant="1" id="9l7-Sr-FAX"/>
                         <constraint firstAttribute="bottom" secondItem="aZd-nK-gl5" secondAttribute="bottom" id="CmO-d7-z57"/>
                         <constraint firstItem="zlU-AC-Mal" firstAttribute="leading" secondItem="E4P-cs-WU5" secondAttribute="leading" id="Eiy-E8-TNo"/>
+                        <constraint firstItem="Klt-HF-50s" firstAttribute="top" secondItem="E4P-cs-WU5" secondAttribute="top" id="HDv-cW-vm1"/>
                         <constraint firstItem="aZd-nK-gl5" firstAttribute="leading" secondItem="E4P-cs-WU5" secondAttribute="leading" id="JRc-q8-qDZ"/>
                         <constraint firstItem="1yr-vi-cMj" firstAttribute="leading" secondItem="wZm-Ye-llg" secondAttribute="trailing" constant="-1" id="JzC-vh-vbS"/>
                         <constraint firstItem="wZm-Ye-llg" firstAttribute="top" secondItem="zlU-AC-Mal" secondAttribute="bottom" constant="1" id="e9a-Jn-x3p"/>
                         <constraint firstAttribute="trailing" secondItem="1yr-vi-cMj" secondAttribute="trailing" id="g3N-kI-1G1"/>
                         <constraint firstItem="1yr-vi-cMj" firstAttribute="top" secondItem="zlU-AC-Mal" secondAttribute="bottom" constant="1" id="hyz-q8-qim"/>
                         <constraint firstItem="zlU-AC-Mal" firstAttribute="top" secondItem="E4P-cs-WU5" secondAttribute="top" id="miF-F2-L8j"/>
+                        <constraint firstItem="1yr-vi-cMj" firstAttribute="top" secondItem="Klt-HF-50s" secondAttribute="bottom" constant="1" id="sDY-hX-gCZ"/>
                         <constraint firstItem="wZm-Ye-llg" firstAttribute="leading" secondItem="aZd-nK-gl5" secondAttribute="trailing" id="tDt-va-gak"/>
+                        <constraint firstAttribute="trailing" secondItem="Klt-HF-50s" secondAttribute="trailing" id="vDU-Oy-Th5"/>
                     </constraints>
                 </view>
             </subviews>

@@ -4,6 +4,7 @@ import Gifu
 class ImportViewController: UIViewController {
     @IBOutlet weak var imageView: AnimatableImageView!
     @IBOutlet weak var imageNameField: UITextField!
+    @IBOutlet weak var extensionPicker: UIPickerView!
 
     var controller: ImportController?
 
@@ -57,6 +58,27 @@ class ImportViewController: UIViewController {
 
     @IBAction func cancel() {
         dismissViewControllerAnimated(true, completion: .None)
+    }
+}
+
+extension ImportViewController: UIPickerViewDataSource {
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 3
+    }
+}
+
+extension ImportViewController: UIPickerViewDelegate {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        switch row {
+        case 0: return ".gif"
+        case 1: return ".png"
+        case 2: return ".jpeg"
+        default: return ""
+        }
     }
 }
 
