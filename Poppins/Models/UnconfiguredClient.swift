@@ -10,4 +10,8 @@ struct UnconfiguredClient: SyncClient {
     func getShareURL(path: String) -> Signal<String> {
         return Signal<String>()
     }
+
+    func uploadFile(filename: String, localPath: String) -> Signal<Void> {
+        return Signal<Void>()
+    }
 }
