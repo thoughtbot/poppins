@@ -1,0 +1,67 @@
+import UIKit
+import Gifu
+
+class ImportViewController: UIViewController {
+    @IBOutlet weak var imageView: AnimatableImageView!
+    @IBOutlet weak var imageNameField: UITextField!
+
+    var controller: ImportController?
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+
+    private func setup() {
+        modalPresentationStyle = .Custom
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let viewModel = controller?.viewModel {
+            imageView.animateWithImageData(data: viewModel.imageData)
+            imageView.startAnimatingGIF()
+        }
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: .None)
+    }
+
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let size = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size,
+           let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue
+        {
+            let yTotal = CGRectGetMidY(view.frame) * 2
+            let yOffset = CGRectGetMaxY(view.frame) - ((yTotal - size.height) - 20)
+            let newFrame = CGRect(origin: CGPoint(x: view.frame.origin.x, y: view.frame.origin.y - yOffset), size: view.frame.size)
+
+            UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseInOut, animations: {
+                self.view.frame = newFrame
+            }, completion: .None)
+        }
+    }
+
+    @IBAction func save() {
+        // add image to core data
+        // upload image to dropbox
+    }
+
+    @IBAction func cancel() {
+        dismissViewControllerAnimated(true, completion: .None)
+    }
+}
+
+extension ImportViewController {
+    static func create() -> ImportViewController {
+        return ImportViewController(nibName: "ImportView", bundle: .None)
+    }
+}

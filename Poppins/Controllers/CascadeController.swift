@@ -18,6 +18,10 @@ class CascadeController {
         viewModel = CascadeViewModel(images: [])
     }
 
+    func importPasteboardImage() -> NSData? {
+        return Pasteboard.fetchImageData()
+    }
+
     func syncWithTHECLOUD() {
         syncEngine.runSync()
     }
