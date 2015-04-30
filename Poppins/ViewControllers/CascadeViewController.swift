@@ -42,6 +42,15 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
     @objc func sync() {
         controller?.syncWithTHECLOUD()
+
+        if let data = controller?.importPasteboardImage() {
+            let alert = UIAlertController(title: "New Image Found!", message: "Would you like to save the image in your pasteboard?", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { _ in
+                self.presentImportView(data)
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { _ in }))
+            presentViewController(alert, animated: true, completion: .None)
+        }
     }
 
     func fetchImages() {
@@ -102,7 +111,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     }
 
     var previewViewController: PreviewViewController?
-    var transitionDelegate: PreviewTransitioningDelegate?
+    var previewTransitionDelegate: PreviewTransitioningDelegate?
 
     func hold(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .Began {
@@ -111,9 +120,9 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
             let frame = (indexPath >>- { self.collectionView?.layoutAttributesForItemAtIndexPath($0) })?.frame
             let realFrame = collectionView?.convertRect(frame!, toView: navigationController?.view)
 
-            transitionDelegate = realFrame.map { PreviewTransitioningDelegate(startingFrame: $0) }
+            previewTransitionDelegate = realFrame.map { PreviewTransitioningDelegate(startingFrame: $0) }
             previewViewController = PreviewViewController.create()
-            previewViewController?.transitioningDelegate = transitionDelegate
+            previewViewController?.transitioningDelegate = previewTransitionDelegate
 
             let path = indexPath >>- { self.controller?.viewModel.imagePathForIndexPath($0) }
             let size = indexPath >>- { self.controller?.viewModel.imageSizeForIndexPath($0) }
@@ -122,6 +131,20 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
             previewViewController.map { self.presentViewController($0, animated: true, completion: .None) }
         } else if gesture.state == .Ended {
             dismissViewControllerAnimated(true, completion: .None)
+        }
+    }
+
+    var importViewController: ImportViewController?
+    var importTransitionDelegate: ImportTransitioningDelegate?
+
+    private func presentImportView(data: NSData) {
+        importTransitionDelegate = ImportTransitioningDelegate()
+        importViewController = ImportViewController.create()
+        importViewController?.transitioningDelegate = importTransitionDelegate
+        importViewController?.controller = ImportController(imageData: data)
+
+        if let importViewController = importViewController {
+            presentViewController(importViewController, animated: true, completion: .None)
         }
     }
 }
