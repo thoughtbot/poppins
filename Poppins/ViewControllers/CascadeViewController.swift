@@ -43,10 +43,10 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     @objc func sync() {
         controller?.syncWithTHECLOUD()
 
-        if let data = controller?.importPasteboardImage() {
+        if controller?.hasPasteboardImage ?? false {
             let alert = UIAlertController(title: "New Image Found!", message: "Would you like to save the image in your pasteboard?", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { _ in
-                self.presentImportView(data)
+                self.presentImportView()
             }))
             alert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { _ in }))
             presentViewController(alert, animated: true, completion: .None)
@@ -137,11 +137,11 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     var importViewController: ImportViewController?
     var importTransitionDelegate: ImportTransitioningDelegate?
 
-    private func presentImportView(data: NSData) {
+    private func presentImportView() {
         importTransitionDelegate = ImportTransitioningDelegate()
         importViewController = ImportViewController.create()
         importViewController?.transitioningDelegate = importTransitionDelegate
-        importViewController?.controller = ImportController(imageData: data)
+        importViewController?.controller = controller?.importController()
 
         if let importViewController = importViewController {
             presentViewController(importViewController, animated: true, completion: .None)
