@@ -3,17 +3,28 @@ import MobileCoreServices
 
 private let LastCheckedPasteboardVersionKey = "PoppinsLastCheckedPasteboardVersionKey"
 
+private let GIFType = CFBridgingRetain(kUTTypeGIF) as! String
+private let JPEGType = CFBridgingRetain(kUTTypeJPEG) as! String
+private let PNGType = CFBridgingRetain(kUTTypePNG) as! String
+
 struct Pasteboard {
     static func fetchImageData() -> NSData? {
-        if !hasPasteboardChanged { return .None }
+        let systemPasteboard = UIPasteboard.generalPasteboard()
+
+        let gif = systemPasteboard.dataForPasteboardType(GIFType)
+        let jpeg = systemPasteboard.dataForPasteboardType(JPEGType)
+        let png = systemPasteboard.dataForPasteboardType(PNGType)
+
+        return gif ?? jpeg ?? png
+    }
+
+    static var hasImageData :Bool {
+        if !hasPasteboardChanged { return false }
 
         let systemPasteboard = UIPasteboard.generalPasteboard()
         NSUserDefaults.standardUserDefaults().setInteger(systemPasteboard.changeCount, forKey: LastCheckedPasteboardVersionKey)
 
-        let gif = systemPasteboard.dataForPasteboardType(CFBridgingRetain(kUTTypeGIF) as! String)
-        let jpeg = systemPasteboard.dataForPasteboardType(CFBridgingRetain(kUTTypeJPEG) as! String)
-        let png = systemPasteboard.dataForPasteboardType(CFBridgingRetain(kUTTypePNG) as! String)
-        return gif ?? jpeg ?? png
+        return systemPasteboard.containsPasteboardTypes([GIFType, JPEGType, PNGType])
     }
 
     private static var hasPasteboardChanged: Bool {
