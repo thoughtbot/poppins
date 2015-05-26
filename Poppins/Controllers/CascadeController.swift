@@ -4,13 +4,12 @@ import Runes
 class CascadeController {
     private let imageFetcher: ImageFetcher
     private let observer: ManagedObjectContextObserver
-    private let dataStore: Store
     private let imageStore: ImageStore
     private let syncEngine: SyncEngine
     var viewModel: CascadeViewModel
 
     init(syncClient: SyncClient) {
-        dataStore = Store()
+        let dataStore = Store()
         imageStore = ImageStore(store: dataStore)
         observer = dataStore.managedObjectContextObserver
         imageFetcher = ImageFetcher()
@@ -18,8 +17,8 @@ class CascadeController {
         viewModel = CascadeViewModel(images: [])
     }
 
-    func importPasteboardImage() -> NSData? {
-        return Pasteboard.fetchImageData()
+    var hasPasteboardImage: Bool {
+        return Pasteboard.hasImageData
     }
 
     func syncWithTHECLOUD() {
@@ -47,5 +46,9 @@ class CascadeController {
     func cellControllerForIndexPath(indexPath: NSIndexPath) -> PoppinsCellController? {
         let path = viewModel.imagePathForIndexPath(indexPath)
         return PoppinsCellController(imageFetcher: imageFetcher, path: path ?? "")
+    }
+
+    func importController() -> ImportController? {
+        return Pasteboard.fetchImageData().map { ImportController(imageData: $0.0, imageType: $0.1, store: imageStore, client: syncEngine.client) }
     }
 }

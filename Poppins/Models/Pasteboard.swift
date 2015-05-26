@@ -3,19 +3,19 @@ import MobileCoreServices
 
 private let LastCheckedPasteboardVersionKey = "PoppinsLastCheckedPasteboardVersionKey"
 
-private let GIFType = CFBridgingRetain(kUTTypeGIF) as! String
-private let JPEGType = CFBridgingRetain(kUTTypeJPEG) as! String
-private let PNGType = CFBridgingRetain(kUTTypePNG) as! String
+let GIFType = CFBridgingRetain(kUTTypeGIF) as! String
+let JPEGType = CFBridgingRetain(kUTTypeJPEG) as! String
+let PNGType = CFBridgingRetain(kUTTypePNG) as! String
 
 struct Pasteboard {
-    static func fetchImageData() -> NSData? {
+    static func fetchImageData() -> (NSData, String)? {
         let systemPasteboard = UIPasteboard.generalPasteboard()
 
-        let gif = systemPasteboard.dataForPasteboardType(GIFType)
-        let jpeg = systemPasteboard.dataForPasteboardType(JPEGType)
-        let png = systemPasteboard.dataForPasteboardType(PNGType)
+        if let gif = systemPasteboard.dataForPasteboardType(GIFType) { return (gif, GIFType) }
+        if let jpeg = systemPasteboard.dataForPasteboardType(JPEGType) { return (jpeg, JPEGType) }
+        if let png = systemPasteboard.dataForPasteboardType(PNGType) { return (png, PNGType) }
 
-        return gif ?? jpeg ?? png
+        return .None
     }
 
     static var hasImageData :Bool {
