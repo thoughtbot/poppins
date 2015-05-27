@@ -19,7 +19,7 @@ struct ImageStore {
     }
 
     func saveCachedImage(cachedImage: CachedImage) {
-        store.insertObject(cachedImage)
+        if !cachedImage.updated { store.insertObject(cachedImage) }
         store.save()
     }
 
