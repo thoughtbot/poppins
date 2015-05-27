@@ -3,7 +3,7 @@
     <entity name="CachedImage" representedClassName="Poppins.CachedImage" syncable="YES">
         <attribute name="aspectRatio" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="path" attributeType="String" syncable="YES"/>
-        <attribute name="rev" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="rev" attributeType="String" defaultValueString="not synced" syncable="YES"/>
         <attribute name="shareURLPath" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
