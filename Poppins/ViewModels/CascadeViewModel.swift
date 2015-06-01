@@ -8,6 +8,10 @@ struct CascadeViewModel {
         return images.count
     }
 
+    var shouldShowEmptyState: Bool {
+        return numberOfImages == 0
+    }
+
     func imagePathForIndexPath(indexPath: NSIndexPath) -> String? {
         return images.safeValue(indexPath.row)?.documentDirectoryPath
     }

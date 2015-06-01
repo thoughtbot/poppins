@@ -74,6 +74,8 @@
 		EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */; };
 		EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211221A2508C50069A5C6 /* NotificationListener.swift */; };
 		EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
+		EAE3D1D21B1CE79C0091014B /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3D1D11B1CE79C0091014B /* EmptyState.xib */; };
+		EAE3D1D41B1CF0BD0091014B /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */; };
 		EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
 		EAF49CD11A3F37D200B395DF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
 		EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
@@ -179,6 +181,8 @@
 		EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDropboxService.swift; sourceTree = "<group>"; };
 		EAB211221A2508C50069A5C6 /* NotificationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListener.swift; sourceTree = "<group>"; };
 		EAD733A71A891C91004A7F6E /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		EAE3D1D11B1CE79C0091014B /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
+		EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateViewController.swift; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EAF49CD01A3F37D200B395DF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		EAF49CDE1A3F582100B395DF /* GifItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifItemSource.swift; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 			children = (
 				75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */,
 				EA59E6551ABC94A500425348 /* PreviewView.xib */,
+				EAE3D1D11B1CE79C0091014B /* EmptyState.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				EAB193191A2FA0740002C6D0 /* LinkAccountViewController.swift */,
 				EA4A51411A76E41300DCEAA8 /* RootViewController.swift */,
 				EA4112431ACF06B300243547 /* PreviewViewController.swift */,
+				EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -601,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8EB6411AD6DDC9006B2404 /* LaunchScreen.xib in Resources */,
+				EAE3D1D21B1CE79C0091014B /* EmptyState.xib in Resources */,
 				EA8EB6401AD6DDC1006B2404 /* Main.storyboard in Resources */,
 				EA4A515B1A76E5B500DCEAA8 /* Authentication.storyboard in Resources */,
 				EA59E6561ABC94A500425348 /* PreviewView.xib in Resources */,
@@ -710,6 +717,7 @@
 				6552338E2EB4663B2328ED58 /* AppDelegate.swift in Sources */,
 				F825388B1A3F8C5C004476DC /* Cache.swift in Sources */,
 				EAB1931C1A2FA8920002C6D0 /* ApplicationController.swift in Sources */,
+				EAE3D1D41B1CF0BD0091014B /* EmptyStateViewController.swift in Sources */,
 				EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */,
 				EAF49CD11A3F37D200B395DF /* Array.swift in Sources */,
 				EA59E6621ABC9AF100425348 /* PreviewViewModel.swift in Sources */,
