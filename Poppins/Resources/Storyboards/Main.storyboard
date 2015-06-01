@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AfL-xs-nH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AfL-xs-nH3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -42,16 +41,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNX-tu-WQi" userLabel="ShadowView">
-                                            <rect key="frame" x="8" y="8" width="480" height="451"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="496" height="459"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4I6-ev-TGc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="480" height="451"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="496" height="459"/>
                                                     <subviews>
                                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VvM-jD-gRj">
-                                                            <rect key="frame" x="230" y="216" width="20" height="20"/>
+                                                            <rect key="frame" x="238" y="220" width="20" height="20"/>
                                                         </activityIndicatorView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oCf-mX-1Jd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="480" height="451"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="496" height="459"/>
                                                             <gestureRecognizers/>
                                                         </imageView>
                                                     </subviews>
@@ -77,10 +76,10 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="jNX-tu-WQi" firstAttribute="top" secondItem="hT0-Tj-cLo" secondAttribute="topMargin" id="7aD-8M-zOG"/>
-                                    <constraint firstItem="jNX-tu-WQi" firstAttribute="leading" secondItem="hT0-Tj-cLo" secondAttribute="leadingMargin" id="AkW-XZ-to2"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="jNX-tu-WQi" secondAttribute="trailing" id="E8k-NG-MBc"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="jNX-tu-WQi" secondAttribute="bottom" constant="-8" id="Khd-xo-LMf"/>
+                                    <constraint firstAttribute="trailing" secondItem="jNX-tu-WQi" secondAttribute="trailing" id="MYE-od-y1l"/>
+                                    <constraint firstItem="jNX-tu-WQi" firstAttribute="top" secondItem="hT0-Tj-cLo" secondAttribute="top" id="NxR-t7-2eo"/>
+                                    <constraint firstItem="jNX-tu-WQi" firstAttribute="leading" secondItem="hT0-Tj-cLo" secondAttribute="leading" id="jlH-DG-dUz"/>
+                                    <constraint firstAttribute="bottom" secondItem="jNX-tu-WQi" secondAttribute="bottom" id="qWe-TT-1lg"/>
                                 </constraints>
                                 <size key="customSize" width="496" height="459"/>
                                 <userDefinedRuntimeAttributes>
