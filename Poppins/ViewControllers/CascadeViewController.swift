@@ -23,6 +23,8 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         holdGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "hold:")
         holdGestureRecognizer?.minimumPressDuration = 0.5
         holdGestureRecognizer >>- { self.collectionView?.addGestureRecognizer($0) }
+
+        navigationItem.titleView = UIImage(named: "PoppinsTitle").map { UIImageView(image: $0) }
     }
 
     deinit {
