@@ -56,7 +56,7 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-A0-Gfu">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UmbrellaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-A0-Gfu">
                     <rect key="frame" x="280" y="92" width="40" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="2nE-OY-jpg"/>
@@ -130,6 +130,6 @@
         </view>
     </objects>
     <resources>
-        <image name="umbrella" width="81" height="90"/>
+        <image name="UmbrellaIcon" width="81" height="90"/>
     </resources>
 </document>
