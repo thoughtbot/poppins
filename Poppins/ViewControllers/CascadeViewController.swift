@@ -32,6 +32,10 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         fetchImages()
+
+        if controller?.viewModel.shouldShowEmptyState ?? true {
+            showEmptyState()
+        }
     }
 
     @objc func sync() {
@@ -41,11 +45,30 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
     func fetchImages() {
         controller?.fetchImages()
         controller?.registerForChanges { inserted, updated, deleted in
+            self.hideEmptyState()
             _ = self.collectionView?.performBatchUpdates({
                 self.collectionView?.insertItemsAtIndexPaths(inserted)
                 self.collectionView?.reloadItemsAtIndexPaths(updated)
                 self.collectionView?.deleteItemsAtIndexPaths(deleted)
             }, completion: .None)
+        }
+    }
+
+    func showEmptyState() {
+        let emptyStateViewController = EmptyStateViewController.create()
+        emptyStateViewController.willMoveToParentViewController(self)
+        addChildViewController(emptyStateViewController)
+        collectionView?.backgroundView = emptyStateViewController.view
+        emptyStateViewController.didMoveToParentViewController(self)
+    }
+
+    func hideEmptyState() {
+        if let emptyStateViewController = childViewControllers.last as? EmptyStateViewController {
+            emptyStateViewController.willMoveToParentViewController(.None)
+            emptyStateViewController.view.removeFromSuperview()
+            collectionView?.backgroundView = .None
+            emptyStateViewController.removeFromParentViewController()
+            emptyStateViewController.didMoveToParentViewController(.None)
         }
     }
 
