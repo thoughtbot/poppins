@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyStateViewController" customModule="Poppins" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="ARY-cc-iP7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to add gifs to Poppins:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDy-l1-bhc">
+                    <rect key="frame" x="202" y="219" width="196" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Poppins!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5j-9k-heg">
+                    <rect key="frame" x="199" y="145" width="202" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save gifs to Dropbox in /Apps/Poppins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQN-x7-ShV">
+                    <rect key="frame" x="183" y="249" width="235" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6M5-Tt-ucn">
+                    <rect key="frame" x="150" y="285" width="300" height="1"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="II9-II-WEk"/>
+                        <constraint firstAttribute="height" constant="1" id="l5G-m6-I3E"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXj-3f-mXm">
+                    <rect key="frame" x="148" y="302" width="305" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="305" id="WlK-6u-JOJ"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Tap &amp; Hold to &quot;Copy&quot; a gif on a website like Giphy. Then open Poppins to import the gif.">
+                            <attributes>
+                                <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-A0-Gfu">
+                    <rect key="frame" x="280" y="92" width="40" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="2nE-OY-jpg"/>
+                        <constraint firstAttribute="width" constant="40" id="aD2-Qy-RFR"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZS-CJ-O5C" customClass="Button" customModule="Poppins" customModuleProvider="target">
+                    <rect key="frame" x="216" y="399" width="168" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="BMZ-w6-bLZ"/>
+                        <constraint firstAttribute="width" constant="168" id="YQt-Mw-nuL"/>
+                    </constraints>
+                    <state key="normal" title="Go to Giphy!">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="navigateToGiphy" destination="-1" eventType="touchUpInside" id="pRg-5J-xeB"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feb-SR-7U9">
+                    <rect key="frame" x="275" y="275" width="50" height="17"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42t-nF-n2N">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="17"/>
+                            <color key="backgroundColor" red="0.1058823529" green="0.1137254902" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="KDg-v7-JmX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="42t-nF-n2N" firstAttribute="top" secondItem="feb-SR-7U9" secondAttribute="top" id="2bj-oq-ADt"/>
+                        <constraint firstAttribute="width" constant="50" id="2ik-TR-0OX"/>
+                        <constraint firstAttribute="bottom" secondItem="42t-nF-n2N" secondAttribute="bottom" id="4cH-v9-PsS"/>
+                        <constraint firstItem="42t-nF-n2N" firstAttribute="leading" secondItem="feb-SR-7U9" secondAttribute="leading" id="Zvj-hH-aob"/>
+                        <constraint firstAttribute="height" constant="17" id="daf-Qh-hrc"/>
+                        <constraint firstAttribute="trailing" secondItem="42t-nF-n2N" secondAttribute="trailing" id="tsX-Kw-9XF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.10588235294117647" green="0.11372549019607843" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jXj-3f-mXm" firstAttribute="top" secondItem="feb-SR-7U9" secondAttribute="bottom" constant="10" id="2Qn-Jw-ekw"/>
+                <constraint firstAttribute="centerX" secondItem="jXj-3f-mXm" secondAttribute="centerX" id="76J-vM-53M"/>
+                <constraint firstItem="sZS-CJ-O5C" firstAttribute="top" secondItem="jXj-3f-mXm" secondAttribute="bottom" constant="60" id="7sU-Md-jsY"/>
+                <constraint firstItem="feb-SR-7U9" firstAttribute="top" secondItem="bQN-x7-ShV" secondAttribute="bottom" constant="10" id="Dj4-by-kgD"/>
+                <constraint firstItem="rDy-l1-bhc" firstAttribute="top" secondItem="d5j-9k-heg" secondAttribute="bottom" constant="50" id="HHT-HH-D4t"/>
+                <constraint firstItem="bQN-x7-ShV" firstAttribute="top" secondItem="rDy-l1-bhc" secondAttribute="bottom" constant="12" id="Jbj-6W-Mfl"/>
+                <constraint firstAttribute="centerX" secondItem="feb-SR-7U9" secondAttribute="centerX" id="KYb-F9-syS"/>
+                <constraint firstAttribute="centerX" secondItem="bQN-x7-ShV" secondAttribute="centerX" id="NXR-cX-RX8"/>
+                <constraint firstAttribute="centerX" secondItem="rDy-l1-bhc" secondAttribute="centerX" id="XfO-98-u2d"/>
+                <constraint firstAttribute="centerY" secondItem="jXj-3f-mXm" secondAttribute="centerY" constant="-20" id="Xsn-vh-qVY"/>
+                <constraint firstAttribute="centerX" secondItem="wfE-A0-Gfu" secondAttribute="centerX" id="da8-1G-UU6"/>
+                <constraint firstAttribute="centerX" secondItem="sZS-CJ-O5C" secondAttribute="centerX" id="fcM-79-Jfk"/>
+                <constraint firstAttribute="centerX" secondItem="6M5-Tt-ucn" secondAttribute="centerX" id="tlg-A9-v0e"/>
+                <constraint firstItem="d5j-9k-heg" firstAttribute="top" secondItem="wfE-A0-Gfu" secondAttribute="bottom" constant="8" id="ujx-oh-G1u"/>
+                <constraint firstItem="6M5-Tt-ucn" firstAttribute="centerY" secondItem="feb-SR-7U9" secondAttribute="centerY" constant="2" id="yON-YX-L2o"/>
+                <constraint firstAttribute="centerX" secondItem="d5j-9k-heg" secondAttribute="centerX" id="yah-Oq-wRB"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="umbrella" width="81" height="90"/>
+    </resources>
+</document>
