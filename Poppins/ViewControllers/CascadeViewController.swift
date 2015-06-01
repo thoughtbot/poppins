@@ -15,6 +15,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
         let layout = collectionView?.collectionViewLayout as? CascadeLayout
         layout?.delegate = self
+        collectionView?.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("sync"), name: UIApplicationDidBecomeActiveNotification, object: .None)
         sync()
