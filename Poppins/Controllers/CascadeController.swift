@@ -49,6 +49,6 @@ class CascadeController {
     }
 
     func importController() -> ImportController? {
-        return Pasteboard.fetchImageData().map { ImportController(imageData: $0.0, imageType: $0.1, store: imageStore, client: syncEngine.client) }
+        return Pasteboard.fetchImageData().map { ImportController(imageData: $0.data, imageType: $0.type, store: imageStore, client: syncEngine.client) }
     }
 }

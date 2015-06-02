@@ -35,7 +35,7 @@ class ImportPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         let containerView = transitionContext.containerView()
 
         let finalFrame = presentedController.map { transitionContext.finalFrameForViewController($0) }
-        let yOffset = -(CGRectGetMidY(containerView.bounds) + size.height / 2)
+        let yOffset = CGRectGetMidY(containerView.bounds) + size.height / 2
         presentedControllerView?.frame = containerView.bounds.centeredRectForSize(size, offset: CGPoint(x: 0, y: yOffset))
         presentedControllerView.map(containerView.addSubview)
 
@@ -50,7 +50,7 @@ class ImportPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)
 
         let containerView = transitionContext.containerView()
-        let yOffset = -(CGRectGetMidY(containerView.bounds) + size.height / 2)
+        let yOffset = CGRectGetMidY(containerView.bounds) + size.height / 2
         let finalFrame = containerView.bounds.centeredRectForSize(size, offset: CGPoint(x: 0, y: yOffset))
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: animationOptions, animations: {
