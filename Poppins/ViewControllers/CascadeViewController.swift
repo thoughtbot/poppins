@@ -12,6 +12,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         super.viewDidLoad()
 
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "NavigationBarBackground"), forBarMetrics: .Default)
+        navigationItem.titleView = UIImage(named: "PoppinsTitle").map { UIImageView(image: $0) }
 
         let layout = collectionView?.collectionViewLayout as? CascadeLayout
         layout?.delegate = self
@@ -23,8 +24,6 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         holdGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "hold:")
         holdGestureRecognizer?.minimumPressDuration = 0.5
         holdGestureRecognizer >>- { self.collectionView?.addGestureRecognizer($0) }
-
-        navigationItem.titleView = UIImage(named: "PoppinsTitle").map { UIImageView(image: $0) }
     }
 
     deinit {
@@ -44,12 +43,8 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         controller?.syncWithTHECLOUD()
 
         if controller?.hasPasteboardImage ?? false {
-            let alert = UIAlertController(title: "New Image Found!", message: "Would you like to save the image in your pasteboard?", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { _ in
-                self.presentImportView()
-            }))
-            alert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { _ in }))
-            presentViewController(alert, animated: true, completion: .None)
+            let alert = controller?.viewModel.alertControllerForImportingPasteboardImage(presentImportView)
+            alert.map { self.presentViewController($0, animated: true, completion: .None) }
         }
     }
 

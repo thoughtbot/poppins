@@ -8,7 +8,7 @@ let JPEGType = CFBridgingRetain(kUTTypeJPEG) as! String
 let PNGType = CFBridgingRetain(kUTTypePNG) as! String
 
 struct Pasteboard {
-    static func fetchImageData() -> (NSData, String)? {
+    static func fetchImageData() -> (data: NSData, type: String)? {
         let systemPasteboard = UIPasteboard.generalPasteboard()
 
         if let gif = systemPasteboard.dataForPasteboardType(GIFType) { return (gif, GIFType) }
