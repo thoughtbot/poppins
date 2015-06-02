@@ -41,7 +41,7 @@ struct CascadeViewModel {
         let positiveAction = UIAlertAction(title: "Yes", style: .Default) { _ in
             importCallback()
         }
-
+        
         alert.addAction(positiveAction)
         alert.addAction(cancelAction)
         return alert
