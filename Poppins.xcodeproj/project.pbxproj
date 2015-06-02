@@ -45,7 +45,6 @@
 		EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
 		EA4A515F1A76EC5A00DCEAA8 /* Cascade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A515E1A76EC5A00DCEAA8 /* Cascade.framework */; };
 		EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */; };
-		EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */; };
 		EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A51641A76EC6500DCEAA8 /* Runes.framework */; };
 		EA59E6561ABC94A500425348 /* PreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA59E6551ABC94A500425348 /* PreviewView.xib */; };
 		EA59E6601ABC96D900425348 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65F1ABC96D800425348 /* PreviewController.swift */; };
@@ -76,6 +75,8 @@
 		EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
 		EAE3D1D21B1CE79C0091014B /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3D1D11B1CE79C0091014B /* EmptyState.xib */; };
 		EAE3D1D41B1CF0BD0091014B /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */; };
+		EAE3D1D61B1E0A560091014B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3D1D51B1E0A560091014B /* Result.framework */; };
+		EAE3D1D81B1E0AA30091014B /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3D1D71B1E0AA30091014B /* Box.framework */; };
 		EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
 		EAF49CD11A3F37D200B395DF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
 		EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
@@ -153,7 +154,6 @@
 		EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		EA4A515E1A76EC5A00DCEAA8 /* Cascade.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cascade.framework; path = ../Carthage/Build/iOS/Cascade.framework; sourceTree = "<group>"; };
 		EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gifu.framework; path = ../Carthage/Build/iOS/Gifu.framework; sourceTree = "<group>"; };
-		EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = ../Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		EA4A51641A76EC6500DCEAA8 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = ../Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		EA59E6551ABC94A500425348 /* PreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewView.xib; sourceTree = "<group>"; };
 		EA59E65F1ABC96D800425348 /* PreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
@@ -183,6 +183,8 @@
 		EAD733A71A891C91004A7F6E /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		EAE3D1D11B1CE79C0091014B /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateViewController.swift; sourceTree = "<group>"; };
+		EAE3D1D51B1E0A560091014B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		EAE3D1D71B1E0AA30091014B /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = ../Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EAF49CD01A3F37D200B395DF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		EAF49CDE1A3F582100B395DF /* GifItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifItemSource.swift; sourceTree = "<group>"; };
@@ -211,8 +213,9 @@
 				F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */,
 				EA9EE8A61AD58A9D00742B68 /* FBSDKMessengerShareKit.framework in Frameworks */,
 				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
-				EA4A51631A76EC6100DCEAA8 /* LlamaKit.framework in Frameworks */,
+				EAE3D1D81B1E0AA30091014B /* Box.framework in Frameworks */,
 				EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */,
+				EAE3D1D61B1E0A560091014B /* Result.framework in Frameworks */,
 				EA4A515F1A76EC5A00DCEAA8 /* Cascade.framework in Frameworks */,
 				EA137CE11A79943500A92B85 /* DropboxSDK.framework in Frameworks */,
 			);
@@ -469,10 +472,11 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAE3D1D71B1E0AA30091014B /* Box.framework */,
+				EAE3D1D51B1E0A560091014B /* Result.framework */,
 				EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */,
 				EA137CE01A79943500A92B85 /* DropboxSDK.framework */,
 				EA4A51641A76EC6500DCEAA8 /* Runes.framework */,
-				EA4A51621A76EC6100DCEAA8 /* LlamaKit.framework */,
 				EA4A51601A76EC5D00DCEAA8 /* Gifu.framework */,
 				EA4A515E1A76EC5A00DCEAA8 /* Cascade.framework */,
 				F80BE3DA1A41E5B9009192A4 /* QuartzCore.framework */,
@@ -638,10 +642,11 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LlamaKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Cascade.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
 			);
 			name = "Run Script";
 			outputPaths = (

@@ -1,7 +1,7 @@
 import CoreData
 import Cascade
 import Gifu
-import LlamaKit
+import Result
 import Runes
 
 class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
