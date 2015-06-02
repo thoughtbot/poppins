@@ -18,6 +18,10 @@ class ImportViewController: UIViewController {
         setup()
     }
 
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
     private func setup() {
         modalPresentationStyle = .Custom
     }
@@ -29,14 +33,9 @@ class ImportViewController: UIViewController {
             imageView.animateWithImageData(data: viewModel.imageData)
             imageView.startAnimatingGIF()
             setImageType(viewModel.imageType)
-
         }
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: .None)
-    }
-
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {

@@ -31,4 +31,19 @@ struct CascadeViewModel {
         let cachedImage = images.safeValue(indexPath.row)
         return cachedImage?.shareURLPath >>- { NSURL(string: "\($0)&raw=1") }
     }
+
+    func alertControllerForImportingPasteboardImage(importCallback: () -> ()) -> UIAlertController {
+        let title = NSLocalizedString("New Image Found!", comment: "")
+        let message = NSLocalizedString("Would you like to save the image in your pasteboard?", comment: "")
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "No", style: .Cancel, handler: .None)
+        let positiveAction = UIAlertAction(title: "Yes", style: .Default) { _ in
+            importCallback()
+        }
+
+        alert.addAction(positiveAction)
+        alert.addAction(cancelAction)
+        return alert
+    }
 }
