@@ -6,7 +6,6 @@ import Runes
 
 class CascadeViewController: UICollectionViewController {
     var controller: CascadeController?
-    var holdGestureRecognizer: UILongPressGestureRecognizer?
     let popupViewManager = PopupViewManager()
 
     override func viewDidLoad() {
@@ -21,10 +20,6 @@ class CascadeViewController: UICollectionViewController {
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("sync"), name: UIApplicationDidBecomeActiveNotification, object: .None)
         sync()
-
-        holdGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "hold:")
-        holdGestureRecognizer?.minimumPressDuration = 0.5
-        holdGestureRecognizer >>- { self.collectionView?.addGestureRecognizer($0) }
     }
 
     deinit {
