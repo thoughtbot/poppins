@@ -103,11 +103,18 @@
                         <connections>
                             <outlet property="dataSource" destination="66v-CU-UqJ" id="aSE-yw-mQ3"/>
                             <outlet property="delegate" destination="66v-CU-UqJ" id="sp1-zS-CxQ"/>
+                            <outletCollection property="gestureRecognizers" destination="qrY-51-Loz" appends="YES" id="6Ac-1w-Ckz"/>
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Poppins" id="EI3-iM-K35"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADR-R8-wdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="qrY-51-Loz">
+                    <connections>
+                        <action selector="hold:" destination="66v-CU-UqJ" id="swa-X6-T5E"/>
+                        <outlet property="delegate" destination="66v-CU-UqJ" id="QRa-uT-Ezi"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="437" y="595"/>
         </scene>
