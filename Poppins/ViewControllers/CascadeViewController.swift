@@ -4,9 +4,10 @@ import Gifu
 import Result
 import Runes
 
-class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
+class CascadeViewController: UICollectionViewController {
     var controller: CascadeController?
     var holdGestureRecognizer: UILongPressGestureRecognizer?
+    let popupViewManager = PopupViewManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         }
     }
 
-    func fetchImages() {
+    private func fetchImages() {
         controller?.fetchImages()
         controller?.registerForChanges { inserted, updated, deleted in
             self.hideEmptyState()
@@ -60,12 +61,12 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         }
     }
 
-    func showEmptyState() {
+    private func showEmptyState() {
         let emptyStateViewController = EmptyStateViewController.create()
         emptyStateViewController.moveToParent(self) { self.collectionView?.backgroundView = $0 }
     }
 
-    func hideEmptyState() {
+    private func hideEmptyState() {
         let emptyStateViewController = childViewControllers.last as? EmptyStateViewController
         emptyStateViewController?.removeFromParent { self.collectionView?.backgroundView = .None }
     }
@@ -84,10 +85,6 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         return controller?.viewModel.imageSizeForIndexPath(indexPath) ?? CGSize(width: 1, height: 1)
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: CascadeLayout, numberOfColumnsInSectionAtIndexPath indexPath: NSIndexPath) -> Int {
-        return 2
-    }
-
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let gifItemSource = controller?.viewModel.gifItemSourceForIndexPath(indexPath)
 
@@ -97,41 +94,30 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
         }
     }
 
-    var previewViewController: PreviewViewController?
-    var previewTransitionDelegate: PreviewTransitioningDelegate?
-
-    func hold(gesture: UILongPressGestureRecognizer) {
+    @IBAction func hold(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .Began {
             let point = gesture.locationInView(collectionView)
             let indexPath = collectionView?.indexPathForItemAtPoint(point)
             let frame = (indexPath >>- { self.collectionView?.layoutAttributesForItemAtIndexPath($0) })?.frame
             let realFrame = collectionView?.convertRect(frame!, toView: navigationController?.view)
-
-            previewTransitionDelegate = realFrame.map { PreviewTransitioningDelegate(startingFrame: $0) }
-            previewViewController = PreviewViewController.create()
-            previewViewController?.transitioningDelegate = previewTransitionDelegate
-
             let path = indexPath >>- { self.controller?.viewModel.imagePathForIndexPath($0) }
             let size = indexPath >>- { self.controller?.viewModel.imageSizeForIndexPath($0) }
 
-            previewViewController?.controller = path >>- { p in size.map { PreviewController(path: p, size: $0) } }
+            let previewViewController = popupViewManager.previewViewController <^> realFrame <*> path <*> size
             previewViewController.map { self.presentViewController($0, animated: true, completion: .None) }
         } else if gesture.state == .Ended {
             dismissViewControllerAnimated(true, completion: .None)
         }
     }
 
-    var importViewController: ImportViewController?
-    var importTransitionDelegate: ImportTransitioningDelegate?
-
     private func presentImportView() {
-        importTransitionDelegate = ImportTransitioningDelegate()
-        importViewController = ImportViewController.create()
-        importViewController?.transitioningDelegate = importTransitionDelegate
-        importViewController?.controller = controller?.importController()
+        let importViewController = popupViewManager.importViewController <^> controller?.importController()
+        importViewController.map { self.presentViewController($0, animated: true, completion: .None) }
+    }
+}
 
-        if let importViewController = importViewController {
-            presentViewController(importViewController, animated: true, completion: .None)
-        }
+extension CascadeViewController: CascadeLayoutDelegate {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: CascadeLayout, numberOfColumnsInSectionAtIndexPath indexPath: NSIndexPath) -> Int {
+        return 2
     }
 }
