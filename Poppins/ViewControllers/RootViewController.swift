@@ -40,26 +40,25 @@ class RootViewController: UIViewController {
 
     func transitionToMainFlow() {
         let cascade = cascadeViewController
-        addChildViewController(cascade)
-        cascade.didMoveToParentViewController(self)
-        cascade.view.transform = CGAffineTransformMakeScale(0.9, 0.9)
+        cascade.moveToParent(self) { childView in
+            childView.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            view.sendSubviewToBack(childView)
+        }
 
         transitionFromViewController(activeViewController!, toViewController: cascade, duration: 0.33, options: .CurveEaseInOut, animations: {
-            self.view.sendSubviewToBack(cascade.view)
             cascade.view.transform = CGAffineTransformIdentity
             self.activeViewController?.view.frame = CGRectOffset(self.view.bounds, 0, self.view.bounds.height)
-            }) { _ in
-                self.activeViewController?.willMoveToParentViewController(.None)
-                self.activeViewController?.removeFromParentViewController()
-                self.activeViewController = cascade
+        }) { _ in
+            self.activeViewController?.removeFromParent(.None)
+            self.activeViewController = cascade
         }
     }
 
     func showViewController(viewController: UIViewController) {
-        addChildViewController(viewController)
-        viewController.view.frame = view.bounds
-        view.addSubview(viewController.view)
-        viewController.didMoveToParentViewController(self)
+        viewController.moveToParent(self) { childView in
+            childView.frame = view.bounds
+            view.addSubview(childView)
+        }
 
         activeViewController = viewController
     }
