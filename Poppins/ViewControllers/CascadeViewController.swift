@@ -62,20 +62,12 @@ class CascadeViewController: UICollectionViewController, CascadeLayoutDelegate {
 
     func showEmptyState() {
         let emptyStateViewController = EmptyStateViewController.create()
-        emptyStateViewController.willMoveToParentViewController(self)
-        addChildViewController(emptyStateViewController)
-        collectionView?.backgroundView = emptyStateViewController.view
-        emptyStateViewController.didMoveToParentViewController(self)
+        emptyStateViewController.moveToParent(self) { self.collectionView?.backgroundView = $0 }
     }
 
     func hideEmptyState() {
-        if let emptyStateViewController = childViewControllers.last as? EmptyStateViewController {
-            emptyStateViewController.willMoveToParentViewController(.None)
-            emptyStateViewController.view.removeFromSuperview()
-            collectionView?.backgroundView = .None
-            emptyStateViewController.removeFromParentViewController()
-            emptyStateViewController.didMoveToParentViewController(.None)
-        }
+        let emptyStateViewController = childViewControllers.last as? EmptyStateViewController
+        emptyStateViewController?.removeFromParent { self.collectionView?.backgroundView = .None }
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
