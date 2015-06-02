@@ -36,6 +36,7 @@ struct ImageStore {
             saveCachedImage(cachedImage)
             return cachedImage.documentDirectoryPath
         }
+
         return .None
     }
 }
