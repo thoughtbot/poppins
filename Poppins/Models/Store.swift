@@ -18,7 +18,7 @@ class Store {
     init() {
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
             <^> objectModel
-            <*> applicationDocumentDirectory >>- appendSQLlitePathURL
+            <*> (applicationDocumentDirectory >>- appendSQLlitePathURL)
     }
 
     private func appendSQLlitePathURL(url: NSURL) -> NSURL? {

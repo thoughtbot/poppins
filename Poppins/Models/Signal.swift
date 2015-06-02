@@ -1,4 +1,4 @@
-import LlamaKit
+import Result
 import Runes
 
 class Signal<T> {
@@ -22,6 +22,6 @@ class Signal<T> {
     }
 
     func fail(error: NSError) {
-        observer?(failure(error))
+        observer?(.failure(error))
     }
 }

@@ -1,5 +1,5 @@
 import Foundation
-import LlamaKit
+import Result
 import Runes
 
 private let SupportedFileExtensions = ["gif", "png", "jpg", "jpeg"]
