@@ -87,6 +87,7 @@
 		EAE3D1D61B1E0A560091014B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3D1D51B1E0A560091014B /* Result.framework */; };
 		EAE3D1D81B1E0AA30091014B /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3D1D71B1E0AA30091014B /* Box.framework */; };
 		EAE3D1DA1B1E264D0091014B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D91B1E264D0091014B /* UIViewController.swift */; };
+		EAE3D1DC1B1E2E230091014B /* PopupViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1DB1B1E2E230091014B /* PopupViewManager.swift */; };
 		EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
 		EAF49CD11A3F37D200B395DF /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
 		EAF49CDF1A3F582100B395DF /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
@@ -205,6 +206,7 @@
 		EAE3D1D51B1E0A560091014B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		EAE3D1D71B1E0AA30091014B /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = ../Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		EAE3D1D91B1E264D0091014B /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		EAE3D1DB1B1E2E230091014B /* PopupViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewManager.swift; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		EAF49CD01A3F37D200B395DF /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		EAF49CDE1A3F582100B395DF /* GifItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifItemSource.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				EA8A80141AF1933E0074C13B /* ImportTransitioningDelegate.swift */,
 				EA8A80161AF193E10074C13B /* ImportPresentationAnimationController.swift */,
 				EA8A80181AF195190074C13B /* ImportPresentationController.swift */,
+				EAE3D1DB1B1E2E230091014B /* PopupViewManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				EAB193181A2F9BD90002C6D0 /* PoppinsCell.swift in Sources */,
 				EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */,
 				5D8975CA1A43807D00F72C27 /* Button.swift in Sources */,
+				EAE3D1DC1B1E2E230091014B /* PopupViewManager.swift in Sources */,
 				EAB1931A1A2FA0740002C6D0 /* LinkAccountViewController.swift in Sources */,
 				EA9EE8A91AD5903400742B68 /* FacebookMessengerActivity.swift in Sources */,
 				EAACE1F21A1BA9BF00E3C43D /* Optional.swift in Sources */,
