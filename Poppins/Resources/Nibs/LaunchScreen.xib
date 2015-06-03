@@ -11,10 +11,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoppinsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-Mf-vjG">
-                    <rect key="frame" x="160" y="162" width="160" height="120"/>
+                    <rect key="frame" x="140" y="172" width="200" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="5D3-Jb-ddy"/>
-                        <constraint firstAttribute="width" constant="160" id="ATd-rp-x7a"/>
+                        <constraint firstAttribute="width" constant="200" id="Tgn-U3-oWD"/>
+                        <constraint firstAttribute="height" constant="100" id="g3h-up-0tI"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -29,6 +29,6 @@
         </view>
     </objects>
     <resources>
-        <image name="PoppinsLogo" width="162" height="48"/>
+        <image name="PoppinsLogo" width="449" height="126"/>
     </resources>
 </document>
