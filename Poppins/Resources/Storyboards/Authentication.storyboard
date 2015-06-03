@@ -35,58 +35,19 @@
                                     <action selector="linkDropbox" destination="gfB-ad-VHk" eventType="touchUpInside" id="90o-wc-xbt"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjS-Eb-s1l">
-                                <rect key="frame" x="200" y="340" width="200" height="120"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syncing..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vQ-Vo-wfY">
-                                        <rect key="frame" x="62" y="30" width="76" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="j1D-PJ-iVL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2aZ-6s-yyE">
-                                        <rect key="frame" x="90" y="70" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="lh8-nD-5fd"/>
-                                            <constraint firstAttribute="height" constant="20" id="v9X-dl-T7p"/>
-                                        </constraints>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="2aZ-6s-yyE" secondAttribute="bottom" constant="30" id="3oI-aI-Qj7"/>
-                                    <constraint firstItem="9vQ-Vo-wfY" firstAttribute="centerY" secondItem="2aZ-6s-yyE" secondAttribute="centerY" constant="5.5" id="5ea-cn-qkV"/>
-                                    <constraint firstAttribute="width" constant="200" id="90o-Ea-JDB"/>
-                                    <constraint firstAttribute="centerX" secondItem="2aZ-6s-yyE" secondAttribute="centerX" id="GG1-Rq-RJl"/>
-                                    <constraint firstItem="9vQ-Vo-wfY" firstAttribute="top" secondItem="SjS-Eb-s1l" secondAttribute="top" constant="30" id="bxN-np-bKX"/>
-                                    <constraint firstItem="2aZ-6s-yyE" firstAttribute="leading" secondItem="SjS-Eb-s1l" secondAttribute="leading" constant="34" id="guc-4Z-2O8"/>
-                                    <constraint firstAttribute="centerX" secondItem="9vQ-Vo-wfY" secondAttribute="centerX" id="voU-k2-uiw"/>
-                                    <constraint firstAttribute="height" constant="120" id="wXg-Z9-vIg"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5ea-cn-qkV"/>
-                                        <exclude reference="guc-4Z-2O8"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoppinsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="u2E-z5-pm3">
-                                <rect key="frame" x="200" y="160" width="200" height="80"/>
+                                <rect key="frame" x="200" y="150" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="JXv-Ky-YiS"/>
-                                    <constraint firstAttribute="height" constant="80" id="PfC-T8-Dcl"/>
+                                    <constraint firstAttribute="height" constant="100" id="zBw-us-B62"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.76078431369999999" green="0.1529411765" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="u2E-z5-pm3" secondAttribute="centerX" id="FIp-bV-sJF"/>
-                            <constraint firstAttribute="centerX" secondItem="SjS-Eb-s1l" secondAttribute="centerX" id="KO0-m3-R46"/>
                             <constraint firstAttribute="centerY" secondItem="u2E-z5-pm3" secondAttribute="centerY" constant="100" id="YpO-LG-y6U"/>
                             <constraint firstAttribute="centerY" secondItem="9lB-ME-bLL" secondAttribute="centerY" constant="-200" id="cvu-Rv-JSC"/>
-                            <constraint firstAttribute="centerY" secondItem="SjS-Eb-s1l" secondAttribute="centerY" constant="-100" id="ugz-NG-Mwf"/>
                             <constraint firstAttribute="centerX" secondItem="9lB-ME-bLL" secondAttribute="centerX" id="zpy-IA-aOp"/>
                         </constraints>
                     </view>
@@ -97,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PoppinsLogo" width="162" height="48"/>
+        <image name="PoppinsLogo" width="449" height="126"/>
     </resources>
 </document>
