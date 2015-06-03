@@ -26,6 +26,11 @@ class ImportViewController: UIViewController {
         modalPresentationStyle = .Custom
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.layer.cornerRadius = 4;
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -85,6 +90,12 @@ extension ImportViewController: UIPickerViewDelegate {
         case 2: return ".jpeg"
         default: return ""
         }
+    }
+
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        let label = (view as? UILabel) ?? UILabel()
+        label.text = self.pickerView(pickerView, titleForRow: row, forComponent: component)
+        return label
     }
 }
 
