@@ -7,6 +7,7 @@ class ImportViewController: UIViewController {
     @IBOutlet weak var extensionPicker: UIPickerView!
 
     var controller: ImportController?
+    var importViewDidDismiss: (() -> ())?
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -62,12 +63,12 @@ class ImportViewController: UIViewController {
             let row = extensionPicker.selectedRowInComponent(ImportViewPickerDefaultComponent)
             let ext = pickerView(extensionPicker, titleForRow: row, forComponent: ImportViewPickerDefaultComponent)
             controller?.saveAndUploadImage(image, name: "\(imageNameField.text)\(ext)")
-            dismissViewControllerAnimated(true, completion: .None)
+            dismissViewControllerAnimated(true, completion: importViewDidDismiss)
         }
     }
 
     @IBAction func cancel() {
-        dismissViewControllerAnimated(true, completion: .None)
+        dismissViewControllerAnimated(true, completion: importViewDidDismiss)
     }
 }
 
