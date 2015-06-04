@@ -101,12 +101,13 @@ class CascadeViewController: UICollectionViewController {
             let previewViewController = popupViewManager.previewViewController <^> realFrame <*> path <*> size
             previewViewController.map { self.presentViewController($0, animated: true, completion: .None) }
         } else if gesture.state == .Ended {
-            dismissViewControllerAnimated(true, completion: .None)
+            dismissViewControllerAnimated(true, completion: popupViewManager.recyclePreview)
         }
     }
 
     private func presentImportView() {
         let importViewController = popupViewManager.importViewController <^> controller?.importController()
+        importViewController?.importViewDidDismiss = popupViewManager.recycleImport
         importViewController.map { self.presentViewController($0, animated: true, completion: .None) }
     }
 }

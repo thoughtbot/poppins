@@ -22,13 +22,16 @@ class PreviewViewController: UIViewController, ViewModelObserver {
         setup()
     }
 
+    deinit {
+        gifView.cleanup()
+    }
+
     func setup() {
         modalPresentationStyle = .Custom
     }
 
     func viewModelDidChange() {
         { _ = self.gifView?.animateWithImageData(data: $0.gifData) } <^> self.controller?.viewModel
-        self.gifView?.startAnimatingGIF()
     }
 }
 
