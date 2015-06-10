@@ -29,14 +29,12 @@ struct ImageStore {
     }
 
     func saveImageData(data: NSData, name: String, aspectRatio: Double) -> String? {
-        if let cachedImage = newCachedImage() {
-            cachedImage.aspectRatio = aspectRatio
-            cachedImage.path = name
-            data.writeToFile(cachedImage.documentDirectoryPath, atomically: true)
-            saveCachedImage(cachedImage)
-            return cachedImage.documentDirectoryPath
-        }
+        guard let cachedImage = newCachedImage() else { return .None }
 
-        return .None
+        cachedImage.aspectRatio = aspectRatio
+        cachedImage.path = name
+        data.writeToFile(cachedImage.documentDirectoryPath, atomically: true)
+        saveCachedImage(cachedImage)
+        return cachedImage.documentDirectoryPath
     }
 }

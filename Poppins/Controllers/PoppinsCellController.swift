@@ -32,9 +32,8 @@ class PoppinsCellController {
     }
 
     @objc func cacheDidUpdate() {
-        if let image = imageFetcher.fetchImage(size, path: path) {
-            viewModel = PoppinsCellViewModel(image: image)
-            NSNotificationCenter.defaultCenter().removeObserver(self)
-        }
+        guard let image = imageFetcher.fetchImage(size, path: path) else { return }
+        viewModel = PoppinsCellViewModel(image: image)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }

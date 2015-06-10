@@ -35,36 +35,34 @@ class ImportViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let viewModel = controller?.viewModel {
-            imageView.animateWithImageData(viewModel.imageData)
-            imageView.startAnimatingGIF()
-            setImageType(viewModel.imageType)
-        }
-
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: .None)
+
+        guard let viewModel = controller?.viewModel else { return }
+        imageView.animateWithImageData(viewModel.imageData)
+        imageView.startAnimatingGIF()
+        setImageType(viewModel.imageType)
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let size = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue.size,
-           let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue
-        {
-            let yTotal = view.superview?.frame.height ?? 0
-            let yOffset = CGRectGetMaxY(view.frame) - (yTotal - (size.height + 20))
-            let newFrame = CGRect(origin: CGPoint(x: view.frame.origin.x, y: view.frame.origin.y - yOffset), size: view.frame.size)
+        guard let size = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue.size,
+              let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue else { return }
 
-            UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseInOut, animations: {
-                self.view.frame = newFrame
-            }, completion: .None)
-        }
+        let yTotal = view.superview?.frame.height ?? 0
+        let yOffset = CGRectGetMaxY(view.frame) - (yTotal - (size.height + 20))
+        let newFrame = CGRect(origin: CGPoint(x: view.frame.origin.x, y: view.frame.origin.y - yOffset), size: view.frame.size)
+
+        UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseInOut, animations: {
+            self.view.frame = newFrame
+        }, completion: .None)
     }
 
     @IBAction func save() {
-        if let image = imageView.image {
-            let row = extensionPicker.selectedRowInComponent(ImportViewPickerDefaultComponent)
-            let ext = pickerView(extensionPicker, titleForRow: row, forComponent: ImportViewPickerDefaultComponent)
-            controller?.saveAndUploadImage(image, name: "\(imageNameField.text)\(ext)")
-            dismissViewControllerAnimated(true, completion: importViewDidDismiss)
-        }
+        guard let image = imageView.image else { return }
+
+        let row = extensionPicker.selectedRowInComponent(ImportViewPickerDefaultComponent)
+        let ext = pickerView(extensionPicker, titleForRow: row, forComponent: ImportViewPickerDefaultComponent)
+        controller?.saveAndUploadImage(image, name: "\(imageNameField.text)\(ext)")
+        dismissViewControllerAnimated(true, completion: importViewDidDismiss)
     }
 
     @IBAction func cancel() {

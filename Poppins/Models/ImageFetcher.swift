@@ -23,31 +23,28 @@ import Runes
     }
 
     func fetchImage(size: CGSize, path: String) -> UIImage? {
-        if let image = imageCache.itemForKey(path) {
-            return image
-        } else {
-            if size == CGSizeZero { return .None }
+        if let image = imageCache.itemForKey(path) { return image }
+        if size == CGSizeZero { return .None }
 
-            dispatch_to_main {
-                objc_sync_enter(self.inProgress)
-                if self.inProgress.contains(path) { return }
-                self.inProgress.append(path)
-                objc_sync_exit(self.inProgress)
+        dispatch_to_main {
+            objc_sync_enter(self.inProgress)
+            if self.inProgress.contains(path) { return }
+            self.inProgress.append(path)
+            objc_sync_exit(self.inProgress)
+            
+            let operation = ImageFetcherOperation(path: path, size: size) { image in
+                curry(self.imageCache.setItem) <^> image <*> path
                 
-                let operation = ImageFetcherOperation(path: path, size: size) { image in
-                    curry(self.imageCache.setItem) <^> image <*> path
-                    
-                    dispatch_to_main {
-                        objc_sync_enter(self.inProgress)
-                        self.inProgress.removeAtIndex <^> self.inProgress.indexOf(path)
-                        objc_sync_exit(self.inProgress)
-                        NSNotificationCenter.defaultCenter().postNotificationName("CacheDidUpdate", object: .None)
-                    }
+                dispatch_to_main {
+                    objc_sync_enter(self.inProgress)
+                    self.inProgress.removeAtIndex <^> self.inProgress.indexOf(path)
+                    objc_sync_exit(self.inProgress)
+                    NSNotificationCenter.defaultCenter().postNotificationName("CacheDidUpdate", object: .None)
                 }
-                
-                self.operationQueue.addOperation(operation)
             }
-            return .None
+            
+            self.operationQueue.addOperation(operation)
         }
+        return .None
     }
 }

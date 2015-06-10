@@ -29,13 +29,13 @@ class SyncEngine {
         let cachedImages = store.cachedImages() ?? []
 
         let updatable: [CachedImage] = cachedImages.reduce([]) { accum, image in
-            if let index = (fileInfos.map { $0.path }).indexOf(image.path) {
-                if fileInfos[index].rev != image.rev {
-                    image.rev = fileInfos[index].rev
-                    return accum + [image]
-                }
-            }
-            return accum
+            guard let index = (fileInfos.map { $0.path }).indexOf(image.path)
+                where fileInfos[index].rev != image.rev
+                else { return accum }
+
+            image.rev = fileInfos[index].rev
+            return accum + [image]
+
         }
 
         let creatable = fileInfos.filter { info in

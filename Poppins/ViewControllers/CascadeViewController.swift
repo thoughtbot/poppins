@@ -81,12 +81,10 @@ class CascadeViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let gifItemSource = controller?.viewModel.gifItemSourceForIndexPath(indexPath)
+        guard let gifItemSource = controller?.viewModel.gifItemSourceForIndexPath(indexPath) else { return }
 
-        if let source = gifItemSource {
-            let activityVC = UIActivityViewController(activityItems: [source], applicationActivities: [FacebookMessengerActivity()])
-            presentViewController(activityVC, animated: true, completion: .None)
-        }
+        let activityVC = UIActivityViewController(activityItems: [gifItemSource], applicationActivities: [FacebookMessengerActivity()])
+        presentViewController(activityVC, animated: true, completion: .None)
     }
 
     @IBAction func hold(gesture: UILongPressGestureRecognizer) {
