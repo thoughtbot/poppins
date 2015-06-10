@@ -36,7 +36,7 @@ class ImportViewController: UIViewController {
         super.viewWillAppear(animated)
 
         if let viewModel = controller?.viewModel {
-            imageView.animateWithImageData(data: viewModel.imageData)
+            imageView.animateWithImageData(viewModel.imageData)
             imageView.startAnimatingGIF()
             setImageType(viewModel.imageType)
         }
@@ -45,7 +45,7 @@ class ImportViewController: UIViewController {
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let size = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().size,
+        if let size = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue.size,
            let duration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue
         {
             let yTotal = view.superview?.frame.height ?? 0
@@ -84,7 +84,7 @@ extension ImportViewController: UIPickerViewDataSource {
 }
 
 extension ImportViewController: UIPickerViewDelegate {
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch row {
         case 0: return ".gif"
         case 1: return ".png"

@@ -14,12 +14,12 @@ class PreviewPresentationAnimationController: NSObject, UIViewControllerAnimated
         super.init()
     }
 
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
 
     var animationOptions: UIViewAnimationOptions {
-        return UIViewAnimationOptions.AllowAnimatedContent | UIViewAnimationOptions.LayoutSubviews
+        return [UIViewAnimationOptions.AllowAnimatedContent, UIViewAnimationOptions.LayoutSubviews]
     }
 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -31,33 +31,33 @@ class PreviewPresentationAnimationController: NSObject, UIViewControllerAnimated
     }
 
     func animatePresentationWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? PreviewViewController
-        let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)
-        let containerView = transitionContext.containerView()
+        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! PreviewViewController
+        let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        let containerView = transitionContext.containerView()!
 
-        let finalFrame = presentedController.map { transitionContext.finalFrameForViewController($0) }
-        presentedControllerView?.frame = startingFrame
-        presentedController?.gifView.frame = CGRect(origin: CGPointZero, size: startingFrame.size)
-        presentedControllerView?.alpha = 0
-        presentedControllerView.map(containerView.addSubview)
+        let finalFrame = transitionContext.finalFrameForViewController(presentedController)
+        presentedControllerView.frame = startingFrame
+        presentedController.gifView.frame = CGRect(origin: CGPointZero, size: startingFrame.size)
+        presentedControllerView.alpha = 0
+        containerView.addSubview(presentedControllerView)
 
         let midPoint = CGPoint(x: startingFrame.width / 2, y: startingFrame.height / 2)
         presentedController?.activityIndicator.frame = CGRect(origin: midPoint, size: presentedController?.activityIndicator.frame.size ?? CGSizeZero)
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: animationOptions, animations: {
-            presentedControllerView?.alpha = 1
-            presentedControllerView?.frame = finalFrame ?? CGRectZero
+            presentedControllerView.alpha = 1
+            presentedControllerView.frame = finalFrame
         }) { completed in
             transitionContext.completeTransition(completed)
         }
     }
 
     func animateDismissalWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)
+        let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: animationOptions, animations: {
-            presentedControllerView?.alpha = 0
-            presentedControllerView?.frame = self.startingFrame
+            presentedControllerView.alpha = 0
+            presentedControllerView.frame = self.startingFrame
         }) { completed in
             transitionContext.completeTransition(completed)
         }

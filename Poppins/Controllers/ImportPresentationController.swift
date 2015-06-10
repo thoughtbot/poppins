@@ -4,20 +4,20 @@ class ImportPresentationController: UIPresentationController {
     let dimmingView = UIView()
     let size: CGSize
 
-    init(presentedViewController: UIViewController!, presentingViewController: UIViewController!, size: CGSize) {
+    init(presentedViewController: UIViewController, presentingViewController: UIViewController, size: CGSize) {
         self.size = size
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
     }
 
     override func presentationTransitionWillBegin() {
-        dimmingView.frame = containerView.bounds
+        dimmingView.frame = containerView!.bounds
         let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
-        blurView.frame = containerView.bounds
+        blurView.frame = containerView!.bounds
         dimmingView.addSubview(blurView)
         dimmingView.alpha = 0
 
-        containerView.addSubview(dimmingView)
-        containerView.addSubview(presentedView())
+        containerView!.addSubview(dimmingView)
+        containerView!.addSubview(presentedView()!)
 
         let transitionCoordinator = presentingViewController.transitionCoordinator()
         transitionCoordinator?.animateAlongsideTransition({ _ in
@@ -45,7 +45,7 @@ class ImportPresentationController: UIPresentationController {
     }
 
     override func frameOfPresentedViewInContainerView() -> CGRect {
-        let bounds = containerView.bounds
+        let bounds = containerView!.bounds
         return bounds.centeredRectForSize(size)
     }
 }

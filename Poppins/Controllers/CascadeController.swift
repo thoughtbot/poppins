@@ -40,7 +40,7 @@ class CascadeController {
     }
 
     private func createIndexPathFromImage(image: CachedImage) -> NSIndexPath? {
-        return find(viewModel.images.map { $0.path }, image.path) >>- { NSIndexPath(forRow: $0, inSection: 0) }
+        return viewModel.images.map { $0.path }.indexOf(image.path) >>- { NSIndexPath(forRow: $0, inSection: 0) }
     }
 
     func cellControllerForIndexPath(indexPath: NSIndexPath) -> PoppinsCellController? {

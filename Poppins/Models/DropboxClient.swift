@@ -43,7 +43,7 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     }
 
     func restClient(client: DBRestClient!, loadFileFailedWithError error: NSError?) {
-        println(error)
+        print(error)
     }
 
     func restClient(client: DBRestClient!, loadedMetadata metadata: DBMetadata?) {
@@ -53,12 +53,12 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     }
 
     func restClient(client: DBRestClient!, loadMetadataFailedWithError error: NSError?) {
-        println(error)
+        print(error)
         metaSignal.fail <^> error
     }
 
     func restClient(restClient: DBRestClient!, loadSharableLinkFailedWithError error: NSError!) {
-        println(error)
+        print(error)
     }
 
     func restClient(restClient: DBRestClient!, loadedSharableLink link: String!, forFile path: String!) {
@@ -66,7 +66,7 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     }
 
     func restClient(client: DBRestClient!, uploadFileFailedWithError error: NSError!) {
-        println(error)
+        print(error)
         uploadSignal.fail <^> error
     }
 

@@ -13,12 +13,12 @@ class ImportPresentationAnimationController: NSObject, UIViewControllerAnimatedT
         super.init()
     }
 
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return duration
     }
 
     var animationOptions: UIViewAnimationOptions {
-        return UIViewAnimationOptions.AllowAnimatedContent | UIViewAnimationOptions.LayoutSubviews | UIViewAnimationOptions.CurveEaseInOut
+        return [UIViewAnimationOptions.AllowAnimatedContent, UIViewAnimationOptions.LayoutSubviews, UIViewAnimationOptions.CurveEaseInOut]
     }
 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -30,31 +30,31 @@ class ImportPresentationAnimationController: NSObject, UIViewControllerAnimatedT
     }
 
     func animatePresentationWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? ImportViewController
-        let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)
-        let containerView = transitionContext.containerView()
+        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! ImportViewController
+        let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        let containerView = transitionContext.containerView()!
 
-        let finalFrame = presentedController.map { transitionContext.finalFrameForViewController($0) }
+        let finalFrame = transitionContext.finalFrameForViewController(presentedController)
         let yOffset = CGRectGetMidY(containerView.bounds) + size.height / 2
-        presentedControllerView?.frame = containerView.bounds.centeredRectForSize(size, offset: CGPoint(x: 0, y: yOffset))
-        presentedControllerView.map(containerView.addSubview)
+        presentedControllerView.frame = containerView.bounds.centeredRectForSize(size, offset: CGPoint(x: 0, y: yOffset))
+        containerView.addSubview(presentedControllerView)
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: animationOptions, animations: {
-            presentedControllerView?.frame = finalFrame ?? CGRectZero
+            presentedControllerView.frame = finalFrame
         }) { completed in
             transitionContext.completeTransition(completed)
         }
     }
 
     func animateDismissalWithTransitionContext(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)
+        let presentedControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+        let containerView = transitionContext.containerView()!
 
-        let containerView = transitionContext.containerView()
         let yOffset = CGRectGetMidY(containerView.bounds) + size.height / 2
         let finalFrame = containerView.bounds.centeredRectForSize(size, offset: CGPoint(x: 0, y: yOffset))
 
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: animationOptions, animations: {
-            presentedControllerView?.frame = finalFrame
+            presentedControllerView.frame = finalFrame
         }) { completed in
             transitionContext.completeTransition(completed)
         }

@@ -32,7 +32,7 @@ class PreviewViewController: UIViewController, ViewModelObserver {
     }
 
     func viewModelDidChange() {
-        { _ = self.gifView?.animateWithImageData(data: $0.gifData) } <^> self.controller?.viewModel
+        { _ = self.gifView?.animateWithImageData($0.gifData) } <^> self.controller?.viewModel
     }
 }
 

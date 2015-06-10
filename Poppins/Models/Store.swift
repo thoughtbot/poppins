@@ -12,7 +12,7 @@ class Store {
 
     var applicationDocumentDirectory: NSURL? {
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls.last as? NSURL
+        return urls.last as NSURL?
     }
 
     init() {
@@ -31,7 +31,9 @@ class Store {
             NSInferMappingModelAutomaticallyOption: true,
             NSMigratePersistentStoresAutomaticallyOption: true
         ]
-        persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: .None, URL: storeURL, options: options, error: nil)
+        do {
+            try persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: .None, URL: storeURL, options: options)
+        } catch {}
         return persistentStoreCoordinator
     }
 
@@ -41,7 +43,7 @@ class Store {
     }
 
     func executeRequest<A: NSManagedObject>(request: NSFetchRequest) -> [A]? {
-        return managedObjectContext.executeFetchRequest(request, error: nil) as? [A]
+        return transform(managedObjectContext.executeFetchRequest)(request) as? [A]
     }
 
     func insertObject<A: NSManagedObject>(object: A) {
@@ -58,7 +60,7 @@ class Store {
 
     func save() {
         managedObjectContext.performBlockAndWait {
-            _ = self.managedObjectContext.save(nil);
+            _ = transform(self.managedObjectContext.save)();
         }
     }
 

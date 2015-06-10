@@ -17,7 +17,7 @@ class SyncEngine {
         client.getFiles().observe { result in
             dispatch_to_user_initiated {
                 let files = result.value?.filter {
-                    contains(SupportedFileExtensions, $0.path.pathExtension.lowercaseString)
+                    SupportedFileExtensions.contains($0.path.pathExtension.lowercaseString)
                 }
 
                 self.processFiles <^> files
@@ -29,7 +29,7 @@ class SyncEngine {
         let cachedImages = store.cachedImages() ?? []
 
         let updatable: [CachedImage] = cachedImages.reduce([]) { accum, image in
-            if let index = find(fileInfos.map { $0.path }, image.path) {
+            if let index = (fileInfos.map { $0.path }).indexOf(image.path) {
                 if fileInfos[index].rev != image.rev {
                     image.rev = fileInfos[index].rev
                     return accum + [image]
@@ -39,11 +39,11 @@ class SyncEngine {
         }
 
         let creatable = fileInfos.filter { info in
-            return find(cachedImages.map { $0.path }, info.path) == .None
+            return cachedImages.map { $0.path }.indexOf(info.path) == .None
         }
 
         let deletable = cachedImages.filter { image in
-            return find(fileInfos.map { $0.path }, image.path) == .None
+            return fileInfos.map { $0.path }.indexOf(image.path) == .None
         }
 
         creatable.map(createFile)
@@ -59,7 +59,7 @@ class SyncEngine {
     }
 
     private func syncFile(cachedImage: CachedImage) {
-        var semaphore = dispatch_semaphore_create(0)
+        let semaphore = dispatch_semaphore_create(0)
 
         dispatch_to_main {
             _ = self.client.getFile(cachedImage.path, destinationPath: cachedImage.documentDirectoryPath).observe { result in

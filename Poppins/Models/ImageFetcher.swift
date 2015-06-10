@@ -30,7 +30,7 @@ import Runes
 
             dispatch_to_main {
                 objc_sync_enter(self.inProgress)
-                if contains(self.inProgress, path) { return }
+                if self.inProgress.contains(path) { return }
                 self.inProgress.append(path)
                 objc_sync_exit(self.inProgress)
                 
@@ -39,7 +39,7 @@ import Runes
                     
                     dispatch_to_main {
                         objc_sync_enter(self.inProgress)
-                        self.inProgress.removeAtIndex <^> find(self.inProgress, path)
+                        self.inProgress.removeAtIndex <^> self.inProgress.indexOf(path)
                         objc_sync_exit(self.inProgress)
                         NSNotificationCenter.defaultCenter().postNotificationName("CacheDidUpdate", object: .None)
                     }

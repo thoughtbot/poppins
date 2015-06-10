@@ -28,7 +28,8 @@ class FacebookMessengerActivity: UIActivity {
     }
 
     override func performActivity() {
-        if FBSDKMessengerSharer.messengerPlatformCapabilities() & .AnimatedGIF == .AnimatedGIF {
+        let gifOptionValue = FBSDKMessengerPlatformCapability.AnimatedGIF.rawValue
+        if FBSDKMessengerSharer.messengerPlatformCapabilities().rawValue & gifOptionValue == gifOptionValue {
             if let data = data {
                 FBSDKMessengerSharer.shareAnimatedGIF(data, withOptions: nil)
                 activityDidFinish(true)

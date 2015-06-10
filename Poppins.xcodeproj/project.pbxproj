@@ -82,11 +82,11 @@
 		EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */; };
 		EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211221A2508C50069A5C6 /* NotificationListener.swift */; };
 		EABCAC261AE6FBAB00D8DE5B /* Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */; };
+		EACA7C321B27B5B900E4513C /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA7C311B27B5B900E4513C /* Transform.swift */; };
 		EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
 		EAE3D1D21B1CE79C0091014B /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3D1D11B1CE79C0091014B /* EmptyState.xib */; };
 		EAE3D1D41B1CF0BD0091014B /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */; };
 		EAE3D1D61B1E0A560091014B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3D1D51B1E0A560091014B /* Result.framework */; };
-		EAE3D1D81B1E0AA30091014B /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3D1D71B1E0AA30091014B /* Box.framework */; };
 		EAE3D1DA1B1E264D0091014B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D91B1E264D0091014B /* UIViewController.swift */; };
 		EAE3D1DC1B1E2E230091014B /* PopupViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1DB1B1E2E230091014B /* PopupViewManager.swift */; };
 		EAF49B8B1A30FF1000B395DF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
@@ -203,11 +203,11 @@
 		EAB211201A24E2EB0069A5C6 /* FakeDropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDropboxService.swift; sourceTree = "<group>"; };
 		EAB211221A2508C50069A5C6 /* NotificationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListener.swift; sourceTree = "<group>"; };
 		EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pasteboard.swift; sourceTree = "<group>"; };
+		EACA7C311B27B5B900E4513C /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		EAD733A71A891C91004A7F6E /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		EAE3D1D11B1CE79C0091014B /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateViewController.swift; sourceTree = "<group>"; };
 		EAE3D1D51B1E0A560091014B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		EAE3D1D71B1E0AA30091014B /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = ../Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		EAE3D1D91B1E264D0091014B /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EAE3D1DB1B1E2E230091014B /* PopupViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewManager.swift; sourceTree = "<group>"; };
 		EAF49B8A1A30FF1000B395DF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -238,7 +238,6 @@
 				F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */,
 				EA9EE8A61AD58A9D00742B68 /* FBSDKMessengerShareKit.framework in Frameworks */,
 				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
-				EAE3D1D81B1E0AA30091014B /* Box.framework in Frameworks */,
 				EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */,
 				EAE3D1D61B1E0A560091014B /* Result.framework in Frameworks */,
 				EA4A515F1A76EC5A00DCEAA8 /* Cascade.framework in Frameworks */,
@@ -503,6 +502,7 @@
 				EAACE1F11A1BA9BF00E3C43D /* Optional.swift */,
 				EA7A042D1A1E44D8002C73AF /* Result.swift */,
 				F825388C1A3F8D4B004476DC /* Curry.swift */,
+				EACA7C311B27B5B900E4513C /* Transform.swift */,
 			);
 			path = Functional;
 			sourceTree = "<group>";
@@ -510,7 +510,6 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAE3D1D71B1E0AA30091014B /* Box.framework */,
 				EAE3D1D51B1E0A560091014B /* Result.framework */,
 				EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */,
 				EA137CE01A79943500A92B85 /* DropboxSDK.framework */,
@@ -610,7 +609,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = POP;
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
 					4E511CA83D18390E4117F469 = {
@@ -685,7 +685,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Cascade.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -745,6 +744,7 @@
 				EABCAC261AE6FBAB00D8DE5B /* Pasteboard.swift in Sources */,
 				EA8A80151AF1933E0074C13B /* ImportTransitioningDelegate.swift in Sources */,
 				EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */,
+				EACA7C321B27B5B900E4513C /* Transform.swift in Sources */,
 				EA8A801B1AF19A850074C13B /* CGRect.swift in Sources */,
 				EA8A80111AF190BD0074C13B /* ImportController.swift in Sources */,
 				EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */,
@@ -819,6 +819,7 @@
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -853,6 +854,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.poppins;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
@@ -885,6 +887,7 @@
 				INFOPLIST_FILE = "Poppins/Resources/Other-Sources/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.poppins;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
@@ -965,6 +968,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1012,6 +1016,7 @@
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

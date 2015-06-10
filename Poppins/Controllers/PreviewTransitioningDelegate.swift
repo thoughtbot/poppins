@@ -8,7 +8,7 @@ class PreviewTransitioningDelegate: NSObject, UIViewControllerTransitioningDeleg
         super.init()
     }
 
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController!, sourceViewController source: UIViewController) -> UIPresentationController? {
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
        return PreviewPresentationController(presentedViewController: presented, presentingViewController: presenting, frame: startingFrame)
     }
 

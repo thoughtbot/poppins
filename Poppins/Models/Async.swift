@@ -4,7 +4,7 @@ class Async {
     private var _done: (() -> ())?
 
     class func map<U, T>(u: [U], f: U -> T) -> Async {
-        var proc = Async()
+        let proc = Async()
 
         u.map { x in
             queue.addOperationWithBlock { _ = f(x) }

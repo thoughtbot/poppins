@@ -3,7 +3,7 @@ import UIKit
 class ImportTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     let size: CGSize = CGSize(width: 216, height: 355)
 
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController!, sourceViewController source: UIViewController) -> UIPresentationController? {
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
        return ImportPresentationController(presentedViewController: presented, presentingViewController: presenting, size: size)
     }
 

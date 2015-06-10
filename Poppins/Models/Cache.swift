@@ -12,7 +12,7 @@ class Cache<T> {
     }
 
     func purge() {
-        println("purging cache")
+        print("purging cache")
         cache = [:]
     }
 }

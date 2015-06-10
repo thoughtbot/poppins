@@ -6,21 +6,21 @@ class PreviewPresentationController: UIPresentationController {
     let dimmingView = UIView()
     let frame: CGRect
 
-    init(presentedViewController: UIViewController!, presentingViewController: UIViewController!, frame: CGRect) {
+    init(presentedViewController: UIViewController, presentingViewController: UIViewController, frame: CGRect) {
         assert(frame.height != 0)
         self.frame = frame
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
     }
 
     override func presentationTransitionWillBegin() {
-        dimmingView.frame = containerView.bounds
+        dimmingView.frame = containerView!.bounds
         let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
-        blurView.frame = containerView.bounds
+        blurView.frame = containerView!.bounds
         dimmingView.addSubview(blurView)
         dimmingView.alpha = 0
 
-        containerView.addSubview(dimmingView)
-        containerView.addSubview(presentedView())
+        containerView!.addSubview(dimmingView)
+        containerView!.addSubview(presentedView()!)
 
         let transitionCoordinator = presentingViewController.transitionCoordinator()
         transitionCoordinator?.animateAlongsideTransition({ _ in
@@ -48,7 +48,7 @@ class PreviewPresentationController: UIPresentationController {
     }
 
     override func frameOfPresentedViewInContainerView() -> CGRect {
-        let bounds = containerView.bounds
+        let bounds = containerView!.bounds
         let fullSize = CGSize(width: bounds.width - PreviewGIFPadding, height: bounds.height - PreviewGIFPadding)
         let aspectRatio = frame.width / frame.height
 

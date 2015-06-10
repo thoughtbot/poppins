@@ -1,7 +1,7 @@
-github "thoughtbot/Cascade" ~> 0.4.1
-github "kaishin/Gifu" ~> 0.10.0
+github "thoughtbot/Cascade" "swift-2.0"
+github "kaishin/Gifu" "swift-2"
 github "antitypical/Result" "master"
 github "thoughtbot/Runes" ~> 2.0.0
 
-github "Quick/Quick" ~> 0.3.1
-github "Quick/Nimble" ~> 1.0.0
+github "Quick/Quick" "swift-2.0"
+github "Quick/Nimble" "swift-2.0"
