@@ -1,3 +1,4 @@
+import ReactiveCocoa
 import Result
 import Runes
 
@@ -5,9 +6,11 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     private let session: DBSession
     private let restClient: DBRestClient
     private let metaSignal = Signal<[FileInfo]>()
-    private let shareURLSignal = Signal<String>()
+//    private let shareURLSignal = Signal<String>()
     private let uploadSignal = Signal<Void>()
-    private var fileSignals: [String:Signal<String>] = [:]
+//    private var fileSignals: [String:Signal<String>] = [:]
+    private var fileSink: SinkOf<Event<String, NSError>>?
+    private var shareURLSink: SinkOf<Event<String, NSError>>?
 
     init(session: DBSession) {
         self.session = session
@@ -21,16 +24,21 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
         return metaSignal
     }
 
-    func getFile(path: String, destinationPath: String) -> Signal<String> {
-        restClient.loadFile("/\(path)", intoPath: destinationPath)
-        let sig = Signal<String>()
-        fileSignals[path] = sig
-        return sig.finally { _ = self.fileSignals.removeValueForKey(path) }
+    func getFile(path: String, destinationPath: String) -> SignalProducer<String, NSError> {
+        return SignalProducer { sink, _ in
+            self.restClient.loadFile("/\(path)", intoPath: destinationPath)
+            self.fileSink = sink
+        }
+//        let sig = Signal<String>()
+//        fileSignals[path] = sig
+//        return sig.finally { _ = self.fileSignals.removeValueForKey(path) }
     }
 
-    func getShareURL(path: String) -> Signal<String> {
-        restClient.loadSharableLinkForFile("/\(path)", shortUrl: false)
-        return shareURLSignal
+    func getShareURL(path: String) -> SignalProducer<String, NSError> {
+        return SignalProducer { sink, _ in
+            self.restClient.loadSharableLinkForFile("/\(path)", shortUrl: false)
+            self.shareURLSink = sink
+        }
     }
 
     func uploadFile(filename: String, localPath: String) -> Signal<Void> {
@@ -39,11 +47,14 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     }
 
     func restClient(client: DBRestClient!, loadedFile destPath: String?) {
-        destPath >>- { self.fileSignals[$0.lastPathComponent]?.push($0) }
+        curry(sendNext) <^> fileSink <*> destPath
+//        fileSink.map(sendCompleted)
+//         self.fileSignals[$0.lastPathComponent]?.push($0) }
     }
 
     func restClient(client: DBRestClient!, loadFileFailedWithError error: NSError?) {
-        println(error)
+        curry(sendError) <^> fileSink <*> error
+//        fileSink.map(sendCompleted)
     }
 
     func restClient(client: DBRestClient!, loadedMetadata metadata: DBMetadata?) {
@@ -58,11 +69,13 @@ class DropboxClient: NSObject, DBRestClientDelegate, SyncClient {
     }
 
     func restClient(restClient: DBRestClient!, loadSharableLinkFailedWithError error: NSError!) {
-        println(error)
+        curry(sendError) <^> shareURLSink <*> error
+//        shareURLSink.map(sendCompleted)
     }
 
     func restClient(restClient: DBRestClient!, loadedSharableLink link: String!, forFile path: String!) {
-        shareURLSignal.push(link)
+        curry(sendNext) <^> shareURLSink <*> link
+//        shareURLSink.map(sendCompleted)
     }
 
     func restClient(client: DBRestClient!, uploadFileFailedWithError error: NSError!) {

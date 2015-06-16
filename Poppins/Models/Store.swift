@@ -31,7 +31,8 @@ class Store {
             NSInferMappingModelAutomaticallyOption: true,
             NSMigratePersistentStoresAutomaticallyOption: true
         ]
-        persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: .None, URL: storeURL, options: options, error: nil)
+//        persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: .None, URL: storeURL, options: options, error: nil)
+        persistentStoreCoordinator.addPersistentStoreWithType(NSInMemoryStoreType, configuration: .None, URL: storeURL, options: options, error: nil)
         return persistentStoreCoordinator
     }
 

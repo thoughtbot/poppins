@@ -1,7 +1,8 @@
 github "thoughtbot/Cascade" ~> 0.4.1
 github "kaishin/Gifu" ~> 0.10.0
-github "antitypical/Result" "master"
+github "antitypical/Result" ~> 0.4.4
 github "thoughtbot/Runes" ~> 2.0.0
+github "ReactiveCocoa/ReactiveCocoa" "v3.0-beta.8"
 
-github "Quick/Quick" ~> 0.3.1
-github "Quick/Nimble" ~> 1.0.0
+github "Quick/Quick" == 0.3.1
+github "Quick/Nimble" "v1.0.0-rc.1"

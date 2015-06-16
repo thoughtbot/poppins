@@ -63,6 +63,7 @@
 		EA8A80171AF193E10074C13B /* ImportPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80161AF193E10074C13B /* ImportPresentationAnimationController.swift */; };
 		EA8A80191AF195190074C13B /* ImportPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80181AF195190074C13B /* ImportPresentationController.swift */; };
 		EA8A801B1AF19A850074C13B /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A801A1AF19A850074C13B /* CGRect.swift */; };
+		EA8BB4771B2A2A4E00DA512C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8BB4751B2A2A2C00DA512C /* ReactiveCocoa.framework */; };
 		EA8EB6401AD6DDC1006B2404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
 		EA8EB6411AD6DDC9006B2404 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */; };
 		EA9B38F61B5D8482001C3AED /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B38F51B5D8482001C3AED /* Keys.swift */; };
@@ -187,6 +188,7 @@
 		EA8A801A1AF19A850074C13B /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
 		EA9B38F41B5D7B4A001C3AED /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		EA9B38F51B5D8482001C3AED /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		EA8BB4751B2A2A2C00DA512C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ../Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherOperation.swift; sourceTree = "<group>"; };
 		EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = SOURCE_ROOT; };
 		EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMessengerActivity.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				F80BE3E61A41E5B9009192A4 /* Security.framework in Frameworks */,
 				EA9EE8A61AD58A9D00742B68 /* FBSDKMessengerShareKit.framework in Frameworks */,
 				EA4A51651A76EC6500DCEAA8 /* Runes.framework in Frameworks */,
+				EA8BB4771B2A2A4E00DA512C /* ReactiveCocoa.framework in Frameworks */,
 				EAE3D1D81B1E0AA30091014B /* Box.framework in Frameworks */,
 				EA4A51611A76EC5D00DCEAA8 /* Gifu.framework in Frameworks */,
 				EAE3D1D61B1E0A560091014B /* Result.framework in Frameworks */,
@@ -510,6 +513,7 @@
 		EAB192E41A2F8D420002C6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA8BB4751B2A2A2C00DA512C /* ReactiveCocoa.framework */,
 				EAE3D1D71B1E0AA30091014B /* Box.framework */,
 				EAE3D1D51B1E0A560091014B /* Result.framework */,
 				EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */,
@@ -610,6 +614,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = POP;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
@@ -686,6 +691,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Cascade.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Gifu.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
