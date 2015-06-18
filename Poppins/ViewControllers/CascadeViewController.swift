@@ -94,7 +94,7 @@ class CascadeViewController: UICollectionViewController {
             let point = gesture.locationInView(collectionView)
             let indexPath = collectionView?.indexPathForItemAtPoint(point)
             let frame = (indexPath >>- { self.collectionView?.layoutAttributesForItemAtIndexPath($0) })?.frame
-            let realFrame = collectionView?.convertRect(frame!, toView: navigationController?.view)
+            let realFrame = frame >>- { self.collectionView?.convertRect($0, toView: self.navigationController?.view) }
             let path = indexPath >>- { self.controller?.viewModel.imagePathForIndexPath($0) }
             let size = indexPath >>- { self.controller?.viewModel.imageSizeForIndexPath($0) }
 
