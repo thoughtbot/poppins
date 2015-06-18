@@ -5,5 +5,5 @@ import CoreData
     @NSManaged var aspectRatio: Double
     @NSManaged var path: String
     @NSManaged var rev: String
-    @NSManaged var shareURLPath: String
+    @NSManaged var shareURLPath: String?
 }
