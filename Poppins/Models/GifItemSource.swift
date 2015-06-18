@@ -2,20 +2,20 @@ import MobileCoreServices
 
 class GifItemSource: NSObject, UIActivityItemSource {
     let imageData: NSData
-    let url: NSURL
+    let url: NSURL?
 
-    init(data: NSData, url: NSURL) {
+    init(data: NSData, url: NSURL?) {
         imageData = data
         self.url = url
         super.init()
     }
 
-    class func create(data: NSData)(url: NSURL) -> GifItemSource {
+    class func create(data: NSData)(url: NSURL?) -> GifItemSource {
         return GifItemSource(data: data, url: url)
     }
 
     func activityViewControllerPlaceholderItem(activityViewController: UIActivityViewController) -> AnyObject {
-        return url
+        return url ?? imageData
     }
 
     func activityViewController(activityViewController: UIActivityViewController, itemForActivityType activityType: String) -> AnyObject? {
