@@ -4,6 +4,7 @@ import Gifu
 
 class PreviewViewController: UIViewController, ViewModelObserver {
     @IBOutlet weak var gifView: AnimatableImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var controller: PreviewController? {
         didSet {
