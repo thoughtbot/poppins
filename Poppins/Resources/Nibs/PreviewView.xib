@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewViewController" customModule="Poppins" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="x6A-Be-3Zh" id="b4x-0D-Qw0"/>
                 <outlet property="gifView" destination="adW-dm-zhZ" id="kOL-5m-ZU0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kLx-fw-8Bi"/>
             </connections>

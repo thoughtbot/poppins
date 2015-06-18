@@ -41,6 +41,9 @@ class PreviewPresentationAnimationController: NSObject, UIViewControllerAnimated
         presentedControllerView?.alpha = 0
         presentedControllerView.map(containerView.addSubview)
 
+        let midPoint = CGPoint(x: startingFrame.width / 2, y: startingFrame.height / 2)
+        presentedController?.activityIndicator.frame = CGRect(origin: midPoint, size: presentedController?.activityIndicator.frame.size ?? CGSizeZero)
+
         UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0, options: animationOptions, animations: {
             presentedControllerView?.alpha = 1
             presentedControllerView?.frame = finalFrame ?? CGRectZero
