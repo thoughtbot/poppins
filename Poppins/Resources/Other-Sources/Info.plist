@@ -32,7 +32,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb***REMOVED***</string>
-				<string>db-***REMOVED***</string>
+				<string>db-APP_KEY</string>
 			</array>
 		</dict>
 	</array>

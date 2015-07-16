@@ -33,3 +33,6 @@ Carthage/
 # AppCode specific files
 .idea/
 *.iml
+
+.secrets
+..bfg-report

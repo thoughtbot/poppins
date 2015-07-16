@@ -7,7 +7,7 @@ class DropboxService : LinkableService {
     }
 
     func setup() {
-        let session = DBSession(appKey: "***REMOVED***", appSecret: "***REMOVED***", root:kDBRootAppFolder)
+        let session = DBSession(appKey: "APP_KEY", appSecret: "APP_SECRET", root:kDBRootAppFolder)
         DBSession.setSharedSession(session)
     }
 
