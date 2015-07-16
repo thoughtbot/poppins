@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 bundle install
-carthage checkout
+brew install carthage 2> /dev/null
+carthage bootstrap
