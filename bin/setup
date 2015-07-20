@@ -3,3 +3,12 @@
 bundle install
 brew install carthage 2> /dev/null
 carthage bootstrap
+
+secret_path=Poppins/Resources/Other-Sources
+if [ ! -d "$secret_path/Secrets.xcconfig" ]; then
+  cp $secret_path/Secrets-Example.xcconfig $secret_path/Secrets.xcconfig
+  echo ""
+  echo "-------------------------------------------------"
+  echo "Created $secret_path/Secrets.xcconfig. Please add your keys to it."
+  echo "-------------------------------------------------"
+fi
