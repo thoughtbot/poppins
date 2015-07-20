@@ -34,5 +34,5 @@ Carthage/
 .idea/
 *.iml
 
-.secrets
+Secrets.xcconfig
 ..bfg-report

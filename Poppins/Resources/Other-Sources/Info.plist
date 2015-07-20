@@ -2,10 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DropboxSecret</key>
+	<string>${DROPBOX_SECRET}</string>
+	<key>DropboxKey</key>
+	<string>${DROPBOX_KEY}</string>
 	<key>FacebookDisplayName</key>
 	<string>Poppins</string>
 	<key>FacebookAppID</key>
-	<string>854856481252575</string>
+	<string>${FACEBOOK_APP_ID}</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -31,8 +35,8 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb854856481252575</string>
-				<string>db-APP_KEY</string>
+				<string>fb${FACEBOOK_APP_ID}</string>
+				<string>db-${DROPBOX_KEY}</string>
 			</array>
 		</dict>
 	</array>

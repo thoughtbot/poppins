@@ -65,6 +65,7 @@
 		EA8A801B1AF19A850074C13B /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A801A1AF19A850074C13B /* CGRect.swift */; };
 		EA8EB6401AD6DDC1006B2404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2E4731BAC412231FABC50C /* Main.storyboard */; };
 		EA8EB6411AD6DDC9006B2404 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75B6C9E72DDC09CBDC887474 /* LaunchScreen.xib */; };
+		EA9B38F61B5D8482001C3AED /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B38F51B5D8482001C3AED /* Keys.swift */; };
 		EA9EE89E1AD49CEA00742B68 /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
 		EA9EE8A61AD58A9D00742B68 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */; };
 		EA9EE8A91AD5903400742B68 /* FacebookMessengerActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */; };
@@ -184,6 +185,8 @@
 		EA8A80161AF193E10074C13B /* ImportPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportPresentationAnimationController.swift; sourceTree = "<group>"; };
 		EA8A80181AF195190074C13B /* ImportPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportPresentationController.swift; sourceTree = "<group>"; };
 		EA8A801A1AF19A850074C13B /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		EA9B38F41B5D7B4A001C3AED /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		EA9B38F51B5D8482001C3AED /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherOperation.swift; sourceTree = "<group>"; };
 		EA9EE8A21AD58A9D00742B68 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = SOURCE_ROOT; };
 		EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookMessengerActivity.swift; sourceTree = "<group>"; };
@@ -304,6 +307,7 @@
 			children = (
 				EA835D851A1BA1470033AE00 /* Poppins-Bridging-Header.h */,
 				6C8F5A473AB2C1C4E96CABB0 /* Info.plist */,
+				EA9B38F41B5D7B4A001C3AED /* Secrets.xcconfig */,
 			);
 			path = "Other-Sources";
 			sourceTree = "<group>";
@@ -351,6 +355,7 @@
 				EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */,
 				EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */,
 				EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */,
+				EA9B38F51B5D8482001C3AED /* Keys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -726,6 +731,7 @@
 				EA13D8D21A78315A00E2611C /* ServiceUpdateObserver.swift in Sources */,
 				EA137CE31A7A8FAC00A92B85 /* DropboxClient.swift in Sources */,
 				EA59E6601ABC96D900425348 /* PreviewController.swift in Sources */,
+				EA9B38F61B5D8482001C3AED /* Keys.swift in Sources */,
 				EA137CF71A7AD37F00A92B85 /* SyncClient.swift in Sources */,
 				EA4A515D1A76E77500DCEAA8 /* UIWindow.swift in Sources */,
 				EAACE1EA1A1BA7FD00E3C43D /* LinkManager.swift in Sources */,
@@ -823,6 +829,7 @@
 		};
 		0947925760929CB551D35466 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9B38F41B5D7B4A001C3AED /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -856,6 +863,7 @@
 		};
 		70F745B2CD2670C497089B02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9B38F41B5D7B4A001C3AED /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
