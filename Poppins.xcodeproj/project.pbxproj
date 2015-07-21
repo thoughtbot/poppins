@@ -52,7 +52,6 @@
 		EA59E6621ABC9AF100425348 /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */; };
 		EA5A86E11ABB850F00AD052A /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A86E01ABB850F00AD052A /* Signal.swift */; };
 		EA7A042E1A1E44D8002C73AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
-		EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */; };
 		EA7CED001AC5A06E00AE8CBC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */; };
 		EA835D821A1BA0560033AE00 /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
 		EA835D841A1BA09D0033AE00 /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
@@ -83,6 +82,55 @@
 		EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB211221A2508C50069A5C6 /* NotificationListener.swift */; };
 		EABCAC261AE6FBAB00D8DE5B /* Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */; };
 		EAD733A81A891C91004A7F6E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
+		EADF27C41B5E8D1D00FAEA9E /* LinkableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D811A1BA0560033AE00 /* LinkableService.swift */; };
+		EADF27C61B5E8D3800FAEA9E /* SyncClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF61A7AD37F00A92B85 /* SyncClient.swift */; };
+		EADF27DC1B5E8D4A00FAEA9E /* DropboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA835D831A1BA09D0033AE00 /* DropboxService.swift */; };
+		EADF27DD1B5E8D4A00FAEA9E /* LinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1E91A1BA7FD00E3C43D /* LinkManager.swift */; };
+		EADF27DE1B5E8D4A00FAEA9E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3EEDEF1A1CEC1D00DE2F3A /* Service.swift */; };
+		EADF27DF1B5E8D4A00FAEA9E /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA34E7841A1CFD4F00875CFC /* Async.swift */; };
+		EADF27E01B5E8D4A00FAEA9E /* UnconfiguredService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111B1A24D7650069A5C6 /* UnconfiguredService.swift */; };
+		EADF27E11B5E8D4A00FAEA9E /* GifItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CDE1A3F582100B395DF /* GifItemSource.swift */; };
+		EADF27E21B5E8D4A00FAEA9E /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388A1A3F8C5C004476DC /* Cache.swift */; };
+		EADF27E31B5E8D4A00FAEA9E /* AsyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA395D661A448DF400EB607E /* AsyncQueue.swift */; };
+		EADF27E41B5E8D4A00FAEA9E /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CC91A7962F000A92B85 /* ImageFetcher.swift */; };
+		EADF27E51B5E8D4A00FAEA9E /* DropboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CE21A7A8FAC00A92B85 /* DropboxClient.swift */; };
+		EADF27E61B5E8D4A00FAEA9E /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF01A7AC34800A92B85 /* CachedImage.swift */; };
+		EADF27E71B5E8D4A00FAEA9E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF21A7AC3FC00A92B85 /* Store.swift */; };
+		EADF27E81B5E8D4A00FAEA9E /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF41A7AD29300A92B85 /* SyncEngine.swift */; };
+		EADF27E91B5E8D4A00FAEA9E /* FileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA137CF81A7AD40C00A92B85 /* FileInfo.swift */; };
+		EADF27EA1B5E8D4A00FAEA9E /* UnconfiguredClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA614CE1A7AEC13008DA897 /* UnconfiguredClient.swift */; };
+		EADF27EB1B5E8D4A00FAEA9E /* ManagedObjectContextObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B79131A7C21310016F749 /* ManagedObjectContextObserver.swift */; };
+		EADF27EC1B5E8D4A00FAEA9E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD733A71A891C91004A7F6E /* ImageStore.swift */; };
+		EADF27ED1B5E8D4A00FAEA9E /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A86E01ABB850F00AD052A /* Signal.swift */; };
+		EADF27EE1B5E8D4A00FAEA9E /* ImageFetcherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE89D1AD49CEA00742B68 /* ImageFetcherOperation.swift */; };
+		EADF27EF1B5E8D4A00FAEA9E /* FacebookMessengerActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EE8A81AD5903400742B68 /* FacebookMessengerActivity.swift */; };
+		EADF27F01B5E8D4A00FAEA9E /* Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCAC251AE6FBAB00D8DE5B /* Pasteboard.swift */; };
+		EADF27F11B5E8D4A00FAEA9E /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B38F51B5D8482001C3AED /* Keys.swift */; };
+		EADF27F21B5E8D4D00FAEA9E /* ViewModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CB1A780EA600E2611C /* ViewModelObserver.swift */; };
+		EADF27F31B5E8D4D00FAEA9E /* ServiceUpdateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8D11A78315A00E2611C /* ServiceUpdateObserver.swift */; };
+		EADF27F41B5E8D5600FAEA9E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49B8A1A30FF1000B395DF /* UIImage.swift */; };
+		EADF27F51B5E8D5600FAEA9E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF49CD01A3F37D200B395DF /* Array.swift */; };
+		EADF27F61B5E8D5600FAEA9E /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A515C1A76E77500DCEAA8 /* UIWindow.swift */; };
+		EADF27F71B5E8D5600FAEA9E /* CachedImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA474D0A1ABB941800127CEF /* CachedImageExtensions.swift */; };
+		EADF27F81B5E8D5600FAEA9E /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */; };
+		EADF27F91B5E8D5600FAEA9E /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A801A1AF19A850074C13B /* CGRect.swift */; };
+		EADF27FA1B5E8D5B00FAEA9E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2111D1A24DEEA0069A5C6 /* UIApplication.swift */; };
+		EADF27FB1B5E8D5B00FAEA9E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D91B1E264D0091014B /* UIViewController.swift */; };
+		EADF27FC1B5E8D6100FAEA9E /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAACE1F11A1BA9BF00E3C43D /* Optional.swift */; };
+		EADF27FD1B5E8D6100FAEA9E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A042D1A1E44D8002C73AF /* Result.swift */; };
+		EADF27FE1B5E8D6100FAEA9E /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F825388C1A3F8D4B004476DC /* Curry.swift */; };
+		EADF27FF1B5E8D8B00FAEA9E /* CascadeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C91A78014A00E2611C /* CascadeViewModel.swift */; };
+		EADF28001B5E8D8B00FAEA9E /* PoppinsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CD1A7824FF00E2611C /* PoppinsCellViewModel.swift */; };
+		EADF28011B5E8D8B00FAEA9E /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */; };
+		EADF28021B5E8D8B00FAEA9E /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80121AF1910B0074C13B /* ImportViewModel.swift */; };
+		EADF28051B5E8D9100FAEA9E /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4A51581A76E49D00DCEAA8 /* RootController.swift */; };
+		EADF28061B5E8D9100FAEA9E /* LinkAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8B61A77F53C00E2611C /* LinkAccountController.swift */; };
+		EADF28071B5E8D9100FAEA9E /* CascadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8C71A7800F500E2611C /* CascadeController.swift */; };
+		EADF28081B5E8D9100FAEA9E /* PoppinsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13D8CF1A78265700E2611C /* PoppinsCellController.swift */; };
+		EADF28091B5E8D9100FAEA9E /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E65F1ABC96D800425348 /* PreviewController.swift */; };
+		EADF280A1B5E8D9100FAEA9E /* PreviewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41123F1ACEFA3900243547 /* PreviewPresentationController.swift */; };
+		EADF280D1B5E8D9100FAEA9E /* ImportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80101AF190BD0074C13B /* ImportController.swift */; };
+		EADF28101B5E8D9100FAEA9E /* ImportPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8A80181AF195190074C13B /* ImportPresentationController.swift */; };
 		EAE3D1D21B1CE79C0091014B /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE3D1D11B1CE79C0091014B /* EmptyState.xib */; };
 		EAE3D1D41B1CF0BD0091014B /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE3D1D31B1CF0BD0091014B /* EmptyStateViewController.swift */; };
 		EAE3D1D61B1E0A560091014B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3D1D51B1E0A560091014B /* Result.framework */; };
@@ -173,7 +221,6 @@
 		EA59E6611ABC9AF100425348 /* PreviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewModel.swift; sourceTree = "<group>"; };
 		EA5A86E01ABB850F00AD052A /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		EA7A042D1A1E44D8002C73AF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManagerSpec.swift; sourceTree = "<group>"; };
 		EA7CECFF1AC5A06E00AE8CBC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
 		EA835D811A1BA0560033AE00 /* LinkableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkableService.swift; sourceTree = "<group>"; };
 		EA835D831A1BA09D0033AE00 /* DropboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxService.swift; sourceTree = "<group>"; };
@@ -492,7 +539,6 @@
 		EA7A04331A23BB3B002C73AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EA7A04341A23BB69002C73AF /* SyncManagerSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -715,11 +761,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADF27F21B5E8D4D00FAEA9E /* ViewModelObserver.swift in Sources */,
+				EADF27E21B5E8D4A00FAEA9E /* Cache.swift in Sources */,
+				EADF27ED1B5E8D4A00FAEA9E /* Signal.swift in Sources */,
+				EADF27E41B5E8D4A00FAEA9E /* ImageFetcher.swift in Sources */,
+				EADF27E81B5E8D4A00FAEA9E /* SyncEngine.swift in Sources */,
+				EADF27F01B5E8D4A00FAEA9E /* Pasteboard.swift in Sources */,
+				EADF27F51B5E8D5600FAEA9E /* Array.swift in Sources */,
+				EADF28021B5E8D8B00FAEA9E /* ImportViewModel.swift in Sources */,
+				EADF27E91B5E8D4A00FAEA9E /* FileInfo.swift in Sources */,
+				EADF27FA1B5E8D5B00FAEA9E /* UIApplication.swift in Sources */,
 				EAA3205A1A793AB10039E234 /* CascadeViewModelSpec.swift in Sources */,
-				EA7A04351A23BB69002C73AF /* SyncManagerSpec.swift in Sources */,
+				EADF28091B5E8D9100FAEA9E /* PreviewController.swift in Sources */,
+				EADF27FF1B5E8D8B00FAEA9E /* CascadeViewModel.swift in Sources */,
+				EADF280A1B5E8D9100FAEA9E /* PreviewPresentationController.swift in Sources */,
+				EADF27F41B5E8D5600FAEA9E /* UIImage.swift in Sources */,
+				EADF28081B5E8D9100FAEA9E /* PoppinsCellController.swift in Sources */,
+				EADF27E31B5E8D4A00FAEA9E /* AsyncQueue.swift in Sources */,
+				EADF27E61B5E8D4A00FAEA9E /* CachedImage.swift in Sources */,
+				EADF27DF1B5E8D4A00FAEA9E /* Async.swift in Sources */,
+				EADF27EA1B5E8D4A00FAEA9E /* UnconfiguredClient.swift in Sources */,
+				EADF28051B5E8D9100FAEA9E /* RootController.swift in Sources */,
+				EADF27FD1B5E8D6100FAEA9E /* Result.swift in Sources */,
+				EADF27E11B5E8D4A00FAEA9E /* GifItemSource.swift in Sources */,
+				EADF27F31B5E8D4D00FAEA9E /* ServiceUpdateObserver.swift in Sources */,
+				EADF27F81B5E8D5600FAEA9E /* dispatch.swift in Sources */,
+				EADF27EC1B5E8D4A00FAEA9E /* ImageStore.swift in Sources */,
+				EADF27FB1B5E8D5B00FAEA9E /* UIViewController.swift in Sources */,
+				EADF27F91B5E8D5600FAEA9E /* CGRect.swift in Sources */,
+				EADF28101B5E8D9100FAEA9E /* ImportPresentationController.swift in Sources */,
+				EADF27EF1B5E8D4A00FAEA9E /* FacebookMessengerActivity.swift in Sources */,
 				EAB211211A24E2EB0069A5C6 /* FakeDropboxService.swift in Sources */,
+				EADF27FE1B5E8D6100FAEA9E /* Curry.swift in Sources */,
+				EADF27DD1B5E8D4A00FAEA9E /* LinkManager.swift in Sources */,
 				EAF49CF01A3F872300B395DF /* ArrayExtensionSpec.swift in Sources */,
 				EAB211231A2508C50069A5C6 /* NotificationListener.swift in Sources */,
+				EADF27F61B5E8D5600FAEA9E /* UIWindow.swift in Sources */,
+				EADF28061B5E8D9100FAEA9E /* LinkAccountController.swift in Sources */,
+				EADF27EE1B5E8D4A00FAEA9E /* ImageFetcherOperation.swift in Sources */,
+				EADF27C41B5E8D1D00FAEA9E /* LinkableService.swift in Sources */,
+				EADF28011B5E8D8B00FAEA9E /* PreviewViewModel.swift in Sources */,
+				EADF27DE1B5E8D4A00FAEA9E /* Service.swift in Sources */,
+				EADF28001B5E8D8B00FAEA9E /* PoppinsCellViewModel.swift in Sources */,
+				EADF27FC1B5E8D6100FAEA9E /* Optional.swift in Sources */,
+				EADF27E71B5E8D4A00FAEA9E /* Store.swift in Sources */,
+				EADF280D1B5E8D9100FAEA9E /* ImportController.swift in Sources */,
+				EADF27DC1B5E8D4A00FAEA9E /* DropboxService.swift in Sources */,
+				EADF27EB1B5E8D4A00FAEA9E /* ManagedObjectContextObserver.swift in Sources */,
+				EADF27E01B5E8D4A00FAEA9E /* UnconfiguredService.swift in Sources */,
+				EADF27F71B5E8D5600FAEA9E /* CachedImageExtensions.swift in Sources */,
+				EADF28071B5E8D9100FAEA9E /* CascadeController.swift in Sources */,
+				EADF27C61B5E8D3800FAEA9E /* SyncClient.swift in Sources */,
+				EADF27F11B5E8D4A00FAEA9E /* Keys.swift in Sources */,
+				EADF27E51B5E8D4A00FAEA9E /* DropboxClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

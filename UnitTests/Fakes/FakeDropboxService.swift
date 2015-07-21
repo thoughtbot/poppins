@@ -1,17 +1,12 @@
-import Poppins
 import Result
 
-class FakeDropboxService: SyncableService {
+class FakeDropboxService: LinkableService {
     var lastCall: String = ""
     var controller: UIViewController?
     var url: NSURL?
-    var filename: String?
-    var data: NSData?
-    var observer: ServiceUpdateObserver?
 
     let type: Service = .Dropbox
-
-    init() {}
+    let client: SyncClient = FakeDropboxSyncClient()
 
     func setup() {
         lastCall = "setup"
@@ -36,31 +31,28 @@ class FakeDropboxService: SyncableService {
     func unLink() {
         lastCall = "unlink"
     }
+}
 
-    func saveFile(filename: String, data: NSData) -> Result<(), NSError> {
-        lastCall = "saveFile"
-        self.filename = filename
-        self.data = data
-        return success(())
-    }
+class FakeDropboxSyncClient: SyncClient {
+    var lastCall: String = ""
 
-    func getFiles() -> Result<[String], NSError> {
+    func getFiles() -> Signal<[FileInfo]> {
         lastCall = "getFiles"
-        return success([])
+        return Signal()
     }
 
-    func getFile(filename: String) -> Result<NSData, NSError> {
+    func getFile(path: String, destinationPath: String) -> Signal<String> {
         lastCall = "getFile"
-        self.filename = filename
+        return Signal()
+    }
 
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContext(rect.size)
-        let context = UIGraphicsGetCurrentContext()
-        CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
-        CGContextFillRect(context, rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+    func getShareURL(path: String) -> Signal<String> {
+        lastCall = "getShareURL"
+        return Signal()
+    }
 
-        return success(UIImagePNGRepresentation(image))
+    func uploadFile(filename: String, localPath: String) -> Signal<Void> {
+        lastCall = "uploadFile"
+        return Signal()
     }
 }

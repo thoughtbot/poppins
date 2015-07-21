@@ -15,9 +15,10 @@ class Store {
         return urls.last as? NSURL
     }
 
-    init() {
+    init(storeType: String = NSSQLiteStoreType) {
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
-            <^> objectModel
+            <^> pure(storeType)
+            <*> objectModel
             <*> (applicationDocumentDirectory >>- appendSQLlitePathURL)
     }
 
@@ -25,13 +26,13 @@ class Store {
         return url.URLByAppendingPathComponent("PoppinsModel.sqlite")
     }
 
-    private func persistentStoreCoordinator(objectModel: NSManagedObjectModel)(storeURL: NSURL) -> NSPersistentStoreCoordinator {
+    private func persistentStoreCoordinator(storeType: String)(objectModel: NSManagedObjectModel)(storeURL: NSURL) -> NSPersistentStoreCoordinator {
         let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: objectModel)
         let options = [
             NSInferMappingModelAutomaticallyOption: true,
             NSMigratePersistentStoresAutomaticallyOption: true
         ]
-        persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: .None, URL: storeURL, options: options, error: nil)
+        persistentStoreCoordinator.addPersistentStoreWithType(storeType, configuration: .None, URL: storeURL, options: options, error: nil)
         return persistentStoreCoordinator
     }
 
