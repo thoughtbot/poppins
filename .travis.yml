@@ -1,4 +1,5 @@
 language: objective-c
+osx_image: xcode6.4
 
 branches:
   only:
@@ -6,4 +7,5 @@ branches:
 
 env: export LANG=en_US.UTF-8
 
+install: bin/setup
 script: bin/test
