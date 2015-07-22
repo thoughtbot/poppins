@@ -10,5 +10,5 @@ env: export LANG=en_US.UTF-8
 install:
   - bundle install
   - brew install carthage 2> /dev/null
-  - carthage bootstrap -v
+  - carthage bootstrap --verbose
 script: bin/test
